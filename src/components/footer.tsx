@@ -10,14 +10,14 @@ import Blog2 from "@/assets/images/blog/footer-blog-2.png";
 
 const Footer = () => {
     return (
-        <div className="footer mt-28">
-            <div className="grid grid-cols-3/1 pt-24 px-20 gap-32 pb-10">
-                <div className="grid grid-cols-1/1.5 gap-6">
+        <div className="footer mt-16 md:mt-28">
+            <div className="flex flex-col md:grid grid-cols-3/1 pt-16 md:pt-24 px-5 md:px-20 gap-10 md:gap-32 pb-10">
+                <div className="flex flex-col md:grid grid-cols-1/1.5 gap-10 md:gap-10">
                     <div>
                         <Link href="/">
-                            <Image src={Logo} alt="logo" className="mb-5 mt-2" />
+                            <Image src={Logo} alt="logo" className="w-[60%] md:w-auto mb-5 mt-2" />
                         </Link>
-                        <p className="w-[80%]">We help you connect, learn, and grow in your remote career, regardless of where you are.</p>
+                        <p className="md:w-[80%]">We help you connect, learn, and grow in your remote career, regardless of where you are.</p>
                         <div className="flex gap-4 mt-5">
                             <div className="bg-[#242527] size-8 flex items-center rounded-full justify-center">
                                 <FaXTwitter className="text-white text-xl" />
@@ -27,7 +27,7 @@ const Footer = () => {
                             <FaInstagram className="text-[#242527] text-3xl" />
                         </div>
                     </div>
-                    <div className="grid grid-cols-3 gap-14">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-14">
                         <div>
                             <h5 className="font-dmsans font-black text-bold mb-5">Explore</h5>
                             <ul className="flex flex-col gap-3">
@@ -96,8 +96,8 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="pb-14 pt-24">
-                <p className="text-center">Copyright © Remote WorkHer 2024. All rights reserved.</p>
+            <div className="pb-10 pt-8 md:pb-14 md:pt-24">
+                <p className="text-center text-sm md:text-base">Copyright © Remote WorkHer 2024. All rights reserved.</p>
             </div>
         </div>
     )

@@ -21,7 +21,7 @@ const SingleJobListing = () => {
                     </div>
                     <div className="border-b-2 border-[#E5E5EC] mt-5 mb-5"></div>
                     <div className="">
-                        <h4 className="font-jakarta font-bold text-2xl">Lead Product Designer</h4>
+                        <h4 className="font-jakarta font-bold text-xl md:text-2xl">Lead Product Designer</h4>
                         <div className="mt-4 flex gap-5">
                             <div className="bg-[#FFFBD6] px-5 py-2 rounded-sm">
                                 <p className="text-sm font-jakarta font-[500]">Fulltime</p>
