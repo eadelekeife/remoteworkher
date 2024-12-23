@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --gray-text-color: #667085;
+  --text-color: #0A2A30;
+  --accent-color: #F963AB;
+  --bold-color: #0A2A30;
+  --black: #000000;
+  --offwhite: #567C82;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  color: var(--text-color);
+  background: var(--background);
+  font-family: "DM Sans", serif;
+  max-width: 1800px;
+  margin: 0px auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", serif;
+}
+
+.footer {
+  background: linear-gradient(to top right, rgba(251, 238, 244, .8), rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url("/images/vector-bg.png");
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.vector-bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.detail .vector-bg {
+  position: absolute;
+  top: -40%;
+  left: 0px;
+}
+
+.group-bg {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
