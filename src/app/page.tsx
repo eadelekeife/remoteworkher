@@ -15,7 +15,7 @@ import { LuPlus } from "react-icons/lu";
 
 import HeroPeople from "@/assets/images/hero_people.png";
 import HeroImg from "@/assets/images/hero.png";
-import HeroFly from "@/assets/images/Patterns.svg";
+import HeroFly from "@/assets/images/patterns.svg";
 
 import Company1 from "@/assets/images/hero/companies/logo_1.svg";
 import Company2 from "@/assets/images/hero/companies/logo_2.svg";
