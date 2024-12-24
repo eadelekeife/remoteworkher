@@ -25,7 +25,7 @@ const Navigation = () => {
     }, [])
 
     return (
-        <div className={`flex justify-between items-center py-5 px-5 md:px-20 z-40 fixed top-0 w-full ${fixedNav ? 'bg-white' : ''}`}>
+        <div className={`flex justify-between items-center py-7 px-5 md:px-20 z-50 fixed top-0 w-full ${fixedNav ? 'bg-white' : ''}`}>
             <div>
                 <Link href="/">
                     <Image src={Logo} className="w-[80%] md:w-full" alt="logo" />
