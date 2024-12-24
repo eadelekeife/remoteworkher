@@ -99,7 +99,7 @@ export default function JobBoard() {
         <>
           <div className="px-20 pt-32">
             <div className="">
-              <div className="grid grid-cols-2">
+              <div ref={addToRefs} className="grid grid-cols-2">
                 <div className="relative">
                   <h2 className="text-[3.5rem] font-bold font-jakarta font-[700]">
                     More Than Just a Space, it&apos;s a Community of Remote WorkHers
@@ -132,7 +132,7 @@ export default function JobBoard() {
           </div>
           <div className="px-20 mt-20 relative">
             <div className="grid grid-cols-1.5/1">
-              <div>
+              <div ref={addToRefs}>
                 <h4 className="text-3xl font-bold mb-3">Who We Are</h4>
                 <p className="text-lg leading-loose text-[#475467]">
                   RemoteWorkHer is a platform dedicated to empowering individuals through remote work opportunities and resources. We help
@@ -151,7 +151,7 @@ export default function JobBoard() {
             </div>
             <Image src={RightRedGradient} className="w-max absolute -top-[20rem] right-0" alt="red gradient" />
           </div>
-          <div className="mt-48 px-20">
+          <div className="mt-48 px-20" ref={addToRefs}>
             <div className="mx-auto w-max border-2 border-solid border-[#E2C6D4] p-1 flex items-center rounded-full">
               <div className="px-32 text-center py-5 bg-[#F963AB] rounded-full shadow-div">
                 <h4 className="font-[600] font-dmsans text-white">Individuals</h4>
@@ -270,19 +270,21 @@ export default function JobBoard() {
                 </div>
               </div>
               <div>
-                <h4 className="text-3xl font-bold mb-5">Get Involved</h4>
-                <div>
-                  <div className="py-4 pl-5 border-l-4 mb-3 border-solid border-black">
-                    <h5 className="mb-1 font-dmsans font-[600]">Mentorship</h5>
-                    <p className="text-[#475467] text-base">Join in on this mentor ship programme as either a Mentor or a Mentee and
-                      make use of the opportunity to learn and impart others</p>
+                <div ref={addToRefs}>
+                  <h4 className="text-3xl font-bold mb-5">Get Involved</h4>
+                  <div>
+                    <div className="py-4 pl-5 border-l-4 mb-3 border-solid border-black">
+                      <h5 className="mb-1 font-dmsans font-[600]">Mentorship</h5>
+                      <p className="text-[#475467] text-base">Join in on this mentor ship programme as either a Mentor or a Mentee and
+                        make use of the opportunity to learn and impart others</p>
+                    </div>
+                    <div className="py-4 pl-5 border-l-4 mb-2 border-solid border-[#F2F4F7]">
+                      <h5 className="mb-1 font-dmsans font-[600]">Volunteering</h5>
+                      <p className="text-[#475467] text-base">Join us and become a part of our esteemed volunteers with
+                        exclusive access to our platform and resources</p>
+                    </div>
+                    <button className="bg-black py-4 px-10 rounded-lg text-white text-sm mt-8">Join Today</button>
                   </div>
-                  <div className="py-4 pl-5 border-l-4 mb-2 border-solid border-[#F2F4F7]">
-                    <h5 className="mb-1 font-dmsans font-[600]">Volunteering</h5>
-                    <p className="text-[#475467] text-base">Join us and become a part of our esteemed volunteers with
-                      exclusive access to our platform and resources</p>
-                  </div>
-                  <button className="bg-black py-4 px-10 rounded-lg text-white text-sm mt-8">Join Today</button>
                 </div>
                 <Image src={PurpleGradient} className="w-max absolute top-[-10rem] right-0" alt="collection of women" />
               </div>
@@ -293,7 +295,7 @@ export default function JobBoard() {
             <Image src={RedGradient} className="w-max absolute -top-[20rem] left-0" alt="gradient" />
           </div>
           <div className="mt-36 px-20">
-            <div className="w-[50%]">
+            <div ref={addToRefs} className="w-[50%]">
               <p className="text-base font-[600] text-[#667085] mb-4">Work Smarter</p>
               <h3 className="text-4xl font-jakarta font-[600] mb-5">Be a part of something great</h3>
               <p className="text-base font-[500] text-[#667085]">
@@ -304,23 +306,23 @@ export default function JobBoard() {
             <div className="grid grid-cols-2 gap-20 mt-16 items-center">
               <div>
                 <div className="grid grid-cols-2 text-center gap-x-10 gap-y-16">
-                  <div>
+                  <div ref={addToRefs}>
                     <h3 className="font-jakarta text-4xl font-[600] mb-4">400+</h3>
                     <h5 className="font-dmsans font-[600] text-lg mb-2">Partnerships Created</h5>
                     <p className="text-base text-[#667085]">We&apos;ve helped build over 400 amazing projects.</p>
                   </div>
-                  <div>
+                  <div ref={addToRefs}>
                     <h3 className="font-jakarta text-4xl font-[600] mb-4">70%</h3>
                     <h5 className="font-dmsans font-[600] text-lg mb-2">Job board validity</h5>
                     <p className="text-base text-[#667085]">Our customers have reported a 70% in the callback
                       responses on jobs posted on our platform.</p>
                   </div>
-                  <div>
+                  <div ref={addToRefs}>
                     <h3 className="font-jakarta text-4xl font-[600] mb-4">10k</h3>
                     <h5 className="font-dmsans font-[600] text-lg mb-2">Community Width</h5>
                     <p className="text-base text-[#667085]">Our free community has a record of ove 20k plus  participating members.</p>
                   </div>
-                  <div>
+                  <div ref={addToRefs}>
                     <h3 className="font-jakarta text-4xl font-[600] mb-4">200+</h3>
                     <h5 className="font-dmsans font-[600] text-lg mb-2">5 Star Reviews</h5>
                     <p className="text-base text-[#667085]">We&apos;re proud of our 5-star rating with over 200 reviews.</p>
@@ -334,7 +336,7 @@ export default function JobBoard() {
           </div>
           <div className="mt-40 px-20 relative">
             <div className="grid grid-cols-2 gap-20 items-center">
-              <div className="">
+              <div ref={addToRefs} className="">
                 <p className="text-sm font-[500] text-[#667085] mb-2">JOB BOARD</p>
                 <h3 className="font-jakarta font-bold text-[3.5rem] mb-2 leading-snug">Want to source for remote jobs?</h3>
                 <p className="text-lg font-[#4B5563] leading-loose md:w-[80%]">
@@ -364,7 +366,7 @@ export default function JobBoard() {
 
               </div>
               <div className="py-28">
-                <div className="w-[75%] mx-auto">
+                <div ref={addToRefs} className="w-[75%] mx-auto">
                   <h3 className="font-jakarta font-bold text-4xl mb-7">Meet Sophie, Our Founder</h3>
                   <p className="text-[#555555] text-lg leading-loose mb-2">
                     Welcome to Remote WorkHER! I&apos;m Adeife Adeoye, and I&apos;m dedicated to empowering women to excel
@@ -397,7 +399,7 @@ export default function JobBoard() {
             </div>
           </div>
           <div className="mt-32 px-20">
-            <div className="grid grid-cols-1/1.5 gap-44">
+            <div ref={addToRefs} className="grid grid-cols-1/1.5 gap-44">
               <div>
                 <h3 className="font-jakarta font-bold text-4xl mb-8 w-[85%] leading-snug">Got Questions? We&apos;ve Got Answers.</h3>
                 <p className="text-lg mb-7">For more information, please contact us:</p>
