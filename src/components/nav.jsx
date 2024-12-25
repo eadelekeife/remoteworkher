@@ -37,6 +37,12 @@ const Navigation = () => {
                         <Link href="/">Home</Link>
                     </li>
                     <li>
+                        <Link href="/blog">Blog</Link>
+                    </li>
+                    <li>
+                        <Link href="/job">Job Board</Link>
+                    </li>
+                    <li>
                         <Link href="/">About</Link>
                     </li>
                     <li>
@@ -45,9 +51,9 @@ const Navigation = () => {
                     <li>
                         <Link href="/">Events</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link href="/blog">Blog</Link>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
             <div className="hidden md:block">

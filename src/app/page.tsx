@@ -410,7 +410,7 @@ export default function JobBoard() {
               <div className="relative flex justify-between">
                 <div></div>
                 <div className="relative">
-                  <Image src={ExperienceCard} className="shadow-2xl relative rounded-l-2xl z-50" alt="remote job calculation" />
+                  <Image src={ExperienceCard} className="shadow-2xl relative rounded-l-2xl z-40" alt="remote job calculation" />
                   <Image src={Ellipse} className="absolute -top-[2rem] -right-[2rem] z-1" alt="ellipse" />
                   <Image src={Eclipse} className="absolute -bottom-[4rem] -right-[3rem] -z-1" alt="eclipse" />
                 </div>
