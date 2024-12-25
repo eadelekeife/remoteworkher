@@ -78,3 +78,29 @@ h6 {
 .shadow-div {
   box-shadow: inset 0px 2px 5px #D92C7F;
 }
+
+.active-bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+  background-color: #F963AB;
+  transition: transform .3s ease;
+  z-index: 0;
+  box-shadow: inset 0px 2px 5px #D92C7F;
+  border-radius: 50px;
+  border: 2px solid #fff;
+}
+
+/* .active-bg {
+  box-shadow: inset 0px 2px 5px #D92C7F;
+} */
+
+.active h4 {
+  color: #fff;
+}
+
+.button:nth-child(1):hover ~ .active-bg {
+  transform: x-region;
+}
