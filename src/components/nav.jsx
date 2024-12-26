@@ -85,10 +85,10 @@ const Navigation = () => {
                             <Link className="text-sm font-dmsans" href="/">Home</Link>
                         </li>
                         <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
-                            <Link className="text-sm font-dmsans" href="/">Blog</Link>
+                            <Link className="text-sm font-dmsans" href="/blog">Blog</Link>
                         </li>
                         <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
-                            <Link className="text-sm font-dmsans" href="/">Job Board</Link>
+                            <Link className="text-sm font-dmsans" href="/job">Job Board</Link>
                         </li>
                         <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
                             <Link className="text-sm font-dmsans" href="/">About</Link>
