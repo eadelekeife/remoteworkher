@@ -143,24 +143,24 @@ export default function JobBoard() {
             <div className="md:grid grid-cols-1.5/1">
               <div ref={addToRefs}>
                 <h4 className="text-3xl font-bold mb-3">Who We Are</h4>
-                <p className="text-base md:text-lg leading-loose text-[#475467]">
+                <p className="text-base md:text-lg mb-7 md:mb-0 leading-loose text-[#475467]">
                   RemoteWorkHer is a platform dedicated to empowering individuals through remote work opportunities and resources. We help
                   you connect, learn, and grow in your remote career, regardless of where you are
                 </p>
                 <div className="relative w-full min-h-[20vh] h-[20vh]">
                   <Image layout="intrisic" src={CardModerator1} className="w-max absolute -top-[20%] -left-[10%]" alt="collection of women" />
-                  <Image layout="intrisic" src={CardModerator2} className="w-max absolute top-[40%] left-[10%]" alt="collection of women" />
+                  <Image layout="intrisic" src={CardModerator2} className="w-max absolute top-[15%] md:top-[40%] left-[10%]" alt="collection of women" />
                   <Image layout="intrisic" src={CardModerator3} className="w-max absolute -top-[20%] right-[20%]" alt="collection of women" />
-                  <Image layout="intrisic" src={CardModerator4} className="w-max absolute top-[40%] -right-[0%]" alt="collection of women" />
+                  <Image layout="intrisic" src={CardModerator4} className="w-max absolute top-[15%] md:top-[40%] -right-[0%]" alt="collection of women" />
                 </div>
               </div>
               <div className="relative">
-                <Image layout="intrisic" src={Girl1} className="w-max mx-auto" alt="collection of women" />
+                <Image layout="intrisic" src={Girl1} className="w-[40%] md:w-max mx-auto" alt="collection of women" />
               </div>
             </div>
             <Image layout="intrisic" src={RightRedGradient} className="w-max absolute -top-[20rem] right-0" alt="red gradient" />
           </div>
-          <div className="mt-48 px-5 md:px-20" ref={addToRefs}>
+          <div className="mt-28 md:mt-48 px-5 md:px-20" ref={addToRefs}>
             <div className={`button mx-auto w-max relative border-2 border-solid border-[#E2C6D4] p-1 flex items-center rounded-full`}>
               <div onClick={() => {
                 setCurrentView("personal")
@@ -180,7 +180,7 @@ export default function JobBoard() {
             </div>
             {
               currentView === "personal" ?
-                <div className="mt-14">
+                <div className="mt-10 md:mt-14">
                   <Swiper
                     navigation
                     pagination={false}
@@ -302,7 +302,7 @@ export default function JobBoard() {
                   </Swiper>
                 </div>
                 :
-                <div className="md:grid grid-cols-4 gap-10 mt-14">
+                <div className="md:grid grid-cols-4 gap-10 mt-10 md:mt-14">
                   {/* */}
                   <div className="bg-[#FFF1F3] rounded-3xl pt-1 pb-10 px-5">
                     <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
@@ -372,7 +372,7 @@ export default function JobBoard() {
             </div>
             <Image layout="intrisic" src={RedGradient} className="w-max absolute -top-[20rem] left-0" alt="gradient" />
           </div>
-          <div className="mt-36 px-5 md:px-20">
+          <div className="mt-28 md:mt-36 px-5 md:px-20">
             <div ref={addToRefs} className="md:w-[50%]">
               <p className="text-base font-[600] text-[#667085] mb-4">Work Smarter</p>
               <h3 className="text-3xl w-[70%] md:w-full md:text-4xl font-jakarta font-[600] mb-5">Be a part of something great</h3>
@@ -412,7 +412,7 @@ export default function JobBoard() {
               </div>
             </div>
           </div>
-          <div className="mt-40 px-5 md:px-20 relative">
+          <div className="mt-28 md:mt-40 px-5 md:px-20 relative">
             <div className="flex flex-col md:grid grid-cols-2 gap-20 items-center">
               <div ref={addToRefs} className="">
                 <p className="text-sm font-[500] text-[#667085] mb-2">JOB BOARD</p>
@@ -438,7 +438,7 @@ export default function JobBoard() {
               <Image layout="intrisic" src={RedGradient} className="w-max absolute -top-[20rem] left-0 opacity-30" alt="gradient" />
             </div>
           </div>
-          <div className="mt-52">
+          <div className="mt-32 md:mt-52">
             <div className="bg-[#FCEFEF] flex flex-col md:grid grid-cols-2">
               <div className="bg-[#E4E4E4] min-h-[20rem]">
 
@@ -476,7 +476,7 @@ export default function JobBoard() {
               </div>
             </div>
           </div>
-          <div className="mt-32 px-5 md:px-20">
+          <div className="mt-24 md:mt-32 px-5 md:px-20">
             <div ref={addToRefs} className="flex flex-col md:grid grid-cols-1/1.5 gap-14 md:gap-44">
               <div>
                 <h3 className="font-jakarta font-bold text-3xl md:text-4xl mb-8 w-[85%] leading-snug">Got Questions? We&apos;ve Got Answers.</h3>
