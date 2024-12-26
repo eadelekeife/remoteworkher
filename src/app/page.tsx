@@ -367,7 +367,7 @@ export default function JobBoard() {
                 <Image layout="intrisic" src={PurpleGradient} className="w-max absolute top-[-10rem] right-0" alt="collection of women" />
               </div>
               <div>
-                <Image layout="intrisic" src={Community} className="w-max" alt="collection of women" />
+                <Image layout="intrisic" src={Community} className="w-[40%] md:w-max" alt="collection of women" />
               </div>
             </div>
             <Image layout="intrisic" src={RedGradient} className="w-max absolute -top-[20rem] left-0" alt="gradient" />
