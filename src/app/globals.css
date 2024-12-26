@@ -101,6 +101,11 @@ h6 {
   color: #fff;
 }
 
-.button:nth-child(1):hover ~ .active-bg {
+.button:nth-child(1):hover~.active-bg {
   transform: x-region;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
 }
