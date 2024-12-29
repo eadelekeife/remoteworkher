@@ -37,7 +37,7 @@ const AboutUsPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-20">
+                    <div className="mt-36 w-[90%] mx-auto">
                         <div className="text-center">
                             <div className="w-max px-6 rounded-full py-3 border-[#F963AB] border-2 border-solid mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500]">About Us</h4>
@@ -91,12 +91,12 @@ const AboutUsPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-20">
+                    <div className="mt-36 w-[90%] mx-auto">
                         <div className="text-center">
                             <h3 className="font-jakarta text-5xl font-bold mt-5">
                                 Services we Offer
                             </h3>
-                            <div className="w-[55%] mt-7 mx-auto">
+                            <div className="w-[60%] mt-7 mx-auto">
                                 <p className="text-lg font-jakarta text-[#475467]">
                                     Explore the groundbreaking branding, freelancing/remote work, and beginner guidance. Additionally, I conduct a
                                     LinkedIn masterclass and a 2-day masterclass designed specifically for content writers and social media managers
@@ -104,7 +104,7 @@ const AboutUsPage = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="mt-7 px-20">
+                        <div className="mt-16 px-20">
                             <div className="grid grid-cols-3 gap-10">
                                 <div>
                                     <Image src={GridOne} alt="woman posing for picture" className="rounded-xl w-full" />
@@ -148,7 +148,7 @@ const AboutUsPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-20 px-20">
+                    <div className="mt-36 px-20 w-[90%] mx-auto">
                         <div className="text-center">
                             <div className="w-max mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500]">Testimonial</h4>
@@ -209,7 +209,7 @@ const AboutUsPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-20">
+                    <div className="mt-36 w-[90%] mx-auto">
                         <div className="">
                             <div className="mt-7 px-20">
                                 <h3 className="font-jakarta text-5xl font-bold mt-4">

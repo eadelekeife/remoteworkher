@@ -8,9 +8,14 @@ import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Blog1 from "@/assets/images/blog/footer-blog-1.png";
 import Blog2 from "@/assets/images/blog/footer-blog-2.png";
 
-const Footer = () => {
+
+interface FooterInterface {
+    footerMargin?: string
+}
+
+const Footer = (props: FooterInterface) => {
     return (
-        <div className="footer mt-16 md:mt-28">
+        <div className={`footer ${props.footerMargin ? props.footerMargin : "mt-16 md:mt-28"}`}>
             <div className="flex flex-col md:grid grid-cols-3/1 pt-16 md:pt-24 px-5 md:px-20 gap-10 md:gap-32 pb-10">
                 <div className="flex flex-col md:grid grid-cols-1/1.5 gap-10 md:gap-10">
                     <div>

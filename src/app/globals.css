@@ -130,3 +130,10 @@ h6 {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.sec-hero {
+  background: url("/images/sec_hero.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

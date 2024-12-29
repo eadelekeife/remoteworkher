@@ -14,22 +14,7 @@ import QuoteImg from "@/assets/images/services/quote.png";
 import { MdOutlineMail } from "react-icons/md";
 import { FiMapPin } from "react-icons/fi";
 import Map from "@/assets/images/services/map.png";
-
-
-import WomanSmallTwo from "@/assets/images/about/small_two.png";
-
-import GridOne from "@/assets/images/about/grid_1.png";
-import GridTwo from "@/assets/images/about/grid_2.png";
-import GridThree from "@/assets/images/about/grid_3.png";
-
-import TeamOne from "@/assets/images/about/team_1.png";
-import TeamTwo from "@/assets/images/about/team_2.png";
-import TeamThree from "@/assets/images/about/team_3.png";
-
-
-import TestimonialOne from "@/assets/images/about/testimonial_1.png";
-import TestimonialTwo from "@/assets/images/about/testimonial_2.png";
-import TestimonialThree from "@/assets/images/about/testimonial_3.png";
+import { FaArrowLeft } from "react-icons/fa6";
 
 
 
@@ -43,25 +28,40 @@ const ServicesPage = () => {
         <div>
             <DisplayLayout>
                 <>
-                    <div className="px-20 mt-28">
+                    <div className="px-20 mt-36">
                         <div className="grid grid-cols-2 gap-20">
                             <div>
                                 <h3 className="font-jakarta leading-tight text-5xl font-bold mt-5 mb-5">
                                     Empowering Employers and Talents to Thrive in Remote Work
                                 </h3>
+                                <div></div>
                             </div>
                             <div>
                                 <Image src={HeroImg} alt="woman posing for picture" className="rounded-xl w-full" />
-                                <div className="mt-16">
-                                    <p className="text-lg text-[#475467] font-jakarta">
-                                        Explore our tailored services designed to transform how businesses and
-                                        professionals succeed in the remote work era.
-                                    </p>
+                            </div>
+                        </div>
+                        <div className="mt-20">
+                            <div className="grid grid-cols-2 items-center gap-20">
+                                <div className="">
+                                    <div className="flex gap-2">
+                                        <Link href="/" className="border rounded-lg py-4 px-5 border-solid border-[#D6D6D6] bg-[#1018280D] flex gap-1 items-center">
+                                            <FaArrowLeft />
+                                            Back to Home</Link>
+                                        <button className="bg-accent text-white text-base py-4 px-8 rounded-lg">Service</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="">
+                                        <p className="text-lg text-[#475467] font-jakarta">
+                                            Explore our tailored services designed to transform how businesses and
+                                            professionals succeed in the remote work era.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="mt-20 px-20">
+                    <div className="mt-36 px-20">
                         <div className="text-center">
                             <div className="w-max mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500] text-accent">Services</h4>
@@ -69,12 +69,12 @@ const ServicesPage = () => {
                             <h3 className="font-jakarta text-5xl font-bold mt-5 mb-5">
                                 For Employers & Businesses
                             </h3>
-                            <p className="text-base w-[65%] leading-relaxed mx-auto text-[#475467] font-jakarta">
+                            <p className="text-base w-[65%] leading-relaxed mx-auto text-[#808080] font-jakarta">
                                 Define ambitious service benchmarks that challenge your team to strive for excellence. These benchmarks should be
                                 both aspirational and achievable, inspiring everyone to aim higher and constantly improve.
                             </p>
                         </div>
-                        <div className="grid grid-cols-2 gap-10 w-[90%] mx-auto mt-1">
+                        <div className="grid grid-cols-2 gap-10 w-[90%] mx-auto mt-16">
                             <div className="border rounded-xl border-solid border-[#D6D6D6] grid grid-cols-1/3 items-center p-4 gap-10">
                                 <div>
                                     <Image src={Consultation} alt="women posing for picture" className="rounded-xl w-full object-cover" />
@@ -120,7 +120,7 @@ const ServicesPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-20 px-20">
+                        <div className="mt-36 px-20">
                             <div className="text-center">
                                 <div className="w-max mx-auto text-[#F963AB]">
                                     <h4 className="font-jost font-[500]">Services</h4>
@@ -176,7 +176,7 @@ const ServicesPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-20 px-20">
+                        <div className="mt-36 px-20">
                             <div className="text-center">
                                 <h3 className="font-jakarta text-5xl font-bold mt-5 mb-16">
                                     Why Choose Us
@@ -209,7 +209,7 @@ const ServicesPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-20 px-20">
+                        <div className="mt-36 px-20">
                             <div className="text-center">
                                 <h3 className="font-jakarta text-5xl font-bold mt-5 mb-16">
                                     What Our Community Says
@@ -229,7 +229,7 @@ const ServicesPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-20 px-20">
+                    <div className="mt-36 px-20">
                         <div className="grid grid-cols-2 gap-32 items-center">
                             <div>
                                 <h4 className="font-jost font-[500] text-accent">Contact Us</h4>

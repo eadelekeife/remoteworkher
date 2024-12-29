@@ -11,7 +11,12 @@ import { Drawer } from "antd";
 
 import { FaTimes } from "react-icons/fa";
 
-const Navigation = () => {
+interface NavigationPropsInterface {
+    textColor?: string
+    logoColor?: string
+}
+
+const Navigation = (props: NavigationPropsInterface) => {
 
     const [fixedNav, setFixed] = useState(false);
     const [displayNavDrawer, setDisplayNavDrawer] = useState(false);
@@ -34,11 +39,12 @@ const Navigation = () => {
         <div className={`flex justify-between items-center py-7 px-5 md:px-20 z-50 fixed top-0 w-full ${fixedNav ? 'bg-white' : ''}`}>
             <div>
                 <Link href="/">
-                    <Image src={Logo} className="w-[80%] md:w-full" alt="logo" />
+                    <h2 className={`font-jakarta font-bold text-3xl ${props.logoColor ? props.logoColor : "text-black"}`}>Remote WorkHer</h2>
+                    {/* <Image src={Logo} className="w-[80%] md:w-full" alt="logo" /> */}
                 </Link>
             </div>
             <div className="hidden md:block">
-                <ul className="flex gap-14">
+                <ul className={`flex gap-14 ${props.textColor ? props.textColor : "text-black"}`}>
                     <li>
                         <Link href="/">Home</Link>
                     </li>
@@ -49,13 +55,13 @@ const Navigation = () => {
                         <Link href="/job">Job Board</Link>
                     </li>
                     <li>
-                        <Link href="/">About</Link>
+                        <Link href="/about-us">About</Link>
                     </li>
                     <li>
-                        <Link href="/job">Services</Link>
+                        <Link href="/services">Services</Link>
                     </li>
                     <li>
-                        <Link href="/">Events</Link>
+                        <Link href="/events">Events</Link>
                     </li>
                     {/* <li>
                         <Link href="/blog">Blog</Link>
@@ -91,13 +97,13 @@ const Navigation = () => {
                             <Link className="text-sm font-dmsans" href="/job">Job Board</Link>
                         </li>
                         <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
-                            <Link className="text-sm font-dmsans" href="/">About</Link>
+                            <Link className="text-sm font-dmsans" href="/about-us">About</Link>
                         </li>
                         <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
-                            <Link className="text-sm font-dmsans" href="/">Services</Link>
+                            <Link className="text-sm font-dmsans" href="/services">Services</Link>
                         </li>
                         <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
-                            <Link className="text-sm font-dmsans" href="/">Events</Link>
+                            <Link className="text-sm font-dmsans" href="/events">Events</Link>
                         </li>
                         <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
                             <Link className="text-sm font-dmsans" href="/">Join Now</Link>
