@@ -1,3 +1,5 @@
+'use client';
+
 import DisplayLayout from "@/components/layout";
 
 import HeroImg from "@/assets/images/services/hero.png";
@@ -23,13 +25,44 @@ import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 
+import { gsap } from 'gsap';
+import { useEffect, useRef } from "react";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
 const ServicesPage = () => {
+    const textRefs = useRef<HTMLDivElement[]>([]);
+    gsap.registerPlugin(ScrollTrigger);
+    useEffect(() => {
+        // Animate each text element
+        textRefs.current.forEach((el) => {
+            if (el) {
+                gsap.fromTo(
+                    el,
+                    { y: 100, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: 'power3.out', stagger: 0.2,
+                        scrollTrigger: {
+                            trigger: el,
+                            start: 'top 80%', // When the top of the element is 80% down the viewport
+                            toggleActions: 'play none none none', // Play animation when triggered
+                        },
+                    }
+                );
+            }
+        });
+    }, []);
+    const addToRefs = (el: HTMLDivElement) => {
+        if (el && !textRefs.current.includes(el)) {
+            textRefs.current.push(el);
+        }
+    };
     return (
         <div>
             <DisplayLayout>
                 <>
                     <div className="px-20 mt-36">
-                        <div className="grid grid-cols-2 gap-20">
+                        <div className="grid grid-cols-2 gap-20" ref={addToRefs}>
                             <div>
                                 <h3 className="font-jakarta leading-tight text-5xl font-bold mt-5 mb-5">
                                     Empowering Employers and Talents to Thrive in Remote Work
@@ -40,7 +73,7 @@ const ServicesPage = () => {
                                 <Image src={HeroImg} alt="woman posing for picture" className="rounded-xl w-full" />
                             </div>
                         </div>
-                        <div className="mt-20">
+                        <div className="mt-20" ref={addToRefs}>
                             <div className="grid grid-cols-2 items-center gap-20">
                                 <div className="">
                                     <div className="flex gap-2">
@@ -62,7 +95,7 @@ const ServicesPage = () => {
                         </div>
                     </div>
                     <div className="mt-36 px-20">
-                        <div className="text-center">
+                        <div className="text-center" ref={addToRefs}>
                             <div className="w-max mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500] text-accent">Services</h4>
                             </div>
@@ -75,7 +108,7 @@ const ServicesPage = () => {
                             </p>
                         </div>
                         <div className="grid grid-cols-2 gap-10 w-[90%] mx-auto mt-16">
-                            <div className="border rounded-xl border-solid border-[#D6D6D6] grid grid-cols-1/3 items-center p-4 gap-10">
+                            <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] grid grid-cols-1/3 items-center p-4 gap-10">
                                 <div>
                                     <Image src={Consultation} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                 </div>
@@ -86,7 +119,7 @@ const ServicesPage = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="border rounded-xl border-solid border-[#D6D6D6] grid grid-cols-1/3 items-center p-4 gap-10">
+                            <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] grid grid-cols-1/3 items-center p-4 gap-10">
                                 <div>
                                     <Image src={JobImg} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                 </div>
@@ -97,7 +130,7 @@ const ServicesPage = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="border rounded-xl border-solid border-[#D6D6D6] grid grid-cols-1/3 items-center p-4 gap-10">
+                            <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] grid grid-cols-1/3 items-center p-4 gap-10">
                                 <div>
                                     <Image src={SpeakingImg} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                 </div>
@@ -108,7 +141,7 @@ const ServicesPage = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="border rounded-xl border-solid border-[#D6D6D6] grid grid-cols-1/3 items-center p-4 gap-10">
+                            <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] grid grid-cols-1/3 items-center p-4 gap-10">
                                 <div>
                                     <Image src={PartnershipImg} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                 </div>
@@ -120,7 +153,7 @@ const ServicesPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-36 px-20">
+                        <div ref={addToRefs} className="mt-36 px-20">
                             <div className="text-center">
                                 <div className="w-max mx-auto text-[#F963AB]">
                                     <h4 className="font-jost font-[500]">Services</h4>
@@ -176,7 +209,7 @@ const ServicesPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-36 px-20">
+                        <div ref={addToRefs} className="mt-36 px-20">
                             <div className="text-center">
                                 <h3 className="font-jakarta text-5xl font-bold mt-5 mb-16">
                                     Why Choose Us
@@ -209,7 +242,7 @@ const ServicesPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-36 px-20">
+                        <div ref={addToRefs} className="mt-36 px-20">
                             <div className="text-center">
                                 <h3 className="font-jakarta text-5xl font-bold mt-5 mb-16">
                                     What Our Community Says
@@ -229,7 +262,7 @@ const ServicesPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-36 px-20">
+                    <div ref={addToRefs} className="mt-36 px-20">
                         <div className="grid grid-cols-2 gap-32 items-center">
                             <div>
                                 <h4 className="font-jost font-[500] text-accent">Contact Us</h4>

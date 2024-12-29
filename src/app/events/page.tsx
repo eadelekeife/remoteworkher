@@ -1,3 +1,5 @@
+'use client';
+
 import EventPros from "@/components/events/pros";
 import DisplayLayout from "@/components/layout";
 import Image from "next/image";
@@ -14,14 +16,44 @@ import PastImg6 from "@/assets/images/events/past_6.png";
 import UpcomingEvents from "@/components/events/upcoming";
 import PastEvents from "@/components/events/past";
 
+import { gsap } from 'gsap';
+import { useEffect, useRef } from "react";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 
 const EventsPage = () => {
+    const textRefs = useRef<HTMLDivElement[]>([]);
+    gsap.registerPlugin(ScrollTrigger);
+    useEffect(() => {
+        // Animate each text element
+        textRefs.current.forEach((el) => {
+            if (el) {
+                gsap.fromTo(
+                    el,
+                    { y: 100, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: 'power3.out', stagger: 0.2,
+                        scrollTrigger: {
+                            trigger: el,
+                            start: 'top 80%', // When the top of the element is 80% down the viewport
+                            toggleActions: 'play none none none', // Play animation when triggered
+                        },
+                    }
+                );
+            }
+        });
+    }, []);
+    const addToRefs = (el: HTMLDivElement) => {
+        if (el && !textRefs.current.includes(el)) {
+            textRefs.current.push(el);
+        }
+    };
     return (
         <div>
             <DisplayLayout textColor="text-[#98A2B3]" logoColor="text-white" footerMargin="mt-0">
                 <>
                     <div className="bg-[#110B10] py-48">
-                        <div className="flex justify-between w-[80%] mx-auto">
+                        <div ref={addToRefs} className="flex justify-between w-[80%] mx-auto">
                             <div>
                                 <h2 className="font-jakarta text-6xl w-[80%] leading-snug font-bold text-white">Digital Thinkers Meet Up</h2>
                             </div>
@@ -34,7 +66,7 @@ const EventsPage = () => {
                             <Image src={HeroImg} alt="women posing for picture" className="rounded-xl w-max mx-auto -mb-[20rem] object-cover" />
                         </div>
                     </div>
-                    <div className="mt-[15rem] px-20">
+                    <div ref={addToRefs} className="mt-[15rem] px-20">
                         <div className="text-center">
                             <div className="w-max mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500] text-accent">Services</h4>
@@ -51,7 +83,7 @@ const EventsPage = () => {
                                 <EventPros bg="bg-[#65FF8B]" textColor="text-black" main="50" icon="+" footnote="Industry Talks" />
                             </div>
                         </div>
-                        <div className="mt-40">
+                        <div ref={addToRefs} className="mt-40">
                             <div className="grid grid-cols-2 gap-20">
                                 <div>
                                     <Image src={RemoteImg} alt="women posing for picture" className="rounded-xl w-full object-cover" />
@@ -69,7 +101,7 @@ const EventsPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-40">
+                        <div ref={addToRefs} className="mt-40">
                             <div className="">
                                 <h3 className="font-jakarta text-4xl font-bold mt-5 mb-10 text-center leading-snug">
                                     Upcoming Events
@@ -81,7 +113,7 @@ const EventsPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-28">
+                        <div ref={addToRefs} className="mt-28">
                             <div className="text-center">
                                 <h3 className="font-jakarta text-5xl font-bold mt-5 mb-5">
                                     Past Events
@@ -102,7 +134,7 @@ const EventsPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="sec-hero mt-40 py-28">
+                    <div ref={addToRefs} className="sec-hero mt-40 py-28">
                         <div>
                             <h3 className="font-jakarta w-[30%] mx-auto text-4xl font-bold mt-5 mb-10 text-center leading-snug text-white">
                                 Count Every Seconds Until Event

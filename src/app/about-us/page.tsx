@@ -1,3 +1,5 @@
+'use client';
+
 import DisplayLayout from "@/components/layout";
 
 import WomanLarge from "@/assets/images/about/big_one.png";
@@ -22,12 +24,43 @@ import Image from "next/image";
 
 import { FaArrowRight } from "react-icons/fa";
 
+import { gsap } from 'gsap';
+import { useEffect, useRef } from "react";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
 const AboutUsPage = () => {
+    const textRefs = useRef<HTMLDivElement[]>([]);
+    gsap.registerPlugin(ScrollTrigger);
+    useEffect(() => {
+        // Animate each text element
+        textRefs.current.forEach((el) => {
+            if (el) {
+                gsap.fromTo(
+                    el,
+                    { y: 100, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: 'power3.out', stagger: 0.2,
+                        scrollTrigger: {
+                            trigger: el,
+                            start: 'top 80%', // When the top of the element is 80% down the viewport
+                            toggleActions: 'play none none none', // Play animation when triggered
+                        },
+                    }
+                );
+            }
+        });
+    }, []);
+    const addToRefs = (el: HTMLDivElement) => {
+        if (el && !textRefs.current.includes(el)) {
+            textRefs.current.push(el);
+        }
+    };
     return (
         <div>
             <DisplayLayout>
                 <>
-                    <div className="px-14 mt-28">
+                    <div className="px-14 mt-28" ref={addToRefs}>
                         <div className="about-hero flex items-center justify-center">
                             <div>
                                 <h3 className="font-jakarta text-5xl text-white font-bold mt-5 mb-5">
@@ -37,7 +70,7 @@ const AboutUsPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-36 w-[90%] mx-auto">
+                    <div className="mt-36 w-[90%] mx-auto" ref={addToRefs}>
                         <div className="text-center">
                             <div className="w-max px-6 rounded-full py-3 border-[#F963AB] border-2 border-solid mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500]">About Us</h4>
@@ -92,7 +125,7 @@ const AboutUsPage = () => {
                         </div>
                     </div>
                     <div className="mt-36 w-[90%] mx-auto">
-                        <div className="text-center">
+                        <div className="text-center" ref={addToRefs}>
                             <h3 className="font-jakarta text-5xl font-bold mt-5">
                                 Services we Offer
                             </h3>
@@ -104,9 +137,9 @@ const AboutUsPage = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="mt-16 px-20">
+                        <div className="mt-16 px-20" ref={addToRefs}>
                             <div className="grid grid-cols-3 gap-10">
-                                <div>
+                                <div ref={addToRefs}>
                                     <Image src={GridOne} alt="woman posing for picture" className="rounded-xl w-full" />
                                     <div className="mt-4">
                                         <h3 className="font-jakarta text-2xl font-bold mt-5">
@@ -119,7 +152,7 @@ const AboutUsPage = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div>
+                                <div ref={addToRefs}>
                                     <Image src={GridTwo} alt="woman posing for picture" className="rounded-xl w-full" />
                                     <div className="mt-4">
                                         <h3 className="font-jakarta text-2xl font-bold mt-5">
@@ -132,7 +165,7 @@ const AboutUsPage = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div>
+                                <div ref={addToRefs}>
                                     <Image src={GridThree} alt="woman posing for picture" className="rounded-xl w-full" />
                                     <div className="mt-4">
                                         <h3 className="font-jakarta text-2xl font-bold mt-5">
@@ -149,7 +182,7 @@ const AboutUsPage = () => {
                         </div>
                     </div>
                     <div className="mt-36 px-20 w-[90%] mx-auto">
-                        <div className="text-center">
+                        <div className="text-center" ref={addToRefs}>
                             <div className="w-max mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500]">Testimonial</h4>
                             </div>
@@ -159,7 +192,7 @@ const AboutUsPage = () => {
                         </div>
                         <div className="mt-14">
                             <div className="grid grid-cols-2 gap-10">
-                                <div>
+                                <div ref={addToRefs}>
                                     <div className="bg-[#F9F9FB] rounded-xl h-full flex items-center">
                                         <div className="w-[85%] mx-auto text-center h-max">
                                             <Image src={TestimonialOne} alt="woman posing for picture" className="rounded-xl mx-auto w-max mb-5" />
@@ -174,7 +207,7 @@ const AboutUsPage = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="flex flex-col gap-10">
+                                <div ref={addToRefs} className="flex flex-col gap-10">
                                     <div className="bg-[#F9F9FB] py-10 rounded-xl">
                                         <div className="w-[85%] mx-auto flex gap-10">
                                             <Image src={TestimonialTwo} alt="woman posing for picture" className="rounded-xl mx-auto w-auto h-max mb-5" />
@@ -210,7 +243,7 @@ const AboutUsPage = () => {
                         </div>
                     </div>
                     <div className="mt-36 w-[90%] mx-auto">
-                        <div className="">
+                        <div className="" ref={addToRefs}>
                             <div className="mt-7 px-20">
                                 <h3 className="font-jakarta text-5xl font-bold mt-4">
                                     Meet our team.
