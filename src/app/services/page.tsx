@@ -18,6 +18,9 @@ import { FiMapPin } from "react-icons/fi";
 import Map from "@/assets/images/services/map.png";
 import { FaArrowLeft } from "react-icons/fa6";
 
+import ProgressOne from "@/assets/images/services/progress_1.png";
+import ProgressTwo from "@/assets/images/services/progress_2.png";
+import ProgressThree from "@/assets/images/services/progress_3.png";
 
 
 import Image from "next/image";
@@ -239,6 +242,44 @@ const ServicesPage = () => {
                                     <h4 className="font-jakarta font-medium text-2xl mb-3">How do consultations work?</h4>
                                     <p className="font-jakarta text-base text-[#808080] leading-relaxed mb-5">These issues can
                                         range from minor illnesses and injuries to chronic.</p>
+                                </div>
+                            </div>
+
+                            <div className="mt-32">
+                                <div className="grid relative grid-cols-3/1 gap-3 md:gap-10">
+                                    <div>
+                                        <Image src={ProgressOne} alt="woman posing for picture" className="rounded-xl h-full w-full" />
+                                    </div>
+                                    <div className="flex flex-col gap-3 md:gap-10">
+                                        <Image src={ProgressTwo} alt="woman posing for picture" className="rounded-xl h-full w-full" />
+                                        <Image src={ProgressThree} alt="woman posing for picture" className="rounded-xl h-full w-full" />
+                                    </div>
+                                    <div className="bg-white absolute rounded-xl -bottom-24 md:-bottom-10 w-[70%] md:w-[30%] right-14 md:right-32 py-5 shadow-2xl px-5">
+                                        <div>
+                                            <h3 className="font-jakarta font-medium text-xl md:text-3xl mb-5">Our Progress and <br /> Milestones</h3>
+                                            <p className="text-xs md:text-sm font-jakarta font-medium text-[#808080]">
+                                                Effective progress tracking and milestone setting are critical components...
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mt-32 md:mt-24 grid-cols-2 gap-10 md:gap-0 md:grid-cols-4 grid">
+                                    <div className="text-center py-5 md:border-solid md:border-[#F963AB] md:border-r px-10">
+                                        <h2 className="text-4xl font-jakarta font-medium mb-3">2+</h2>
+                                        <p className="text-base font-jakarta font-medium text-[#808080]">Years of Experience</p>
+                                    </div>
+                                    <div className="text-center py-5 md:border-solid md:border-[#F963AB] md:border-r px-10">
+                                        <h2 className="text-4xl font-jakarta font-medium mb-3">70+</h2>
+                                        <p className="text-base font-jakarta font-medium text-[#808080]">Total Courses</p>
+                                    </div>
+                                    <div className="text-center py-5 md:border-solid md:border-[#F963AB] md:border-r px-10">
+                                        <h2 className="text-4xl font-jakarta font-medium mb-3">1K+</h2>
+                                        <p className="text-base font-jakarta font-medium text-[#808080]">Satisfied Partnerships</p>
+                                    </div>
+                                    <div className="text-center py-5 px-10">
+                                        <h2 className="text-4xl font-jakarta font-medium mb-3">20+</h2>
+                                        <p className="text-base font-jakarta font-medium text-[#808080]">Certificates and Awards</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
