@@ -5,7 +5,7 @@ import DisplayLayout from "@/components/layout";
 import HeroImg from "@/assets/images/services/hero.png";
 import Consultation from "@/assets/images/services/consultation.png";
 import PartnershipImg from "@/assets/images/services/partnership.png";
-import JobImg from "@/assets/images/services/job.png";
+import JobImg from "@/assets/images/services/postings.png";
 import SpeakingImg from "@/assets/images/services/speaking.png";
 
 import TalentOne from "@/assets/images/services/talent_1.png";
@@ -61,10 +61,10 @@ const ServicesPage = () => {
         <div>
             <DisplayLayout>
                 <>
-                    <div className="px-20 mt-36">
-                        <div className="grid grid-cols-2 gap-20" ref={addToRefs}>
+                    <div className="px-5 md:px-20 mt-36">
+                        <div className="flex flex-col md:grid grid-cols-2 gap-5 md:gap-20" ref={addToRefs}>
                             <div>
-                                <h3 className="font-jakarta leading-tight text-5xl font-bold mt-5 mb-5">
+                                <h3 className="font-jakarta leading-tight text-3xl md:text-5xl font-bold mt-5 mb-5">
                                     Empowering Employers and Talents to Thrive in Remote Work
                                 </h3>
                                 <div></div>
@@ -73,8 +73,8 @@ const ServicesPage = () => {
                                 <Image src={HeroImg} alt="woman posing for picture" className="rounded-xl w-full" />
                             </div>
                         </div>
-                        <div className="mt-20" ref={addToRefs}>
-                            <div className="grid grid-cols-2 items-center gap-20">
+                        <div className="mt-5 md:mt-20" ref={addToRefs}>
+                            <div className="flex flex-col-reverse md:grid grid-cols-2 md:items-center gap-10 md:gap-20">
                                 <div className="">
                                     <div className="flex gap-2">
                                         <Link href="/" className="border rounded-lg py-4 px-5 border-solid border-[#D6D6D6] bg-[#1018280D] flex gap-1 items-center">
@@ -94,21 +94,21 @@ const ServicesPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-36 px-20">
+                    <div className="mt-36 px-5 md:px-20">
                         <div className="text-center" ref={addToRefs}>
                             <div className="w-max mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500] text-accent">Services</h4>
                             </div>
-                            <h3 className="font-jakarta text-5xl font-bold mt-5 mb-5">
-                                For Employers & Businesses
+                            <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-5 mb-5">
+                                For Remote Workers and Talents
                             </h3>
-                            <p className="text-base w-[65%] leading-relaxed mx-auto text-[#808080] font-jakarta">
+                            <p className="text-base md:w-[65%] leading-relaxed mx-auto text-[#808080] font-jakarta">
                                 Define ambitious service benchmarks that challenge your team to strive for excellence. These benchmarks should be
                                 both aspirational and achievable, inspiring everyone to aim higher and constantly improve.
                             </p>
                         </div>
-                        <div className="grid grid-cols-2 gap-10 w-[90%] mx-auto mt-16">
-                            <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] grid grid-cols-1/3 items-center p-4 gap-10">
+                        <div className="flex flex-col md:grid grid-cols-2 gap-10 md:w-[90%] mx-auto mt-16">
+                            <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] md:grid grid-cols-1/3 items-center p-4 gap-10">
                                 <div>
                                     <Image src={Consultation} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                 </div>
@@ -119,56 +119,56 @@ const ServicesPage = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] grid grid-cols-1/3 items-center p-4 gap-10">
+                            <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] md:grid grid-cols-1/3 items-center p-4 gap-10">
                                 <div>
                                     <Image src={JobImg} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                 </div>
                                 <div className="py-4">
-                                    <h4 className="font-600 mb-2 text-xl font-jakarta">Consultation Services</h4>
+                                    <h4 className="font-600 mb-2 text-xl font-jakarta">Remote Work Resources</h4>
                                     <p className="text-base leading-relaxed mx-auto text-[#475467] font-jakarta">
-                                        Tailored advice and strategies to help you integrate remote work into your business successfully.
+                                        Easily post job opportunities and connect with skilled remote professionals in our community.
                                     </p>
                                 </div>
                             </div>
-                            <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] grid grid-cols-1/3 items-center p-4 gap-10">
+                            <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] md:grid grid-cols-1/3 items-center p-4 gap-10">
                                 <div>
                                     <Image src={SpeakingImg} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                 </div>
                                 <div className="py-4">
-                                    <h4 className="font-600 mb-2 text-xl font-jakarta">Consultation Services</h4>
+                                    <h4 className="font-600 mb-2 text-xl font-jakarta">Events and Workshops</h4>
                                     <p className="text-base leading-relaxed mx-auto text-[#475467] font-jakarta">
-                                        Tailored advice and strategies to help you integrate remote work into your business successfully.
+                                        Book us for events and workshops to inspire and educate your team about remote work best practices.
                                     </p>
                                 </div>
                             </div>
-                            <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] grid grid-cols-1/3 items-center p-4 gap-10">
+                            <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] md:grid grid-cols-1/3 items-center p-4 gap-10">
                                 <div>
                                     <Image src={PartnershipImg} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                 </div>
                                 <div className="py-4">
-                                    <h4 className="font-600 mb-2 text-xl font-jakarta">Consultation Services</h4>
+                                    <h4 className="font-600 mb-2 text-xl font-jakarta">Private Community</h4>
                                     <p className="text-base leading-relaxed mx-auto text-[#475467] font-jakarta">
-                                        Tailored advice and strategies to help you integrate remote work into your business successfully.
+                                        Collaborate with Remote WorkHers to foster innovation and inclusivity in the remote workspace.
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div ref={addToRefs} className="mt-36 px-20">
+                        <div ref={addToRefs} className="mt-36 md:px-20">
                             <div className="text-center">
                                 <div className="w-max mx-auto text-[#F963AB]">
                                     <h4 className="font-jost font-[500]">Services</h4>
                                 </div>
-                                <h3 className="font-jakarta text-5xl font-bold mt-5 mb-5">
-                                    For Talents
+                                <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-5 mb-5">
+                                    For Businesses
                                 </h3>
                             </div>
-                            <div className="mt-16">
-                                <div className="grid grid-cols-3 gap-7">
+                            <div className="mt-10 md:mt-16">
+                                <div className="flex flex-col md:grid grid-cols-3 gap-7">
                                     <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5">
                                         <Image src={TalentOne} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                         <div className="mt-4">
                                             <h3 className="font-jakarta text-2xl font-bold mt-5">
-                                                Courses
+                                                Partnership
                                             </h3>
                                             <div className="mt-2 mx-auto">
                                                 <p className="text-base leading-relaxed font-jakarta text-[#475467] mb-4">
@@ -181,11 +181,11 @@ const ServicesPage = () => {
                                     <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5">
                                         <div className="mt-4">
                                             <h3 className="font-jakarta text-2xl font-bold">
-                                                Masters
+                                                Partnership
                                             </h3>
                                             <div className="mt-2 mx-auto">
                                                 <p className="text-base leading-relaxed font-jakarta text-[#475467] mb-4">
-                                                    Learn everything about remote work, from beginner skills to professional-level expertise.
+                                                    Advanced sessions led by experts to level up your remote work skills.
                                                 </p>
                                                 <Link href="" className="text-accent text-base font-jost font-600 flex gap-3 items-center">Read More <FaArrowRight /></Link>
                                             </div>
@@ -196,11 +196,11 @@ const ServicesPage = () => {
                                         <Image src={TalentThree} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                         <div className="mt-4">
                                             <h3 className="font-jakarta text-2xl font-bold mt-5">
-                                                Courses
+                                                Partnership
                                             </h3>
                                             <div className="mt-2 mx-auto">
                                                 <p className="text-base leading-relaxed font-jakarta text-[#475467] mb-4">
-                                                    Learn everything about remote work, from beginner skills to professional-level expertise.
+                                                    Personalized one-on-one guidance to help you excel in your remote career.
                                                 </p>
                                                 <Link href="" className="text-accent text-base font-jost font-600 flex gap-3 items-center">Read More <FaArrowRight /></Link>
                                             </div>
@@ -209,13 +209,13 @@ const ServicesPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div ref={addToRefs} className="mt-36 px-20">
+                        <div ref={addToRefs} className="mt-36 md:px-20">
                             <div className="text-center">
-                                <h3 className="font-jakarta text-5xl font-bold mt-5 mb-16">
+                                <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-5 mb-16">
                                     Why Choose Us
                                 </h3>
                             </div>
-                            <div className="grid grid-cols-3 text-center gap-20">
+                            <div className="flex flex-col md:grid grid-cols-3 text-center gap-5 md:gap-20">
                                 <div>
                                     <div className="mx-auto border-2 mb-5 border-solid border-accent size-16 rounded-full flex items-center justify-center">
                                         <h4 className="text-accent text-2xl">1</h4>
@@ -242,17 +242,17 @@ const ServicesPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div ref={addToRefs} className="mt-36 px-20">
+                        <div ref={addToRefs} className="mt-36 md:px-20">
                             <div className="text-center">
-                                <h3 className="font-jakarta text-5xl font-bold mt-5 mb-16">
+                                <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-5 mb-16">
                                     What Our Community Says
                                 </h3>
                             </div>
                             <div className="my-10">
                                 <Image src={QuoteImg} alt="woman posing for picture" className="rounded-xl mx-auto" />
                             </div>
-                            <div className="mt-10 w-[70%] mx-auto text-center border rounded-xl border-solid border-[#D6D6D6] py-5 px-14">
-                                <h4 className="font-jakarta text-lg font-medium leading-loose">
+                            <div className="mt-10 md:w-[70%] mx-auto text-center border rounded-xl border-solid border-[#D6D6D6] py-5 px-5 md:px-14">
+                                <h4 className="font-jakarta text-base md:text-lg font-medium leading-loose">
                                     Working with Remote WorkHers was a game-changer for our company. Their consultation services helped us
                                     streamline our remote work policies and hire top talent with ease. Highly recommend!
                                 </h4>
@@ -262,11 +262,11 @@ const ServicesPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div ref={addToRefs} className="mt-36 px-20">
-                        <div className="grid grid-cols-2 gap-32 items-center">
+                    <div ref={addToRefs} className="mt-36 px-5 md:px-20">
+                        <div className="flex flex-col md:grid grid-cols-2 gap-10 md:gap-32 md:items-center">
                             <div>
                                 <h4 className="font-jost font-[500] text-accent">Contact Us</h4>
-                                <h3 className="font-jakarta text-5xl font-bold mt-5 mb-16">
+                                <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-5 mb-10 md:mb-16">
                                     Reach Our Service Team
                                 </h3>
                                 <div className="mt-3">
@@ -283,7 +283,7 @@ const ServicesPage = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-2 border-solid border-y border-[#D6D6D6] py-7">
+                                    <div className="flex flex-col gap-8 md:gap-0 md:grid grid-cols-2 border-solid border-y border-[#D6D6D6] py-7">
                                         <div className="flex gap-5">
                                             <div>
                                                 <MdOutlineMail className="font-bold text-accent text-2xl" />
