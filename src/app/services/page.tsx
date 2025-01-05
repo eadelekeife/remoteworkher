@@ -70,7 +70,7 @@ const ServicesPage = () => {
         <div>
             <DisplayLayout>
                 <>
-                    <Image src={VectorImg} alt="vector background" className="vector-bg z-10" />
+                    {/* <Image src={VectorImg} alt="vector background" className="vector-bg z-10" /> */}
                     <div className="md:min-h-[100vh] job-hero pt-24">
                         <div className="md:w-[85%] px-5 md:px-0 mx-auto text-center">
                             <div ref={addToRefs}>
@@ -84,11 +84,11 @@ const ServicesPage = () => {
                             <div ref={addToRefs} className="mt-8">
                             </div>
                         </div>
-                        <div className="flex gap-8 items-end px-20">
-                            <Image src={HeroImgOne} alt="woman posing for picture" className="rounded-xl w-max h-max" />
+                        <div className="flex w-max gap-8 items-end px-20">
+                            <Image src={HeroImgOne} alt="woman posing for picture" className="rounded-xl flex-1 w-max h-max" />
                             <Image src={HeroImgTwo} alt="woman posing for picture" className="rounded-xl w-max h-max" />
                             <Image src={HeroImgThree} alt="woman posing for picture" className="rounded-xl w-max h-max" />
-                            <Image src={HeroImgFour} alt="woman posing for picture" className="rounded-xl w-max h-max" />
+                            <Image src={HeroImgFour} alt="woman posing for picture" className="rounded-xl flex-1 w-max h-max" />
                         </div>
                     </div>
                     {/* <div className="px-5 md:px-20 mt-36">
