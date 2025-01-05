@@ -85,10 +85,10 @@ const ServicesPage = () => {
                             </div>
                         </div>
                         <div className="flex gap-8 items-end px-20">
-                            <Image src={HeroImgOne} alt="woman posing for picture" className="rounded-xl w-full h-max" />
-                            <Image src={HeroImgTwo} alt="woman posing for picture" className="rounded-xl w-full h-max" />
-                            <Image src={HeroImgThree} alt="woman posing for picture" className="rounded-xl w-full h-max" />
-                            <Image src={HeroImgFour} alt="woman posing for picture" className="rounded-xl w-full h-max" />
+                            <Image src={HeroImgOne} alt="woman posing for picture" className="rounded-xl w-max h-max" />
+                            <Image src={HeroImgTwo} alt="woman posing for picture" className="rounded-xl w-max h-max" />
+                            <Image src={HeroImgThree} alt="woman posing for picture" className="rounded-xl w-max h-max" />
+                            <Image src={HeroImgFour} alt="woman posing for picture" className="rounded-xl w-max h-max" />
                         </div>
                     </div>
                     {/* <div className="px-5 md:px-20 mt-36">
