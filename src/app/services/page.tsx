@@ -212,7 +212,7 @@ const ServicesPage = () => {
                                     <Image src={TalentTwo} alt="women posing for picture" className="rounded-xl object-cover" />
                                     <div className="mt-4">
                                         <h3 className="font-jakarta text-2xl font-bold">
-                                            Partnership
+                                            Partner Deal
                                         </h3>
                                         <div className="mt-2 mx-auto">
                                             <p className="text-base leading-relaxed font-jakarta text-[#475467] mb-4">
