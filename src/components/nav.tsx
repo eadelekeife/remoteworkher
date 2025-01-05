@@ -93,9 +93,9 @@ const Navigation = (props: NavigationPropsInterface) => {
                         <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
                             <Link className="text-sm font-dmsans" href="/blog">Blog</Link>
                         </li>
-                        <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
+                        {/* <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
                             <Link className="text-sm font-dmsans" href="/job">Job Board</Link>
-                        </li>
+                        </li> */}
                         <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
                             <Link className="text-sm font-dmsans" href="/about-us">About</Link>
                         </li>
