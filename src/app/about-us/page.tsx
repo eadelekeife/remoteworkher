@@ -63,7 +63,7 @@ const AboutUsPage = () => {
                 <>
                     <div className="px-5 md:px-24" ref={addToRefs}>
                         <Image src={VectorImg} alt="vector background" className="vector-bg z-10" />
-                        <div className="md:min-h-[100vh] job-hero pt-32 pb-24">
+                        <div className="md:min-h-[100vh] job-hero pt-24 pb-24">
                             <div className="md:w-[70%] px-5 md:px-0 mx-auto text-center">
                                 <div ref={addToRefs}>
                                     <div className="text-[#F963AB] pt-14">
@@ -72,7 +72,7 @@ const AboutUsPage = () => {
                                     <h2 style={{ display: 'block' }} className="font-600 mx-auto text-4xl md:text-5xl pt-6 leading-tight">Thrive in a World Without Borders</h2>
                                 </div>
                                 <div ref={addToRefs} className="mt-3 md:mt-8 md:w-[70%] mx-auto">
-                                    <p style={{ display: 'block' }} className="text-sm md:text-lg leading-loose md:leading-relaxed mb-16 text-[#475467]">We&apos;re a community dedicated  to promoting and sustaining remote work worldwide.</p>
+                                    <p style={{ display: 'block' }} className="text-sm md:text-lg leading-loose md:leading-normal mb-16 text-[#475467]">We&apos;re a community dedicated  to promoting and sustaining remote work worldwide.</p>
                                 </div>
                             </div>
                             <Image src={Hero} alt="woman posing for picture" className="h-full rounded-xl w-full" />

@@ -57,7 +57,7 @@ const EventsPage = () => {
             <DisplayLayout>
                 <>
                     <Image src={VectorImg} alt="vector background" className="vector-bg z-10" />
-                    <div className="md:min-h-[100vh] job-hero pt-32">
+                    <div className="md:min-h-[100vh] job-hero pt-24">
                         <div className="md:w-[85%] px-5 md:px-0 mx-auto text-center">
                             <div ref={addToRefs}>
                                 <h2 className="block font-bold md:w-[80%] mx-auto text-4xl md:text-5xl pt-16 leading-tight md:leading-tight">

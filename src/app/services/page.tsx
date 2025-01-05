@@ -71,10 +71,10 @@ const ServicesPage = () => {
             <DisplayLayout>
                 <>
                     <Image src={VectorImg} alt="vector background" className="vector-bg z-10" />
-                    <div className="md:min-h-[100vh] job-hero pt-32">
+                    <div className="md:min-h-[100vh] job-hero pt-24">
                         <div className="md:w-[85%] px-5 md:px-0 mx-auto text-center">
                             <div ref={addToRefs}>
-                                <h2 className="block font-bold md:w-[70%] mx-auto text-4xl md:text-5xl pt-12 leading-normal md:leading-normal">
+                                <h2 className="block font-bold md:w-[70%] mx-auto text-4xl md:text-5xl pt-12 leading-tight md:leading-tight">
                                     Empowering Employers and Talents to Thrive in Remote Work</h2>
                             </div>
                             <div ref={addToRefs} className="mt-3 md:mt-6 md:w-[65%] mx-auto">

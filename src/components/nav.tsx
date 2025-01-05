@@ -51,9 +51,9 @@ const Navigation = (props: NavigationPropsInterface) => {
                     <li>
                         <Link href="/blog">Blog</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link href="/job">Job Board</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link href="/about-us">About</Link>
                     </li>
