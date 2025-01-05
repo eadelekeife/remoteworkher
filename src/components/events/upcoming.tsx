@@ -20,7 +20,7 @@ const UpcomingEvents = () => {
 
                     <div className="mt-10 flex items-center justify-between">
                         <button className="bg-black py-3 px-10 text-white rounded-lg">Register</button>
-                        <p className="text-[#747474]">Paid</p>
+                        <p className="text-[#747474]">Physical</p>
                     </div>
                 </div>
             </div>

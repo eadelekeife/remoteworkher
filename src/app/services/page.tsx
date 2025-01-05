@@ -22,7 +22,13 @@ import ProgressOne from "@/assets/images/services/progress_1.png";
 import ProgressTwo from "@/assets/images/services/progress_2.png";
 import ProgressThree from "@/assets/images/services/progress_3.png";
 
+import HeroImgOne from "@/assets/images/services/hero1.png";
+import HeroImgTwo from "@/assets/images/services/hero2.png";
+import HeroImgThree from "@/assets/images/services/hero3.png";
+import HeroImgFour from "@/assets/images/services/hero4.png";
 
+
+import VectorImg from "@/assets/images/vector-bg.png";
 import Image from "next/image";
 
 import { FaArrowRight } from "react-icons/fa";
@@ -64,7 +70,28 @@ const ServicesPage = () => {
         <div>
             <DisplayLayout>
                 <>
-                    <div className="px-5 md:px-20 mt-36">
+                    <Image src={VectorImg} alt="vector background" className="vector-bg z-10" />
+                    <div className="md:min-h-[100vh] job-hero pt-32">
+                        <div className="md:w-[85%] px-5 md:px-0 mx-auto text-center">
+                            <div ref={addToRefs}>
+                                <h2 className="block font-bold md:w-[80%] mx-auto text-4xl md:text-6xl pt-16 leading-tight md:leading-tight">
+                                    Empowering Employers and Talents to Thrive in Remote Work</h2>
+                            </div>
+                            <div ref={addToRefs} className="mt-3 md:mt-8 md:w-[65%] mx-auto">
+                                <p style={{ display: 'block' }} className="text-sm md:text-lg leading-loose md:leading-normal">Explore practical advice, success stories, and the latest trends
+                                    in remote work. Are you just starting out or levelling up your skills, we've got something for every Remote WorkHer.</p>
+                            </div>
+                            <div ref={addToRefs} className="mt-8">
+                            </div>
+                        </div>
+                        <div className="flex gap-8 items-end px-20">
+                            <Image src={HeroImgOne} alt="woman posing for picture" className="rounded-xl w-full h-max" />
+                            <Image src={HeroImgTwo} alt="woman posing for picture" className="rounded-xl w-full h-max" />
+                            <Image src={HeroImgThree} alt="woman posing for picture" className="rounded-xl w-full h-max" />
+                            <Image src={HeroImgFour} alt="woman posing for picture" className="rounded-xl w-full h-max" />
+                        </div>
+                    </div>
+                    {/* <div className="px-5 md:px-20 mt-36">
                         <div className="flex flex-col md:grid grid-cols-2 gap-5 md:gap-20" ref={addToRefs}>
                             <div>
                                 <h3 className="font-jakarta leading-tight text-3xl md:text-5xl font-bold mt-5 mb-5">
@@ -96,7 +123,7 @@ const ServicesPage = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="mt-36 px-5 md:px-20">
                         <div className="text-center" ref={addToRefs}>
                             <div className="w-max mx-auto text-[#F963AB]">
@@ -166,8 +193,8 @@ const ServicesPage = () => {
                                 </h3>
                             </div>
                             <div className="mt-10 md:mt-16">
-                                <div className="flex flex-col md:grid grid-cols-3 gap-7">
-                                    <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5">
+                                {/* <div className="flex flex-col md:grid grid-cols-3 gap-7"> */}
+                                {/* <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5">
                                         <Image src={TalentOne} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                         <div className="mt-4">
                                             <h3 className="font-jakarta text-2xl font-bold mt-5">
@@ -180,22 +207,26 @@ const ServicesPage = () => {
                                                 <Link href="" className="text-accent text-base font-jost font-600 flex gap-3 items-center">Read More <FaArrowRight /></Link>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5">
-                                        <div className="mt-4">
-                                            <h3 className="font-jakarta text-2xl font-bold">
-                                                Partnership
-                                            </h3>
-                                            <div className="mt-2 mx-auto">
-                                                <p className="text-base leading-relaxed font-jakarta text-[#475467] mb-4">
-                                                    Advanced sessions led by experts to level up your remote work skills.
-                                                </p>
-                                                <Link href="" className="text-accent text-base font-jost font-600 flex gap-3 items-center">Read More <FaArrowRight /></Link>
-                                            </div>
+                                    </div> */}
+                                <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5 flex gap-5">
+                                    <Image src={TalentTwo} alt="women posing for picture" className="rounded-xl object-cover" />
+                                    <div className="mt-4">
+                                        <h3 className="font-jakarta text-2xl font-bold">
+                                            Partnership
+                                        </h3>
+                                        <div className="mt-2 mx-auto">
+                                            <p className="text-base leading-relaxed font-jakarta text-[#475467] mb-4">
+                                                Advanced sessions led by experts to level up your remote work skills.Advanced sessions led by 
+                                                experts to level up your remote work skills.Advanced sessions led by experts to level up your 
+                                                remote work skills.Advanced sessions led by experts to level up your remote work skills. Advanced 
+                                                sessions led by experts to level up your remote work skills. Advanced sessions led by experts to 
+                                                level up your remote work skills.
+                                            </p>
+                                            <Link href="" className="text-accent text-base font-jost font-600 flex gap-3 items-center">Read More <FaArrowRight /></Link>
                                         </div>
-                                        <Image src={TalentTwo} alt="women posing for picture" className="rounded-xl w-full object-cover mt-10" />
                                     </div>
-                                    <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5">
+                                </div>
+                                {/* <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5">
                                         <Image src={TalentThree} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                         <div className="mt-4">
                                             <h3 className="font-jakarta text-2xl font-bold mt-5">
@@ -208,8 +239,8 @@ const ServicesPage = () => {
                                                 <Link href="" className="text-accent text-base font-jost font-600 flex gap-3 items-center">Read More <FaArrowRight /></Link>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div> */}
+                                {/* </div> */}
                             </div>
                         </div>
                         <div ref={addToRefs} className="mt-36 md:px-20">
