@@ -74,10 +74,10 @@ const ServicesPage = () => {
                     <div className="md:min-h-[100vh] job-hero pt-32">
                         <div className="md:w-[85%] px-5 md:px-0 mx-auto text-center">
                             <div ref={addToRefs}>
-                                <h2 className="block font-bold md:w-[80%] mx-auto text-4xl md:text-6xl pt-16 leading-tight md:leading-tight">
+                                <h2 className="block font-bold md:w-[70%] mx-auto text-4xl md:text-5xl pt-12 leading-normal md:leading-normal">
                                     Empowering Employers and Talents to Thrive in Remote Work</h2>
                             </div>
-                            <div ref={addToRefs} className="mt-3 md:mt-8 md:w-[65%] mx-auto">
+                            <div ref={addToRefs} className="mt-3 md:mt-6 md:w-[65%] mx-auto">
                                 <p style={{ display: 'block' }} className="text-sm md:text-lg leading-loose md:leading-normal">Explore practical advice, success stories, and the latest trends
                                     in remote work. Are you just starting out or levelling up your skills, we've got something for every Remote WorkHer.</p>
                             </div>
@@ -129,15 +129,15 @@ const ServicesPage = () => {
                             <div className="w-max mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500] text-accent">Services</h4>
                             </div>
-                            <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-5 mb-5">
-                                For Remote Workers and Talents
+                            <h3 className="font-jakarta text-3xl md:text-4xl font-medium mt-5 mb-5">
+                                Remote Workers and Talents
                             </h3>
                             <p className="text-base md:w-[65%] leading-relaxed mx-auto text-[#808080] font-jakarta">
                                 Define ambitious service benchmarks that challenge your team to strive for excellence. These benchmarks should be
                                 both aspirational and achievable, inspiring everyone to aim higher and constantly improve.
                             </p>
                         </div>
-                        <div className="flex flex-col md:grid grid-cols-2 gap-10 md:w-[90%] mx-auto mt-16">
+                        <div className="flex flex-col md:grid grid-cols-2 gap-10 md:w-[90%] mx-auto mt-12">
                             <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] md:grid grid-cols-1/3 items-center p-4 gap-10">
                                 <div>
                                     <Image src={Consultation} alt="women posing for picture" className="rounded-xl w-full object-cover" />
@@ -183,16 +183,16 @@ const ServicesPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div ref={addToRefs} className="mt-36 md:px-20">
+                        <div ref={addToRefs} className="mt-36">
                             <div className="text-center">
                                 <div className="w-max mx-auto text-[#F963AB]">
                                     <h4 className="font-jost font-[500]">Services</h4>
                                 </div>
-                                <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-5 mb-5">
+                                <h3 className="font-jakarta text-3xl md:text-4xl font-medium mt-5 mb-5">
                                     For Businesses
                                 </h3>
                             </div>
-                            <div className="mt-10 md:mt-16">
+                            <div className="mt-10 md:mt-16 px-20">
                                 {/* <div className="flex flex-col md:grid grid-cols-3 gap-7"> */}
                                 {/* <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5">
                                         <Image src={TalentOne} alt="women posing for picture" className="rounded-xl w-full object-cover" />
@@ -208,7 +208,7 @@ const ServicesPage = () => {
                                             </div>
                                         </div>
                                     </div> */}
-                                <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5 flex gap-5">
+                                <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5 flex gap-12">
                                     <Image src={TalentTwo} alt="women posing for picture" className="rounded-xl object-cover" />
                                     <div className="mt-4">
                                         <h3 className="font-jakarta text-2xl font-bold">
@@ -245,7 +245,7 @@ const ServicesPage = () => {
                         </div>
                         <div ref={addToRefs} className="mt-36 md:px-20">
                             <div className="text-center">
-                                <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-5 mb-16">
+                                <h3 className="font-jakarta text-3xl md:text-4xl font-medium mt-5 mb-16">
                                     Why Choose Us
                                 </h3>
                             </div>
@@ -316,7 +316,7 @@ const ServicesPage = () => {
                         </div>
                         <div ref={addToRefs} className="mt-36 md:px-20">
                             <div className="text-center">
-                                <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-5 mb-16">
+                                <h3 className="font-jakarta text-3xl md:text-4xl font-medium mt-5 mb-16">
                                     What Our Community Says
                                 </h3>
                             </div>
@@ -338,7 +338,7 @@ const ServicesPage = () => {
                         <div className="flex flex-col md:grid grid-cols-2 gap-10 md:gap-32 md:items-center">
                             <div>
                                 <h4 className="font-jost font-[500] text-accent">Contact Us</h4>
-                                <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-5 mb-10 md:mb-16">
+                                <h3 className="font-jakarta text-3xl md:text-5xl font-medium mt-5 mb-10 md:mb-14">
                                     Reach Our Service Team
                                 </h3>
                                 <div className="mt-3">

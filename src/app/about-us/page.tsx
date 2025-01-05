@@ -69,7 +69,7 @@ const AboutUsPage = () => {
                                     <div className="text-[#F963AB] pt-14">
                                         <h4 className="font-600 text-base font-dmsans">About us</h4>
                                     </div>
-                                    <h2 style={{ display: 'block' }} className="font-600 mx-auto text-4xl md:text-6xl pt-6 leading-tight">Thrive in a World Without Borders</h2>
+                                    <h2 style={{ display: 'block' }} className="font-600 mx-auto text-4xl md:text-5xl pt-6 leading-tight">Thrive in a World Without Borders</h2>
                                 </div>
                                 <div ref={addToRefs} className="mt-3 md:mt-8 md:w-[70%] mx-auto">
                                     <p style={{ display: 'block' }} className="text-sm md:text-lg leading-loose md:leading-relaxed mb-16 text-[#475467]">We&apos;re a community dedicated  to promoting and sustaining remote work worldwide.</p>
@@ -144,7 +144,7 @@ const AboutUsPage = () => {
                             <div className="w-max mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500]">Testimonial</h4>
                             </div>
-                            <h3 className="font-jakarta text-3xl md:text-5xl font-medium mt-5">
+                            <h3 className="font-jakarta text-3xl md:text-4xl font-medium mt-5">
                                 What our users say about us
                             </h3>
                         </div>
@@ -202,7 +202,7 @@ const AboutUsPage = () => {
                     </div>
                     <div className="mt-36 px-5 md:px-0 mx-auto">
                         <div className="text-center" ref={addToRefs}>
-                            <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-5">
+                            <h3 className="font-jakarta text-3xl md:text-4xl font-bold mt-5">
                                 Services we Offer
                             </h3>
                             <div className="md:w-[60%] mt-3 md:mt-7 mx-auto">
@@ -213,7 +213,7 @@ const AboutUsPage = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="mt-14 md:px-24" ref={addToRefs}>
+                        <div className="mt-10 md:px-24" ref={addToRefs}>
                             <div className="flex flex-col md:grid grid-cols-4 gap-8">
                                 <div ref={addToRefs}>
                                     <Image src={GridOne} alt="woman posing for picture" className="rounded-xl" />
@@ -221,7 +221,7 @@ const AboutUsPage = () => {
                                         <h3 className="font-jakarta text-2xl font-bold mt-5">
                                             Community Access
                                         </h3>
-                                        <div className="mt-3 mx-auto">
+                                        <div className="mt-2 mx-auto">
                                             <p className="text-base leading-relaxed font-jakarta text-[#475467]">
                                                 Journey to the highest reaches of the earth and discover the unparalleled.
                                             </p>
@@ -234,7 +234,7 @@ const AboutUsPage = () => {
                                         <h3 className="font-jakarta text-2xl font-bold mt-5">
                                             Resources
                                         </h3>
-                                        <div className="mt-3 mx-auto">
+                                        <div className="mt-2 mx-auto">
                                             <p className="text-base leading-relaxed font-jakarta text-[#475467]">
                                                 Journey to the highest reaches of the earth and discover the unparalleled.
                                             </p>
@@ -247,7 +247,7 @@ const AboutUsPage = () => {
                                         <h3 className="font-jakarta text-2xl font-bold mt-5">
                                             Events and Workshop
                                         </h3>
-                                        <div className="mt-3 mx-auto">
+                                        <div className="mt-2 mx-auto">
                                             <p className="text-base leading-relaxed font-jakarta text-[#475467]">
                                                 Journey to the highest reaches of the earth and discover the unparalleled.
                                             </p>
@@ -260,7 +260,7 @@ const AboutUsPage = () => {
                                         <h3 className="font-jakarta text-2xl font-bold mt-5">
                                             Mentorship
                                         </h3>
-                                        <div className="mt-3 mx-auto">
+                                        <div className="mt-2 mx-auto">
                                             <p className="text-base leading-relaxed font-jakarta text-[#475467]">
                                                 Journey to the highest reaches of the earth and discover the unparalleled.
                                             </p>
@@ -273,10 +273,10 @@ const AboutUsPage = () => {
                     <div className="mt-36 mx-auto">
                         <div className="" ref={addToRefs}>
                             <div className="mt-7 px-5 md:px-24 text-center">
-                                <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-4">
+                                <h3 className="font-jakarta text-3xl md:text-4xl font-bold mt-4">
                                     Meet our team.
                                 </h3>
-                                <div className="md:w-[50%] mx-auto mt-3 md:mt-7">
+                                <div className="md:w-[50%] mx-auto mt-3 md:mt-5">
                                     <p className="text-lg font-jakarta text-[#475467]">
                                         Empowers users to create, customize, collaborate, and track seamlessly, streamlining project tasks for optimal efficiency.
                                     </p>
