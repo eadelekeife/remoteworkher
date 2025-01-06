@@ -85,10 +85,18 @@ const ServicesPage = () => {
                             </div>
                         </div>
                         <div className="flex w-max gap-8 items-end px-20">
-                            <Image src={HeroImgOne} alt="woman posing for picture" className="rounded-xl flex-1 w-max h-max" />
-                            <Image src={HeroImgTwo} alt="woman posing for picture" className="rounded-xl w-max h-max" />
-                            <Image src={HeroImgThree} alt="woman posing for picture" className="rounded-xl w-max h-max" />
-                            <Image src={HeroImgFour} alt="woman posing for picture" className="rounded-xl flex-1 w-max h-max" />
+                            <div>
+                                <Image src={HeroImgOne} alt="woman posing for picture" className="rounded-xl flex-1 max-w-full h-auto" />
+                            </div>
+                            <div>
+                                <Image src={HeroImgTwo} alt="woman posing for picture" className="rounded-xl max-w-full h-auto" />
+                            </div>
+                            <div>
+                                <Image src={HeroImgThree} alt="woman posing for picture" className="rounded-xl max-w-full h-auto" />
+                            </div>
+                            <div>
+                                <Image src={HeroImgFour} alt="woman posing for picture" className="rounded-xl flex-1 max-w-full h-auto" />
+                            </div>
                         </div>
                     </div>
                     {/* <div className="px-5 md:px-20 mt-36">
@@ -216,10 +224,10 @@ const ServicesPage = () => {
                                         </h3>
                                         <div className="mt-2 mx-auto">
                                             <p className="text-base leading-relaxed font-jakarta text-[#475467] mb-4">
-                                                Advanced sessions led by experts to level up your remote work skills.Advanced sessions led by 
-                                                experts to level up your remote work skills.Advanced sessions led by experts to level up your 
-                                                remote work skills.Advanced sessions led by experts to level up your remote work skills. Advanced 
-                                                sessions led by experts to level up your remote work skills. Advanced sessions led by experts to 
+                                                Advanced sessions led by experts to level up your remote work skills.Advanced sessions led by
+                                                experts to level up your remote work skills.Advanced sessions led by experts to level up your
+                                                remote work skills.Advanced sessions led by experts to level up your remote work skills. Advanced
+                                                sessions led by experts to level up your remote work skills. Advanced sessions led by experts to
                                                 level up your remote work skills.
                                             </p>
                                             <Link href="" className="text-accent text-base font-jost font-600 flex gap-3 items-center">Read More <FaArrowRight /></Link>
