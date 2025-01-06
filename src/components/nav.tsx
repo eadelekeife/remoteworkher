@@ -48,9 +48,6 @@ const Navigation = (props: NavigationPropsInterface) => {
                     <li>
                         <Link href="/">Home</Link>
                     </li>
-                    <li>
-                        <Link href="/blog">Blog</Link>
-                    </li>
                     {/* <li>
                         <Link href="/job">Job Board</Link>
                     </li> */}
@@ -62,6 +59,9 @@ const Navigation = (props: NavigationPropsInterface) => {
                     </li>
                     <li>
                         <Link href="/events">Events</Link>
+                    </li>
+                    <li>
+                        <Link href="/blog">Blog</Link>
                     </li>
                     {/* <li>
                         <Link href="/blog">Blog</Link>
@@ -90,9 +90,6 @@ const Navigation = (props: NavigationPropsInterface) => {
                         <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
                             <Link className="text-sm font-dmsans" href="/">Home</Link>
                         </li>
-                        <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
-                            <Link className="text-sm font-dmsans" href="/blog">Blog</Link>
-                        </li>
                         {/* <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
                             <Link className="text-sm font-dmsans" href="/job">Job Board</Link>
                         </li> */}
@@ -104,6 +101,9 @@ const Navigation = (props: NavigationPropsInterface) => {
                         </li>
                         <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
                             <Link className="text-sm font-dmsans" href="/events">Events</Link>
+                        </li>
+                        <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
+                            <Link className="text-sm font-dmsans" href="/blog">Blog</Link>
                         </li>
                         <li className="border-b border-solid border-[#F2F4F7] px-5 pb-2">
                             <Link className="text-sm font-dmsans" href="/">Join Now</Link>

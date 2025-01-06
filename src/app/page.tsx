@@ -20,7 +20,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // import { Navigation, Pagination } from 'swiper';
 
 import HeroPeople from "@/assets/images/hero_people.png";
-import HeroImg from "@/assets/images/hero.png";
+// import HeroImg from "@/assets/images/hero.png";
+import HeroImg from "@/assets/images/home/hero.png";
 import HeroFly from "@/assets/images/patterns.svg";
 
 import Company1 from "@/assets/images/hero/companies/logo_1.svg";
@@ -65,6 +66,10 @@ import Shape from "@/assets/images/hero/Shape.png";
 
 import Woman from "@/assets/images/hero/woman.png";
 import Community from "@/assets/images/hero/community.png";
+import Quote from "@/assets/images/home/quote.png";
+
+import MainInvolved from "@/assets/images/home/main_involved.png";
+import SecInvolved from "@/assets/images/home/sec_involved.png";
 
 import BlogImg from "@/assets/images/blog/blog_content.png";
 import { IoFilter } from "react-icons/io5";
@@ -107,18 +112,19 @@ export default function JobBoard() {
     <div>
       <DisplayLayout>
         <>
-          <div className="px-5 md:px-20 pt-32">
+          <div className="px-5 md:px-20 pt-32 md:pt-20">
             <div className="">
               <div ref={addToRefs} className="flex flex-col md:grid grid-cols-2 items-center">
                 <div className="relative">
                   <h2 className="text-[2rem] md:text-[3.5rem] font-bold font-jakarta font-[700] leading-tight">
                     More Than Just a Space, it&apos;s a Community of Remote WorkHers
                   </h2>
-                  <p className="mt-6 text-[#666666] text-lg font-[300] w-full md:w-[80%]">
+                  <p className="mt-6 text-[#666666] text-lg font-[300] w-full md:w-[70%] mb-10">
                     Whatever your remote work journey looks like, Remote WorkHER is here to support, inspire, and elevate you.
                   </p>
-                  <Image layout="intrisic" src={HeroPeople} className="w-[40%] md:w-max mt-5 md:mt-10 mb-5 md:mb-10" alt="collection of women" />
-                  <button className="bg-accent px-8 py-4 font-[600] text-base text-white rounded-lg">Join The Community</button>
+                  <button className="bg-accent px-8 py-4 font-[600] text-base text-white rounded-lg mb-10">Join The Community</button>
+                  <h4 className="font-dmsans text-sm font-bold mb-3">Community Members</h4>
+                  <Image layout="intrisic" src={HeroPeople} className="w-[40%] md:w-max" alt="collection of women" />
                   <Image layout="intrisic" src={HeroFly} className="absolute -top-5 md:top-0 -right-5 md:right-0" alt="flying icon" />
                 </div>
                 <div className="">
@@ -142,7 +148,7 @@ export default function JobBoard() {
           <div className="px-5 md:px-20 mt-20 relative">
             <div className="md:grid grid-cols-1.5/1">
               <div ref={addToRefs}>
-                <h4 className="text-3xl font-bold mb-3">Who We Are</h4>
+                <h4 className="text-3xl font-bold mb-4">Who We Are</h4>
                 <p className="text-base md:text-lg mb-7 md:mb-0 leading-loose text-[#475467]">
                   RemoteWorkHer is a platform dedicated to empowering individuals through remote work opportunities and resources. We help
                   you connect, learn, and grow in your remote career, regardless of where you are
@@ -199,7 +205,7 @@ export default function JobBoard() {
                       // Desktop view
                       1024: {
                         slidesPerView: 4,
-                        spaceBetween: 20,
+                        spaceBetween: 35,
                       },
                     }}
                   >
@@ -329,59 +335,39 @@ export default function JobBoard() {
                 </div>
             }
           </div>
-          <div className="mt-28 px-5 md:px-20 relative">
-            <div className="flex flex-col md:flex-row gap-14 md:gap-28 md:items-center">
-              <div className="grid md:block grid-cols-2 gap-3 md:gap-5">
-                <div className="md:mb-24">
-                  <Image layout="intrisic" src={Woman} className="w-max" alt="collection of women" />
-                </div>
-                <div className="">
-                  <div className="grid grid-cols-2 gap-3 md:gap-5">
-                    <div className="flex flex-col gap-5">
-                      <Image layout="intrisic" src={Grid1} className="w-max" alt="collection of women" />
-                      <Image layout="intrisic" src={Grid3} className="w-max" alt="collection of women" />
-                    </div>
-                    <div>
-                      <Image layout="intrisic" src={Grid2} className="w-full h-full object-cover object-top rounded-3xl" alt="collection of women" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div ref={addToRefs}>
-                  <h4 className="text-3xl font-bold mb-5">Get Involved</h4>
-                  <div>
-                    <div className="py-4 pl-5 border-l-4 mb-3 border-solid border-black">
-                      <h5 className="mb-1 font-dmsans font-[600]">Mentorship</h5>
-                      <p className="text-[#475467] text-base">Join in on this mentor ship programme as either a Mentor or a Mentee and
-                        make use of the opportunity to learn and impart others</p>
-                    </div>
-                    <div className="py-4 pl-5 border-l-4 mb-2 border-solid border-[#F2F4F7]">
-                      <h5 className="mb-1 font-dmsans font-[600]">Volunteering</h5>
-                      <p className="text-[#475467] text-base">Join us and become a part of our esteemed volunteers with
-                        exclusive access to our platform and resources</p>
-                    </div>
-                    <button className="bg-black py-4 px-10 rounded-lg text-white text-sm mt-8">Join Today</button>
-                  </div>
-                </div>
-                <Image layout="intrisic" src={PurpleGradient} className="w-max absolute top-[-10rem] right-0" alt="collection of women" />
-              </div>
-              <div>
-                <Image layout="intrisic" src={Community} className="w-[40%] md:w-max" alt="collection of women" />
-              </div>
-            </div>
-            <Image layout="intrisic" src={RedGradient} className="w-max absolute -top-[20rem] left-0" alt="gradient" />
-          </div>
           <div className="mt-28 md:mt-36 px-5 md:px-20">
-            <div ref={addToRefs} className="md:w-[50%]">
+            {/* <div ref={addToRefs} className="md:w-[50%]">
               <p className="text-base font-[600] text-[#667085] mb-4">Work Smarter</p>
               <h3 className="text-3xl w-[70%] md:w-full md:text-4xl font-jakarta font-[600] mb-5">Be a part of something great</h3>
               <p className="text-base font-[500] text-[#667085]">
                 Everything you need to work from the comfort of your home as a limtless Remote workHer in this modern day. We&apos;ve done all
                 the heavy work and research so you don&apos;t have to — the perfect commnunity to be as a remote worker.
               </p>
+            </div> */}
+            <div className="grid grid-cols-2 md:grid-cols-4 text-center gap-x-10 gap-y-10 md:gap-y-16 mt-16">
+              <div ref={addToRefs}>
+                <h3 className="font-jakarta text-4xl md:text-6xl font-[600] mb-4">400+</h3>
+                <h5 className="font-dmsans font-[600] text-base md:text-lg mb-2">Partnerships Created</h5>
+                <p className="text-sm md:text-base text-[#667085]">We&apos;ve helped build over 400 amazing projects.</p>
+              </div>
+              <div ref={addToRefs}>
+                <h3 className="font-jakarta text-4xl md:text-6xl font-[600] mb-4">70%</h3>
+                <h5 className="font-dmsans font-[600] text-base md:text-lg mb-2">Job board validity</h5>
+                <p className="text-sm md:text-base text-[#667085]">Our customers have reported a 70% in the callback
+                  responses on jobs posted on our platform.</p>
+              </div>
+              <div ref={addToRefs}>
+                <h3 className="font-jakarta text-4xl md:text-6xl font-[600] mb-4">10k</h3>
+                <h5 className="font-dmsans font-[600] text-base md:text-lg mb-2">Community Width</h5>
+                <p className="text-sm md:text-base text-[#667085]">Our free community has a record of ove 20k plus  participating members.</p>
+              </div>
+              <div ref={addToRefs}>
+                <h3 className="font-jakarta text-4xl md:text-6xl font-[600] mb-4">200+</h3>
+                <h5 className="font-dmsans font-[600] text-base md:text-lg mb-2">5 Star Reviews</h5>
+                <p className="text-sm md:text-base text-[#667085]">We&apos;re proud of our 5-star rating with over 200 reviews.</p>
+              </div>
             </div>
-            <div className="flex flex-col md:grid grid-cols-2 gap-10 md:gap-20 mt-16 items-center">
+            {/* <div className="flex flex-col md:grid grid-cols-2 gap-10 md:gap-20 mt-16 items-center">
               <div>
                 <div className="grid grid-cols-2 text-center gap-x-10 gap-y-10 md:gap-y-16">
                   <div ref={addToRefs}>
@@ -410,13 +396,13 @@ export default function JobBoard() {
               <div>
                 <Image layout="intrisic" src={Great} className="w-full" alt="woman holding camera" />
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="mt-28 md:mt-40 px-5 md:px-20 relative">
             <div className="flex flex-col md:grid grid-cols-2 gap-20 items-center">
               <div ref={addToRefs} className="">
                 <p className="text-sm font-[500] text-[#667085] mb-2">JOB BOARD</p>
-                <h3 className="font-jakarta font-bold text-[2rem] md:text-[3.5rem] mb-2 leading-snug">Want to source for remote jobs?</h3>
+                <h3 className="font-jakarta font-bold text-[2rem] md:text-[3.5rem] mb-4 leading-snug">Want to source for remote jobs?</h3>
                 <p className="text-sm md:text-lg font-[#4B5563] leading-loose md:w-[80%]">
                   Join RemoteWorkHer Today
                 </p>
@@ -438,7 +424,83 @@ export default function JobBoard() {
               <Image layout="intrisic" src={RedGradient} className="w-max absolute -top-[20rem] left-0 opacity-30" alt="gradient" />
             </div>
           </div>
-          <div className="mt-32 md:mt-52">
+          <div className="mt-32 md:mt-72 px-5 md:px-20 relative">
+            <div className="grid grid-cols-2 gap-14 md:gap-28 md:items-center">
+              <div>
+                <div className="flex justify-between relative">
+                  <div></div>
+                  <div className="absolute h-full w-full top-0 left-0 flex items-center">
+                    <Image layout="intrisic" src={SecInvolved} className="h-[20rem] w-auto" alt="collection of women" />
+                  </div>
+                  <div>
+                    <div className="-ml-[27rem]">
+                      <Image layout="intrisic" src={MainInvolved} className="w-max" alt="collection of women" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <Image layout="intrisic" src={Quote} className="w-auto h-[25px] mb-4" alt="quote" />
+                <h4 className="text-3xl font-bold mb-10">Get Involved</h4>
+                <div>
+                  <div className="py-1 pl-5 border-l-4 mb-8 border-solid border-black">
+                    <h5 className="mb-1 font-dmsans font-[600]">Mentorship</h5>
+                    <p className="text-[#475467] text-base">Join in on this mentor ship programme as either a Mentor or a Mentee and
+                      make use of the opportunity to learn and impart others</p>
+                  </div>
+                  <div className="py-1 pl-5 border-l-4 mb-2 border-solid border-[#F2F4F7]">
+                    <h5 className="mb-1 font-dmsans font-[600]">Volunteering</h5>
+                    <p className="text-[#475467] text-base">Join us and become a part of our esteemed volunteers with
+                      exclusive access to our platform and resources</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <div className="mt-28 px-5 md:px-20 relative">
+            <div className="flex flex-col md:flex-row gap-14 md:gap-28 md:items-center">
+              <div className="grid md:block grid-cols-2 gap-3 md:gap-5">
+                <div className="md:mb-24">
+                  <Image layout="intrisic" src={Woman} className="w-max" alt="collection of women" />
+                </div>
+                <div className="">
+                  <div className="grid grid-cols-2 gap-3 md:gap-5">
+                    <div className="flex flex-col gap-5">
+                      <Image layout="intrisic" src={Grid1} className="w-max" alt="collection of women" />
+                      <Image layout="intrisic" src={Grid3} className="w-max" alt="collection of women" />
+                    </div>
+                    <div>
+                      <Image layout="intrisic" src={Grid2} className="w-full h-full object-cover object-top rounded-3xl" alt="collection of women" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div ref={addToRefs}>
+                  <h4 className="text-3xl font-bold mb-5">Get Involved</h4>
+                  <div>
+                    <div className="py-4 pl-5 border-l-4 mb-10 border-solid border-black">
+                      <h5 className="mb-1 font-dmsans font-[600]">Mentorship</h5>
+                      <p className="text-[#475467] text-base">Join in on this mentor ship programme as either a Mentor or a Mentee and
+                        make use of the opportunity to learn and impart others</p>
+                    </div>
+                    <div className="py-4 pl-5 border-l-4 mb-2 border-solid border-[#F2F4F7]">
+                      <h5 className="mb-1 font-dmsans font-[600]">Volunteering</h5>
+                      <p className="text-[#475467] text-base">Join us and become a part of our esteemed volunteers with
+                        exclusive access to our platform and resources</p>
+                    </div>
+                    <button className="bg-black py-4 px-10 rounded-lg text-white text-sm mt-8">Join Today</button>
+                  </div>
+                </div>
+                <Image layout="intrisic" src={PurpleGradient} className="w-max absolute top-[-10rem] right-0" alt="collection of women" />
+              </div>
+              <div>
+                <Image layout="intrisic" src={Community} className="w-[40%] md:w-max" alt="collection of women" />
+              </div>
+            </div>
+            <Image layout="intrisic" src={RedGradient} className="w-max absolute -top-[20rem] left-0" alt="gradient" />
+          </div> */}
+          <div className="mt-32">
             <div className="bg-[#FCEFEF] flex flex-col md:grid grid-cols-2">
               <div className="bg-[#E4E4E4] min-h-[20rem]">
 
@@ -462,7 +524,7 @@ export default function JobBoard() {
               </div>
             </div>
           </div>
-          <div className="mt-20 px-5 md:px-20">
+          <div className="mt-32 px-5 md:px-20">
             <div className="flex flex-col md:grid px-5 md:px-20 grid-cols-2 bg-[#FFF4F9] rounded-2xl">
               <div className="py-10 md:py-20">
                 <h3 className="font-jakarta font-bold text-3xl md:text-5xl mb-2 md:mb-5 leading-snug">People love <br /> Remote WorkHer</h3>
@@ -471,7 +533,7 @@ export default function JobBoard() {
                 </p>
               </div>
               <div className="shape relative h-full">
-                <Image layout="intrisic" src={TestimonialCard1} className="w-full md:absolute -top-[2rem] -right-[9rem]" alt="gradient" />
+                <Image layout="intrisic" src={TestimonialCard1} className="w-full md:absolute -top-[5rem] -right-[9rem]" alt="gradient" />
                 <Image layout="intrisic" src={TestimonialCard2} className="w-full md:absolute -mt-[3rem] md:-bottom-[4rem] left-0" alt="gradient" />
               </div>
             </div>

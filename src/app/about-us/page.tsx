@@ -69,10 +69,10 @@ const AboutUsPage = () => {
                                     <div className="text-[#F963AB] pt-14">
                                         <h4 className="font-600 text-base font-dmsans">About us</h4>
                                     </div>
-                                    <h2 style={{ display: 'block' }} className="font-600 mx-auto text-4xl md:text-5xl pt-6 leading-tight">Thrive in a World Without Borders</h2>
+                                    <h2 style={{ display: 'block' }} className="font-600 mx-auto text-4xl md:text-5xl pt-6 leading-tight text-[#101828]">Thrive in a World Without Borders</h2>
                                 </div>
                                 <div ref={addToRefs} className="mt-3 md:mt-8 md:w-[70%] mx-auto">
-                                    <p style={{ display: 'block' }} className="text-sm md:text-lg leading-loose md:leading-normal mb-16 text-[#475467]">We&apos;re a community dedicated  to promoting and sustaining remote work worldwide.</p>
+                                    <p style={{ display: 'block' }} className="text-sm md:text-lg leading-loose md:leading-normal mb-14 text-[#475467]">We&apos;re a community dedicated  to promoting and sustaining remote work worldwide.</p>
                                 </div>
                             </div>
                             <Image src={Hero} alt="woman posing for picture" className="h-full rounded-xl w-full" />
@@ -110,14 +110,14 @@ const AboutUsPage = () => {
                                 </div>
                                 <div>
                                     <div className="mb-10">
-                                        <h4 className="font-bold mb-5 text-2xl md:text-2xl font-jakarta">Our Mission</h4>
+                                        <h4 className="font-bold mb-3 text-2xl md:text-2xl font-jakarta">Our Mission</h4>
                                         <p className="text-lg text-[#666666] leading-relaxed">
                                             At Remote WorkHER, our mission is to empower women to achieve professional success and personal fulfillment
                                             through remote work opportunities. We strive to provide the resources, support, and community needed for
                                             women to thrive in the evolving digital workspace.</p>
                                     </div>
                                     <div className="mb-10">
-                                        <h4 className="font-bold mb-5 text-2xl md:text-2xl font-jakarta">Our Vision</h4>
+                                        <h4 className="font-bold mb-3 text-2xl md:text-2xl font-jakarta">Our Vision</h4>
                                         <p className="text-lg text-[#666666] leading-relaxed">
                                             We envision a world where women have equal access to remote work opportunities, enabling them to
                                             balance their careers and personal lives effectively. By fostering a supportive community and offering
@@ -126,7 +126,7 @@ const AboutUsPage = () => {
                                         </p>
                                     </div>
                                     <div className="">
-                                        <h4 className="font-bold mb-5 text-2xl md:text-2xl font-jakarta">Our Story</h4>
+                                        <h4 className="font-bold mb-3 text-2xl md:text-2xl font-jakarta">Our Story</h4>
                                         <p className="text-lg text-[#666666] leading-relaxed">
                                             Remote WorkHER was founded with the goal of supporting women in their remote work journeys. Our
                                             founder, who also runs Penpalms, a content creation agency, recognized the growing need for guidance
@@ -144,11 +144,11 @@ const AboutUsPage = () => {
                             <div className="w-max mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500]">Testimonial</h4>
                             </div>
-                            <h3 className="font-jakarta text-3xl md:text-4xl font-medium mt-5">
+                            <h3 className="font-jakarta text-3xl md:text-4xl text-[#0D0D0D] font-medium mt-5">
                                 What our users say about us
                             </h3>
                         </div>
-                        <div className="mt-16">
+                        <div className="mt-12">
                             <div className="flex flex-col md:grid grid-cols-2 gap-10">
                                 <div ref={addToRefs}>
                                     <div className="bg-[#F9F9FB] py-10 md:py-0 rounded-xl h-full flex items-center">
@@ -205,7 +205,7 @@ const AboutUsPage = () => {
                             <h3 className="font-jakarta text-3xl md:text-4xl font-bold mt-5">
                                 Services we Offer
                             </h3>
-                            <div className="md:w-[60%] mt-3 md:mt-7 mx-auto">
+                            <div className="md:w-[60%] mt-3 md:mt-5 mx-auto">
                                 <p className="text-base md:text-lg font-jakarta text-[#475467]">
                                     Explore the groundbreaking branding, freelancing/remote work, and beginner guidance. Additionally, I conduct a
                                     LinkedIn masterclass and a 2-day masterclass designed specifically for content writers and social media managers
@@ -213,12 +213,12 @@ const AboutUsPage = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="mt-10 md:px-24" ref={addToRefs}>
+                        <div className="mt-12 md:px-24" ref={addToRefs}>
                             <div className="flex flex-col md:grid grid-cols-4 gap-8">
                                 <div ref={addToRefs}>
                                     <Image src={GridOne} alt="woman posing for picture" className="rounded-xl" />
                                     <div className="mt-4">
-                                        <h3 className="font-jakarta text-2xl font-bold mt-5">
+                                        <h3 className="font-jakarta text-2xl font-600 text-[#0D0D0D] mt-5">
                                             Community Access
                                         </h3>
                                         <div className="mt-2 mx-auto">
@@ -231,7 +231,7 @@ const AboutUsPage = () => {
                                 <div ref={addToRefs}>
                                     <Image src={GridTwo} alt="woman posing for picture" className="rounded-xl" />
                                     <div className="mt-4">
-                                        <h3 className="font-jakarta text-2xl font-bold mt-5">
+                                        <h3 className="font-jakarta text-2xl font-600 text-[#0D0D0D] mt-5">
                                             Resources
                                         </h3>
                                         <div className="mt-2 mx-auto">
@@ -244,7 +244,7 @@ const AboutUsPage = () => {
                                 <div ref={addToRefs}>
                                     <Image src={GridThree} alt="woman posing for picture" className="rounded-xl" />
                                     <div className="mt-4">
-                                        <h3 className="font-jakarta text-2xl font-bold mt-5">
+                                        <h3 className="font-jakarta text-2xl font-600 text-[#0D0D0D] mt-5">
                                             Events and Workshop
                                         </h3>
                                         <div className="mt-2 mx-auto">
@@ -257,7 +257,7 @@ const AboutUsPage = () => {
                                 <div ref={addToRefs}>
                                     <Image src={GridThree} alt="woman posing for picture" className="rounded-xl" />
                                     <div className="mt-4">
-                                        <h3 className="font-jakarta text-2xl font-bold mt-5">
+                                        <h3 className="font-jakarta text-2xl font-600 text-[#0D0D0D] mt-5">
                                             Mentorship
                                         </h3>
                                         <div className="mt-2 mx-auto">
@@ -273,15 +273,15 @@ const AboutUsPage = () => {
                     <div className="mt-36 mx-auto">
                         <div className="" ref={addToRefs}>
                             <div className="mt-7 px-5 md:px-24 text-center">
-                                <h3 className="font-jakarta text-3xl md:text-4xl font-bold mt-4">
+                                <h3 className="font-jakarta text-3xl md:text-4xl font-medium text-[#0D0D0D] mt-4">
                                     Meet our team.
                                 </h3>
                                 <div className="md:w-[50%] mx-auto mt-3 md:mt-5">
-                                    <p className="text-lg font-jakarta text-[#475467]">
+                                    <p className="text-lg font-jakarta text-[#808080]">
                                         Empowers users to create, customize, collaborate, and track seamlessly, streamlining project tasks for optimal efficiency.
                                     </p>
                                 </div>
-                                <div className="flex flex-col md:grid grid-cols-3 gap-10 mt-5 md:mt-14">
+                                <div className="flex flex-col md:grid grid-cols-3 gap-10 mt-5 md:mt-12">
                                     <div>
                                         <Image src={TeamOne} alt="woman posing for picture" className="rounded-xl w-full" />
                                     </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 const UpcomingEvents = () => {
     return (
         <div>
-            <div className="border border-solid border-[#14141C] p-4 rounded-lg">
+            <div className="border border-solid border-[#14141C] p-4 rounded-lg shadow-l shadow-[#F963AB]">
                 <div>
                     <Image src={UpcomingImg} alt="women posing for picture" className="w-full object-center mb-5" />
                 </div>

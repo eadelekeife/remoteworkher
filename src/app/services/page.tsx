@@ -70,15 +70,15 @@ const ServicesPage = () => {
         <div>
             <DisplayLayout>
                 <>
-                    {/* <Image src={VectorImg} alt="vector background" className="vector-bg z-10" /> */}
+                    <Image src={VectorImg} alt="vector background" className="vector-bg z-10" />
                     <div className="md:min-h-[100vh] job-hero pt-24">
                         <div className="md:w-[85%] px-5 md:px-0 mx-auto text-center">
                             <div ref={addToRefs}>
-                                <h2 className="block font-bold md:w-[70%] mx-auto text-4xl md:text-5xl pt-12 leading-tight md:leading-tight">
+                                <h2 className="block font-bold md:w-[70%] mx-auto text-4xl md:text-5xl pt-12 leading-tight md:leading-tight font-jakarta">
                                     Empowering Employers and Talents to Thrive in Remote Work</h2>
                             </div>
                             <div ref={addToRefs} className="mt-3 md:mt-6 md:w-[65%] mx-auto">
-                                <p style={{ display: 'block' }} className="text-sm md:text-lg leading-loose md:leading-normal">Explore practical advice, success stories, and the latest trends
+                                <p className="block text-sm md:text-lg leading-loose md:leading-normal text-[#475467]">Explore practical advice, success stories, and the latest trends
                                     in remote work. Are you just starting out or levelling up your skills, we've got something for every Remote WorkHer.</p>
                             </div>
                             <div ref={addToRefs} className="mt-8">
@@ -132,12 +132,12 @@ const ServicesPage = () => {
                             </div>
                         </div>
                     </div> */}
-                    <div className="mt-36 px-5 md:px-20">
+                    <div className="mt-32 px-5 md:px-20">
                         <div className="text-center" ref={addToRefs}>
                             <div className="w-max mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500] text-accent">Services</h4>
                             </div>
-                            <h3 className="font-jakarta text-3xl md:text-4xl font-medium mt-5 mb-5">
+                            <h3 className="font-jakarta text-3xl md:text-4xl font-bold mt-5 mb-5">
                                 Remote Workers and Talents
                             </h3>
                             <p className="text-base md:w-[65%] leading-relaxed mx-auto text-[#808080] font-jakarta">
@@ -151,8 +151,8 @@ const ServicesPage = () => {
                                     <Image src={Consultation} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                 </div>
                                 <div className="py-4">
-                                    <h4 className="font-600 mb-2 text-xl font-jakarta">Consultation Services</h4>
-                                    <p className="text-base leading-relaxed mx-auto text-[#475467] font-jakarta">
+                                    <h4 className="font-600 mb-2 text-xl font-jakarta font-[#0D0D0D]">Consultation Services</h4>
+                                    <p className="text-base leading-relaxed mx-auto text-[#667085] font-jakarta font-medium">
                                         Tailored advice and strategies to help you integrate remote work into your business successfully.
                                     </p>
                                 </div>
@@ -162,8 +162,8 @@ const ServicesPage = () => {
                                     <Image src={JobImg} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                 </div>
                                 <div className="py-4">
-                                    <h4 className="font-600 mb-2 text-xl font-jakarta">Remote Work Resources</h4>
-                                    <p className="text-base leading-relaxed mx-auto text-[#475467] font-jakarta">
+                                    <h4 className="font-600 mb-2 text-xl font-jakarta font-[#0D0D0D]">Remote Work Resources</h4>
+                                    <p className="text-base leading-relaxed mx-auto text-[#667085] font-jakarta font-medium">
                                         Easily post job opportunities and connect with skilled remote professionals in our community.
                                     </p>
                                 </div>
@@ -173,8 +173,8 @@ const ServicesPage = () => {
                                     <Image src={SpeakingImg} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                 </div>
                                 <div className="py-4">
-                                    <h4 className="font-600 mb-2 text-xl font-jakarta">Events and Workshops</h4>
-                                    <p className="text-base leading-relaxed mx-auto text-[#475467] font-jakarta">
+                                    <h4 className="font-600 mb-2 text-xl font-jakarta font-[#0D0D0D]">Events and Workshops</h4>
+                                    <p className="text-base leading-relaxed mx-auto text-[#667085] font-jakarta font-medium">
                                         Book us for events and workshops to inspire and educate your team about remote work best practices.
                                     </p>
                                 </div>
@@ -184,23 +184,23 @@ const ServicesPage = () => {
                                     <Image src={PartnershipImg} alt="women posing for picture" className="rounded-xl w-full object-cover" />
                                 </div>
                                 <div className="py-4">
-                                    <h4 className="font-600 mb-2 text-xl font-jakarta">Private Community</h4>
-                                    <p className="text-base leading-relaxed mx-auto text-[#475467] font-jakarta">
+                                    <h4 className="font-600 mb-2 text-xl font-jakarta font-[#0D0D0D]">Private Community</h4>
+                                    <p className="text-base leading-relaxed mx-auto text-[#667085] font-jakarta font-medium">
                                         Collaborate with Remote WorkHers to foster innovation and inclusivity in the remote workspace.
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div ref={addToRefs} className="mt-36">
+                        <div ref={addToRefs} className="mt-32">
                             <div className="text-center">
                                 <div className="w-max mx-auto text-[#F963AB]">
                                     <h4 className="font-jost font-[500]">Services</h4>
                                 </div>
-                                <h3 className="font-jakarta text-3xl md:text-4xl font-medium mt-5 mb-5">
+                                <h3 className="font-jakarta text-3xl md:text-4xl font-bold mt-5 mb-5">
                                     For Businesses
                                 </h3>
                             </div>
-                            <div className="mt-10 md:mt-16 px-20">
+                            <div className="mt-10 md:mt-10 md:px-20">
                                 {/* <div className="flex flex-col md:grid grid-cols-3 gap-7"> */}
                                 {/* <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5">
                                         <Image src={TalentOne} alt="women posing for picture" className="rounded-xl w-full object-cover" />
@@ -216,21 +216,21 @@ const ServicesPage = () => {
                                             </div>
                                         </div>
                                     </div> */}
-                                <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5 flex gap-12">
-                                    <Image src={TalentTwo} alt="women posing for picture" className="rounded-xl object-cover" />
-                                    <div className="mt-4">
+                                <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5 flex flex-col md:flex-row gap-4 md:gap-12">
+                                    <Image src={TalentTwo} alt="women posing for picture" className="rounded-xl object-cover w-full md:w-max" />
+                                    <div className="md:mt-4">
                                         <h3 className="font-jakarta text-2xl font-bold">
-                                            Partner Deal
+                                            Partnership
                                         </h3>
                                         <div className="mt-2 mx-auto">
-                                            <p className="text-base leading-relaxed font-jakarta text-[#475467] mb-4">
+                                            <p className="text-base leading-relaxed font-jakarta text-[#808080] mb-4">
                                                 Advanced sessions led by experts to level up your remote work skills.Advanced sessions led by
                                                 experts to level up your remote work skills.Advanced sessions led by experts to level up your
                                                 remote work skills.Advanced sessions led by experts to level up your remote work skills. Advanced
                                                 sessions led by experts to level up your remote work skills. Advanced sessions led by experts to
                                                 level up your remote work skills.
                                             </p>
-                                            <Link href="" className="text-accent text-base font-jost font-600 flex gap-3 items-center">Read More <FaArrowRight /></Link>
+                                            <Link href="" className="text-accent text-base font-jost font-600 flex gap-3 items-center">Partnership Deal<FaArrowRight /></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -251,9 +251,9 @@ const ServicesPage = () => {
                                 {/* </div> */}
                             </div>
                         </div>
-                        <div ref={addToRefs} className="mt-36 md:px-20">
+                        <div ref={addToRefs} className="mt-32 md:px-20">
                             <div className="text-center">
-                                <h3 className="font-jakarta text-3xl md:text-4xl font-medium mt-5 mb-16">
+                                <h3 className="font-jakarta text-3xl md:text-4xl font-medium mt-5 mb-16 text-[#0D0D0D]">
                                     Why Choose Us
                                 </h3>
                             </div>
@@ -262,7 +262,7 @@ const ServicesPage = () => {
                                     <div className="mx-auto border-2 mb-5 border-solid border-accent size-16 rounded-full flex items-center justify-center">
                                         <h4 className="text-accent text-2xl">1</h4>
                                     </div>
-                                    <h4 className="font-jakarta font-medium text-2xl mb-3">How do consultations work?</h4>
+                                    <h4 className="font-jakarta font-medium text-2xl mb-3 text-[#0D0D0D]">How do consultations work?</h4>
                                     <p className="font-jakarta text-base text-[#808080] leading-relaxed mb-5">These issues can
                                         range from minor illnesses and injuries to chronic.</p>
                                 </div>
@@ -270,7 +270,7 @@ const ServicesPage = () => {
                                     <div className="mx-auto border-2 mb-5 border-solid border-accent size-16 rounded-full flex items-center justify-center">
                                         <h4 className="text-accent text-2xl">2</h4>
                                     </div>
-                                    <h4 className="font-jakarta font-medium text-2xl mb-3">How do consultations work?</h4>
+                                    <h4 className="font-jakarta font-medium text-2xl mb-3 text-[#0D0D0D]">How do consultations work?</h4>
                                     <p className="font-jakarta text-base text-[#808080] leading-relaxed mb-5">These issues can
                                         range from minor illnesses and injuries to chronic.</p>
                                 </div>
@@ -278,13 +278,13 @@ const ServicesPage = () => {
                                     <div className="mx-auto border-2 mb-5 border-solid border-accent size-16 rounded-full flex items-center justify-center">
                                         <h4 className="text-accent text-2xl">3</h4>
                                     </div>
-                                    <h4 className="font-jakarta font-medium text-2xl mb-3">How do consultations work?</h4>
+                                    <h4 className="font-jakarta font-medium text-2xl mb-3 text-[#0D0D0D]">How do consultations work?</h4>
                                     <p className="font-jakarta text-base text-[#808080] leading-relaxed mb-5">These issues can
                                         range from minor illnesses and injuries to chronic.</p>
                                 </div>
                             </div>
 
-                            <div className="mt-32">
+                            <div className="mt-40">
                                 <div className="grid relative grid-cols-3/1 gap-3 md:gap-10">
                                     <div>
                                         <Image src={ProgressOne} alt="woman posing for picture" className="rounded-xl h-full w-full" />
@@ -295,8 +295,8 @@ const ServicesPage = () => {
                                     </div>
                                     <div className="bg-white absolute rounded-xl -bottom-24 md:-bottom-10 w-[70%] md:w-[30%] right-14 md:right-32 py-5 shadow-2xl px-5">
                                         <div>
-                                            <h3 className="font-jakarta font-medium text-xl md:text-3xl mb-5">Our Progress and <br /> Milestones</h3>
-                                            <p className="text-xs md:text-sm font-jakarta font-medium text-[#808080]">
+                                            <h3 className="font-jakarta font-medium text-xl md:text-3xl mb-5 text-[#0D0D0D]">Our Progress and <br /> Milestones</h3>
+                                            <p className="text-xs md:text-sm font-jakarta text-[#808080]">
                                                 Effective progress tracking and milestone setting are critical components...
                                             </p>
                                         </div>
@@ -304,27 +304,27 @@ const ServicesPage = () => {
                                 </div>
                                 <div className="mt-32 md:mt-24 grid-cols-2 gap-10 md:gap-0 md:grid-cols-4 grid">
                                     <div className="text-center py-5 md:border-solid md:border-[#F963AB] md:border-r px-10">
-                                        <h2 className="text-4xl font-jakarta font-medium mb-3">2+</h2>
-                                        <p className="text-base font-jakarta font-medium text-[#808080]">Years of Experience</p>
+                                        <h2 className="text-4xl font-jakarta font-medium mb-3 text-[#0D0D0D]">2+</h2>
+                                        <p className="text-base font-jakarta text-[#808080]">Years of Experience</p>
                                     </div>
                                     <div className="text-center py-5 md:border-solid md:border-[#F963AB] md:border-r px-10">
-                                        <h2 className="text-4xl font-jakarta font-medium mb-3">70+</h2>
-                                        <p className="text-base font-jakarta font-medium text-[#808080]">Total Courses</p>
+                                        <h2 className="text-4xl font-jakarta font-medium mb-3 text-[#0D0D0D]">70+</h2>
+                                        <p className="text-base font-jakarta text-[#808080]">Total Courses</p>
                                     </div>
                                     <div className="text-center py-5 md:border-solid md:border-[#F963AB] md:border-r px-10">
-                                        <h2 className="text-4xl font-jakarta font-medium mb-3">1K+</h2>
-                                        <p className="text-base font-jakarta font-medium text-[#808080]">Satisfied Partnerships</p>
+                                        <h2 className="text-4xl font-jakarta font-medium mb-3 text-[#0D0D0D]">1K+</h2>
+                                        <p className="text-base font-jakarta text-[#808080]">Satisfied Partnerships</p>
                                     </div>
                                     <div className="text-center py-5 px-10">
-                                        <h2 className="text-4xl font-jakarta font-medium mb-3">20+</h2>
-                                        <p className="text-base font-jakarta font-medium text-[#808080]">Certificates and Awards</p>
+                                        <h2 className="text-4xl font-jakarta font-medium mb-3 text-[#0D0D0D]">20+</h2>
+                                        <p className="text-base font-jakarta text-[#808080]">Certificates and Awards</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div ref={addToRefs} className="mt-36 md:px-20">
+                        <div ref={addToRefs} className="mt-32 md:px-20">
                             <div className="text-center">
-                                <h3 className="font-jakarta text-3xl md:text-4xl font-medium mt-5 mb-16">
+                                <h3 className="font-jakarta text-3xl md:text-4xl font-medium mt-5 mb-16 text-[#0D0D0D]">
                                     What Our Community Says
                                 </h3>
                             </div>
@@ -332,7 +332,7 @@ const ServicesPage = () => {
                                 <Image src={QuoteImg} alt="woman posing for picture" className="rounded-xl mx-auto" />
                             </div>
                             <div className="mt-10 md:w-[70%] mx-auto text-center border rounded-xl border-solid border-[#D6D6D6] py-5 px-5 md:px-14">
-                                <h4 className="font-jakarta text-base md:text-lg font-medium leading-loose">
+                                <h4 className="font-jakarta text-base md:text-lg font-medium leading-loose text-[#0D0D0D]">
                                     Working with Remote WorkHers was a game-changer for our company. Their consultation services helped us
                                     streamline our remote work policies and hire top talent with ease. Highly recommend!
                                 </h4>
@@ -342,11 +342,11 @@ const ServicesPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div ref={addToRefs} className="mt-36 px-5 md:px-20">
+                    <div ref={addToRefs} className="mt-32 px-5 md:px-20">
                         <div className="flex flex-col md:grid grid-cols-2 gap-10 md:gap-32 md:items-center">
                             <div>
                                 <h4 className="font-jost font-[500] text-accent">Contact Us</h4>
-                                <h3 className="font-jakarta text-3xl md:text-5xl font-medium mt-5 mb-10 md:mb-14">
+                                <h3 className="font-jakarta text-3xl md:text-5xl font-medium mt-5 mb-10 md:mb-14 text-[#0D0D0D]">
                                     Reach Our Service Team
                                 </h3>
                                 <div className="mt-3">
@@ -356,8 +356,8 @@ const ServicesPage = () => {
                                                 <FiMapPin className="font-bold text-accent text-2xl" />
                                             </div>
                                             <div className="">
-                                                <h4 className="font-500 mb-2 text-xl font-jakarta">Address</h4>
-                                                <a href="mailTo:info@+1800-525-54-589" className="text-base leading-relaxed mx-auto text-[#475467] font-jakarta">
+                                                <h4 className="font-medium mb-2 text-xl font-jakarta text-[#0D0D0D]">Address</h4>
+                                                <a href="mailTo:info@+1800-525-54-589" className="text-base leading-relaxed mx-auto text-[#808080] font-jakarta">
                                                     403, Port Washington Road, Canada.
                                                 </a>
                                             </div>
@@ -369,8 +369,8 @@ const ServicesPage = () => {
                                                 <MdOutlineMail className="font-bold text-accent text-2xl" />
                                             </div>
                                             <div className="">
-                                                <h4 className="font-500 mb-2 text-xl font-jakarta">Contact Details</h4>
-                                                <a href="mailTo:info@+1800-525-54-589" className="text-base leading-relaxed mx-auto text-[#475467] font-jakarta">
+                                                <h4 className="font-medium mb-2 text-xl font-jakarta text-[#0D0D0D]">Contact Details</h4>
+                                                <a href="mailTo:info@+1800-525-54-589" className="text-base leading-relaxed mx-auto text-[#808080] font-jakarta">
                                                     +1 800-525-54-589
                                                 </a>
                                             </div>
@@ -380,8 +380,8 @@ const ServicesPage = () => {
                                                 <MdOutlineMail className="font-bold text-accent text-2xl" />
                                             </div>
                                             <div className="">
-                                                <h4 className="font-500 mb-2 text-xl font-jakarta">Email Us</h4>
-                                                <a href="mailTo:info@remoteworkher.com" className="text-base leading-relaxed mx-auto text-[#475467] font-jakarta">
+                                                <h4 className="font-medium mb-2 text-xl font-jakarta text-[#0D0D0D]">Email Us</h4>
+                                                <a href="mailTo:info@remoteworkher.com" className="text-base leading-relaxed mx-auto text-[#808080] font-jakarta">
                                                     info@remoteworkher.com
                                                 </a>
                                             </div>

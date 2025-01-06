@@ -111,7 +111,7 @@ const EventsPage = () => {
                                     <Image src={RemoteImg} alt="women posing for picture" className="rounded-xl w-full h-auto object-cover" />
                                 </div>
                                 <div>
-                                    <h3 className="font-jakarta text-3xl md:text-4xl font-black leading-relaxed md:leading-relaxed mb-5 w-[80%] md:w-[70%]">Bringing the Remote Community Together</h3>
+                                    <h3 className="font-jakarta text-3xl md:text-4xl font-black leading-normal md:leading-normal mb-3 w-[80%] md:w-[70%]">Bringing the Remote Community Together</h3>
                                     <p className="md:text-lg text-[#333333] leading-loose md:leading-loose mb-2">
                                         Learn about remote work best practices from industry experts and become part of the thriving tech
                                         experts community. Learn the best things.
