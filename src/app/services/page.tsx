@@ -27,6 +27,8 @@ import HeroImgTwo from "@/assets/images/services/hero2.png";
 import HeroImgThree from "@/assets/images/services/hero3.png";
 import HeroImgFour from "@/assets/images/services/hero4.png";
 
+import CenterVectorImg from "@/assets/images/services/Vector.svg";
+
 
 import VectorImg from "@/assets/images/vector-bg.png";
 import Image from "next/image";
@@ -73,9 +75,12 @@ const ServicesPage = () => {
                     <Image src={VectorImg} alt="vector background" className="vector-bg z-10" />
                     <div className="md:min-h-[100vh] job-hero pt-24">
                         <div className="md:w-[85%] px-5 md:px-0 mx-auto text-center">
-                            <div ref={addToRefs}>
+                            <div ref={addToRefs} className="relative">
                                 <h2 className="block font-bold md:w-[70%] mx-auto text-3xl md:text-5xl pt-12 leading-tight md:leading-tight font-jakarta">
                                     Empowering Employers and Talents to Thrive in Remote Work</h2>
+                                <div className="absolute w-full h-full -bottom-3 bg-blac flex items-end justify-center">
+                                    <Image src={CenterVectorImg} alt="zig-zag lines" className="" />
+                                </div>
                             </div>
                             <div ref={addToRefs} className="mt-3 md:mt-6 md:w-[65%] mx-auto">
                                 <p className="block text-sm md:text-lg leading-loose md:leading-normal text-[#475467]">Explore practical advice, success stories, and the latest trends

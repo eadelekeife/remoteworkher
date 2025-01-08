@@ -71,6 +71,12 @@ import Quote from "@/assets/images/home/quote.png";
 import MainInvolved from "@/assets/images/home/main_involved.png";
 import SecInvolved from "@/assets/images/home/sec_involved.png";
 
+import MeetHero from "@/assets/images/home/meet.png";
+import MeetRight from "@/assets/images/home/meet_right.png";
+import MeetLeft from "@/assets/images/home/meet_left.png";
+import VectorImg from "@/assets/images/home/mask.png";
+import CurveImg from "@/assets/images/home/curve.svg";
+
 import BlogImg from "@/assets/images/blog/blog_content.png";
 import { IoFilter } from "react-icons/io5";
 import { useEffect, useRef, useState } from "react";
@@ -186,127 +192,219 @@ export default function JobBoard() {
             </div>
             {
               currentView === "personal" ?
-                <div className="mt-10 md:mt-14">
-                  <Swiper
-                    navigation
-                    pagination={false}
-                    spaceBetween={50}
-                    breakpoints={{
-                      // Mobile view (default)
-                      0: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                      },
-                      // Tablet view
-                      768: {
-                        slidesPerView: 2,
-                        spaceBetween: 15,
-                      },
-                      // Desktop view
-                      1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 35,
-                      },
-                    }}
-                  >
-                    <SwiperSlide>
-                      <div className="bg-[#FFF1F3] rounded-3xl pt-1 pb-10 px-5">
-                        <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
-                          <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
-                            <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
-                          </div>
-                          <Image layout="intrisic" src={Pros1} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
-                          <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
-                            <ul className="flex gap-5">
-                              <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                                <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
-                              {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
-                            </ul>
-                          </div>
+                <>
+                  <div className="hidden md:grid grid-cols-4 gap-10 mt-10 md:mt-14">
+                    <div className="bg-[#FFF1F3] h-full rounded-3xl pt-1 pb-10 px-5">
+                      <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
+                        <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
+                          <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
                         </div>
-                        <div className="mb-10">
-                          <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Exclusive Community Events </h4>
-                          <p className="text-base text-[#4B5563]">
-                            Events that help bring you together with other remote workers and better opportunities
-                          </p>
+                        <Image layout="intrisic" src={Pros1} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                        <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
+                          <ul className="flex gap-5">
+                            <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                              <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
+                            {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
+                          </ul>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="bg-[#FFFAEC] rounded-3xl pt-1 pb-10 px-5">
-                        <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
-                          <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
-                            <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
-                          </div>
-                          <Image layout="intrisic" src={Pros2} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
-                          <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
-                            <ul className="flex gap-5">
-                              <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                                <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
-                              {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
-                            </ul>
-                          </div>
+                      <div className="mb-10">
+                        <h4 className="font-bold font-jakarta text-xl leading-snug mb-2 min-h-[2rem]">Exclusive Community Events </h4>
+                        <p className="text-base text-[#4B5563]">
+                          Events that help bring you together with other remote workers and better opportunities
+                        </p>
+                      </div>
+                    </div>
+                    <div className="bg-[#FFFAEC] h-full rounded-3xl pt-1 pb-10 px-5">
+                      <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
+                        <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
+                          <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
                         </div>
-                        <div className="mb-10">
-                          <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Facebook Community</h4>
-                          <p className="text-base text-[#4B5563]">
-                            Our easy-to-use editor allows you to create customized job ads within minutes.
-                          </p>
+                        <Image layout="intrisic" src={Pros2} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                        <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
+                          <ul className="flex gap-5">
+                            <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                              <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
+                            {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
+                          </ul>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="bg-[#F1F3FF] rounded-3xl pt-1 pb-10 px-5">
-                        <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
-                          <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
-                            <p className="text-[#555A62] font-jakarta font-[600] text-xs">Open Source Library of resources</p>
-                          </div>
-                          <Image layout="intrisic" src={Pros3} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
-                          <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
-                            <ul className="flex gap-5">
-                              <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                                <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
-                              {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
-                            </ul>
-                          </div>
+                      <div className="mb-10">
+                        <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Facebook Community</h4>
+                        <p className="text-base text-[#4B5563]">
+                          Our easy-to-use editor allows you to create customized job ads within minutes.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="bg-[#F1F3FF] h-full rounded-3xl pt-1 pb-10 px-5">
+                      <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
+                        <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
+                          <p className="text-[#555A62] font-jakarta font-[600] text-xs">Open Source Library of resources</p>
                         </div>
-                        <div className="mb-10">
-                          <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Resources</h4>
-                          <p className="text-base text-[#4B5563]">
-                            Our easy-to-use resource library provides you with everything needed to help you excel at your job
-                          </p>
+                        <Image layout="intrisic" src={Pros3} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                        <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
+                          <ul className="flex gap-5">
+                            <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                              <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
+                            {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
+                          </ul>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="bg-[#F1FFF8] rounded-3xl pt-1 pb-10 px-5">
-                        <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
-                          <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
-                            <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
-                          </div>
-                          <Image layout="intrisic" src={Pros4} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
-                          <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
-                            <ul className="flex gap-5">
-                              <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                                <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
-                              {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
-                            </ul>
-                          </div>
+                      <div className="mb-10">
+                        <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Resources</h4>
+                        <p className="text-base text-[#4B5563]">
+                          Our easy-to-use resource library provides you with everything needed to help you excel at your job
+                        </p>
+                      </div>
+                    </div>
+                    <div className="bg-[#F1FFF8] h-full rounded-3xl pt-1 pb-10 px-5">
+                      <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
+                        <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
+                          <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
                         </div>
-                        <div className="mb-10">
-                          <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Private Community</h4>
-                          <p className="text-base text-[#4B5563]">
-                            Our easy-to-use editor allows you to create customized job ads within minutes.
-                          </p>
+                        <Image layout="intrisic" src={Pros4} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                        <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
+                          <ul className="flex gap-5">
+                            <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                              <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
+                            {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
+                          </ul>
                         </div>
                       </div>
-                    </SwiperSlide>
-                  </Swiper>
-                </div>
+                      <div className="mb-10">
+                        <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Private Community</h4>
+                        <p className="text-base text-[#4B5563]">
+                          Our easy-to-use editor allows you to create customized job ads within minutes.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="block md:hidden mt-10 md:mt-14">
+                    <Swiper
+                      navigation
+                      pagination={false}
+                      spaceBetween={50}
+                      breakpoints={{
+                        // Mobile view (default)
+                        0: {
+                          slidesPerView: 1,
+                          spaceBetween: 10,
+                        },
+                        // Tablet view
+                        768: {
+                          slidesPerView: 2,
+                          spaceBetween: 15,
+                        },
+                        // Desktop view
+                        1024: {
+                          slidesPerView: 4,
+                          spaceBetween: 35,
+                        },
+                      }}
+                    >
+                      <SwiperSlide>
+                        <div className="bg-[#FFF1F3] h-full rounded-3xl pt-1 pb-10 px-5">
+                          <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
+                            <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
+                              <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
+                            </div>
+                            <Image layout="intrisic" src={Pros1} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                            <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
+                              <ul className="flex gap-5">
+                                <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                                  <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
+                                {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="mb-10">
+                            <h4 className="font-bold font-jakarta text-xl leading-snug mb-2 min-h-[2rem]">Exclusive Community Events </h4>
+                            <p className="text-base text-[#4B5563]">
+                              Events that help bring you together with other remote workers and better opportunities
+                            </p>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="bg-[#FFFAEC] h-full rounded-3xl pt-1 pb-10 px-5">
+                          <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
+                            <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
+                              <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
+                            </div>
+                            <Image layout="intrisic" src={Pros2} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                            <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
+                              <ul className="flex gap-5">
+                                <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                                  <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
+                                {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="mb-10">
+                            <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Facebook Community</h4>
+                            <p className="text-base text-[#4B5563]">
+                              Our easy-to-use editor allows you to create customized job ads within minutes.
+                            </p>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="bg-[#F1F3FF] h-full rounded-3xl pt-1 pb-10 px-5">
+                          <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
+                            <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
+                              <p className="text-[#555A62] font-jakarta font-[600] text-xs">Open Source Library of resources</p>
+                            </div>
+                            <Image layout="intrisic" src={Pros3} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                            <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
+                              <ul className="flex gap-5">
+                                <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                                  <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
+                                {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="mb-10">
+                            <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Resources</h4>
+                            <p className="text-base text-[#4B5563]">
+                              Our easy-to-use resource library provides you with everything needed to help you excel at your job
+                            </p>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="bg-[#F1FFF8] h-full rounded-3xl pt-1 pb-10 px-5">
+                          <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
+                            <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
+                              <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
+                            </div>
+                            <Image layout="intrisic" src={Pros4} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                            <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
+                              <ul className="flex gap-5">
+                                <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                                  <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
+                                {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="mb-10">
+                            <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Private Community</h4>
+                            <p className="text-base text-[#4B5563]">
+                              Our easy-to-use editor allows you to create customized job ads within minutes.
+                            </p>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    </Swiper>
+                  </div>
+                </>
                 :
                 <div className="md:grid grid-cols-4 gap-10 mt-10 md:mt-14">
                   {/* */}
@@ -441,7 +539,12 @@ export default function JobBoard() {
               </div>
               <div>
                 <Image layout="intrisic" src={Quote} className="w-auto h-[25px] mb-4" alt="quote" />
-                <h4 className="text-3xl font-bold mb-10">Get Involved</h4>
+                <div className="relative">
+                  <h4 className="text-3xl font-bold mb-10">Get Involved</h4>
+                  <div className="absolute w-full md:w-max h-full -bottom-4 left-7 md:left-0 flex items-end">
+                    <Image src={CurveImg} alt="semi-circle curve" className="w-[30%] md:w-[70%] md:mx-auto" />
+                  </div>
+                </div>
                 <div>
                   <div className="py-1 pl-5 border-l-4 mb-8 border-solid border-black">
                     <h5 className="mb-1 font-dmsans font-[600]">Mentorship</h5>
@@ -500,14 +603,22 @@ export default function JobBoard() {
             </div>
             <Image layout="intrisic" src={RedGradient} className="w-max absolute -top-[20rem] left-0" alt="gradient" />
           </div> */}
-          <div className="mt-32">
-            <div className="bg-[#FCEFEF] flex flex-col md:grid grid-cols-2">
+          <div className="mt-24 md:mt-32">
+            <div className="relative w-full h-full pt-16">
+              <h3 className="font-jakarta font-bold text-2xl md:text-4xl text-center">Meet Adeife, Our Founder</h3>
+              <Image layout="intrisic" src={MeetHero} className="mx-auto" alt="about us video" />
+              <Image layout="intrisic" src={MeetRight} className="hidden md:block absolute right-5 bottom-48" alt="image of founder" />
+              <Image layout="intrisic" src={MeetLeft} className="hidden md:block absolute left-5 bottom-20" alt="image of founder" />
+              <Image src={VectorImg} alt="vector background" className="vector-bg" />
+            </div>
+            {/* <div className="bg-[#FCEFEF] flex flex-col md:grid grid-cols-2">
               <div className="bg-[#E4E4E4] min-h-[20rem]">
 
               </div>
               <div className="py-16 md:py-28">
                 <div ref={addToRefs} className="px-5 md:px-0 md:w-[75%] mx-auto">
                   <h3 className="font-jakarta font-bold text-2xl md:text-4xl mb-3 md:mb-7">Meet Sophie, Our Founder</h3>
+                  <Image layout="intrisic" src={TestimonialCard1} className="w-full md:absolute -top-[5rem] -right-[9rem]" alt="gradient" />
                   <p className="text-[#555555] text-base md:text-lg leading-loose mb-2">
                     Welcome to Remote WorkHER! I&apos;m Adeife Adeoye, and I&apos;m dedicated to empowering women to excel
                     in their careers, whether they&apos;re working remotely or in traditional settings.
@@ -522,9 +633,9 @@ export default function JobBoard() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
-          <div className="mt-32 px-5 md:px-20">
+          <div className="mt-24 md:mt-32 px-5 md:px-20">
             <div className="flex flex-col md:grid px-5 md:px-20 grid-cols-2 bg-[#FFF4F9] rounded-2xl">
               <div className="py-10 md:py-20">
                 <h3 className="font-jakarta font-bold text-3xl md:text-5xl mb-2 md:mb-5 leading-snug">People love <br /> Remote WorkHer</h3>
