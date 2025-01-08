@@ -21,7 +21,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import HeroPeople from "@/assets/images/hero_people.png";
 // import HeroImg from "@/assets/images/hero.png";
-import HeroImg from "@/assets/images/home/hero.png";
+import HeroImg from "@/assets/images/home/hero-2.png";
 import HeroFly from "@/assets/images/patterns.svg";
 
 import Company1 from "@/assets/images/hero/companies/logo_1.svg";
@@ -66,6 +66,7 @@ import Shape from "@/assets/images/hero/Shape.png";
 
 import Woman from "@/assets/images/hero/woman.png";
 import Community from "@/assets/images/hero/community.png";
+import VectorImg from "@/assets/images/home/bg-pattern.png";
 import Quote from "@/assets/images/home/quote.png";
 
 import MainInvolved from "@/assets/images/home/main_involved.png";
@@ -113,27 +114,28 @@ export default function JobBoard() {
       <DisplayLayout>
         <>
           <div className="px-5 md:px-20 pt-32 md:pt-20">
+            <Image src={VectorImg} alt="vector background" className="vector-bg z-[-1]" />
             <div className="">
-              <div ref={addToRefs} className="flex flex-col md:grid grid-cols-2 items-center">
-                <div className="relative">
-                  <h2 className="text-[2rem] md:text-[3.5rem] font-bold font-jakarta font-[700] leading-tight">
+              <div ref={addToRefs} className="flex flex-col md:grid grid-cols-2 md:mt-[60px] ">
+                <div className="relative  ">
+                  <h2 className="text-[2rem] md:text-[2.9rem] font-bold font-jakarta  leading-tight">
                     More Than Just a Space, it&apos;s a Community of Remote WorkHers
                   </h2>
-                  <p className="mt-6 text-[#666666] text-lg font-[300] w-full md:w-[70%] mb-10">
+                  <p className="mt-6 text-[#666666] text-base font-[300] w-full md:w-[70%] mb-7">
                     Whatever your remote work journey looks like, Remote WorkHER is here to support, inspire, and elevate you.
                   </p>
-                  <button className="bg-accent px-8 py-4 font-[600] text-base text-white rounded-lg mb-10">Join The Community</button>
-                  <h4 className="font-dmsans text-sm font-bold mb-3">Community Members</h4>
+                  <button className="bg-accent px-8 py-4 font-[600] text-base text-white rounded-lg mb-7">Join The Community</button>
+                  <h4 className="font-dmsans text-sm font-bold mb-2">Community Members</h4>
                   <Image layout="intrisic" src={HeroPeople} className="w-[40%] md:w-max" alt="collection of women" />
                   <Image layout="intrisic" src={HeroFly} className="absolute -top-5 md:top-0 -right-5 md:right-0" alt="flying icon" />
                 </div>
                 <div className="">
-                  <Image layout="intrisic" src={HeroImg} className="w-full md:w-max mx-auto mt-10 mb-5 md:mb-10" alt="collection of women" />
+                  <Image layout="intrisic" src={HeroImg} className="w-full md:w-max mx-auto mt-10 mb-5 md:mt-[-60px] md:mb-0 " alt="collection of women" />
                 </div>
               </div>
             </div>
           </div>
-          <div className="mt-20 bg-[#F9FAFB] w-full py-14 md:py-10 px-5 md:px-20">
+          <div className="mt-5 bg-[#F9FAFB] w-full py-14 md:py-10 px-5 md:px-20">
             <p className="text-[#475467] text-xl text-center">Trusted by our Partners</p>
             <div className="mt-7">
               <div className="flex justify-between flex-wrap gap-10 md:flex-unwrap md:gap-0">
@@ -210,16 +212,16 @@ export default function JobBoard() {
                     }}
                   >
                     <SwiperSlide>
-                      <div className="bg-[#FFF1F3] rounded-3xl pt-1 pb-10 px-5">
+                      <div className="bg-[#FFF1F3] rounded-3xl pt-1 pb-10 px-5 h-[504px]">
                         <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                           <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
-                            <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
+                            <p className="text-[#555A62] font-jakarta font-[600] text-[10px]"> The law and Business of Remote Work</p>
                           </div>
                           <Image layout="intrisic" src={Pros1} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
                           <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
                             <ul className="flex gap-5">
                               <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                                <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
+                                <span className="text-[#555A62] font-jakarta font-[600] text-xs"> Individuals</span></li>
                               {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
                             <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
                             </ul>
@@ -234,16 +236,16 @@ export default function JobBoard() {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className="bg-[#FFFAEC] rounded-3xl pt-1 pb-10 px-5">
+                      <div className="bg-[#FFFAEC] rounded-3xl pt-1 pb-10 px-5 h-[504px]">
                         <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                           <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
-                            <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
+                            <p className="text-[#555A62] font-jakarta font-[600] text-[10px]"> The law and Business of Remote Work</p>
                           </div>
                           <Image layout="intrisic" src={Pros2} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
                           <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
                             <ul className="flex gap-5">
                               <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                                <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
+                                <span className="text-[#555A62] font-jakarta font-[600] text-xs"> Individuals</span></li>
                               {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
                             <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
                             </ul>
@@ -258,16 +260,16 @@ export default function JobBoard() {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className="bg-[#F1F3FF] rounded-3xl pt-1 pb-10 px-5">
+                      <div className="bg-[#F1F3FF] rounded-3xl pt-1 pb-10 px-5 h-[504px]">
                         <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                           <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
-                            <p className="text-[#555A62] font-jakarta font-[600] text-xs">Open Source Library of resources</p>
+                            <p className="text-[#555A62] font-jakarta font-[600] text-[10px]">Open Source Library of resources</p>
                           </div>
                           <Image layout="intrisic" src={Pros3} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
                           <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
                             <ul className="flex gap-5">
                               <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                                <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
+                                <span className="text-[#555A62] font-jakarta font-[600] text-xs"> Individuals</span></li>
                               {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
                             <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
                             </ul>
@@ -282,16 +284,16 @@ export default function JobBoard() {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className="bg-[#F1FFF8] rounded-3xl pt-1 pb-10 px-5">
+                      <div className="bg-[#F1FFF8] rounded-3xl pt-1 pb-10 px-5 h-[504px]">
                         <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                           <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
-                            <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
+                            <p className="text-[#555A62] font-jakarta font-[600] text-[10px]"> The law and Business of Remote Work</p>
                           </div>
                           <Image layout="intrisic" src={Pros4} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
                           <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
                             <ul className="flex gap-5">
                               <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                                <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li>
+                                <span className="text-[#555A62] font-jakarta font-[600] text-xs"> Individuals</span></li>
                               {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
                             <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
                             </ul>
@@ -310,10 +312,10 @@ export default function JobBoard() {
                 :
                 <div className="md:grid grid-cols-4 gap-10 mt-10 md:mt-14">
                   {/* */}
-                  <div className="bg-[#FFF1F3] rounded-3xl pt-1 pb-10 px-5">
+                  <div className="bg-[#FFF1F3] rounded-3xl pt-1 pb-10 px-5 h-[504px]">
                     <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                       <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
-                        <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
+                        <p className="text-[#555A62] font-jakarta font-[600] text-[10px]"> The law and Business of Remote Work</p>
                       </div>
                       <Image layout="intrisic" src={Pros1} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
                       <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
@@ -321,7 +323,7 @@ export default function JobBoard() {
                           {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
                             <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li> */}
                           <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li>
+                            <span className="text-[#555A62] font-jakarta font-[600] text-xs"> Businesses</span></li>
                         </ul>
                       </div>
                     </div>
@@ -402,11 +404,11 @@ export default function JobBoard() {
             <div className="flex flex-col md:grid grid-cols-2 gap-20 items-center">
               <div ref={addToRefs} className="">
                 <p className="text-sm font-[500] text-[#667085] mb-2">JOB BOARD</p>
-                <h3 className="font-jakarta font-bold text-[2rem] md:text-[3.5rem] mb-4 leading-snug">Want to source for remote jobs?</h3>
+                <h3 className="font-jakarta font-bold text-[2rem] md:text-[2.5rem] md:w-[70%] md:max-w-[465px] mb-1 leading-snug">Want to source for remote jobs?</h3>
                 <p className="text-sm md:text-lg font-[#4B5563] leading-loose md:w-[80%]">
                   Join RemoteWorkHer Today
                 </p>
-                <button className="bg-black py-4 px-10 rounded-lg text-white text-sm mt-8">Browse Opportunities</button>
+                <button className="bg-black py-4 px-10 rounded-lg text-white text-sm mt-5">Browse Opportunities</button>
               </div>
               <div className="relative flex justify-between">
                 <div></div>
