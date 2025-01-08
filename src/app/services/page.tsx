@@ -74,7 +74,7 @@ const ServicesPage = () => {
                     <div className="md:min-h-[100vh] job-hero pt-24">
                         <div className="md:w-[85%] px-5 md:px-0 mx-auto text-center">
                             <div ref={addToRefs}>
-                                <h2 className="block font-bold md:w-[70%] mx-auto text-4xl md:text-5xl pt-12 leading-tight md:leading-tight font-jakarta">
+                                <h2 className="block font-bold md:w-[70%] mx-auto text-3xl md:text-5xl pt-12 leading-tight md:leading-tight font-jakarta">
                                     Empowering Employers and Talents to Thrive in Remote Work</h2>
                             </div>
                             <div ref={addToRefs} className="mt-3 md:mt-6 md:w-[65%] mx-auto">
@@ -84,18 +84,28 @@ const ServicesPage = () => {
                             <div ref={addToRefs} className="mt-8">
                             </div>
                         </div>
-                        <div className="flex w-max gap-8 items-end px-20">
-                            <div>
-                                <Image src={HeroImgOne} alt="woman posing for picture" className="rounded-xl flex-1 max-w-full h-auto" />
+                        <div className="hidden md:block">
+                            <div className="grid grid-cols-2 md:flex w-max gap-8 items-end px-5 md:px-20">
+                                <div>
+                                    <Image src={HeroImgOne} alt="woman posing for picture" className="rounded-xl flex-1 max-w-full h-auto" />
+                                </div>
+                                <div>
+                                    <Image src={HeroImgTwo} alt="woman posing for picture" className="rounded-xl max-w-full h-auto" />
+                                </div>
+                                <div>
+                                    <Image src={HeroImgThree} alt="woman posing for picture" className="rounded-xl max-w-full h-auto" />
+                                </div>
+                                <div>
+                                    <Image src={HeroImgFour} alt="woman posing for picture" className="rounded-xl flex-1 max-w-full h-auto" />
+                                </div>
                             </div>
-                            <div>
-                                <Image src={HeroImgTwo} alt="woman posing for picture" className="rounded-xl max-w-full h-auto" />
-                            </div>
-                            <div>
-                                <Image src={HeroImgThree} alt="woman posing for picture" className="rounded-xl max-w-full h-auto" />
-                            </div>
-                            <div>
-                                <Image src={HeroImgFour} alt="woman posing for picture" className="rounded-xl flex-1 max-w-full h-auto" />
+                        </div>
+                        <div className="block md:hidden px-5">
+                            <div className="gallery">
+                                <Image src={HeroImgOne} alt="woman posing for picture" className="rounded-xl" />
+                                <Image src={HeroImgThree} alt="woman posing for picture" className="rounded-xl" />
+                                <Image src={HeroImgTwo} alt="woman posing for picture" className="rounded-xl" />
+                                <Image src={HeroImgFour} alt="woman posing for picture" className="rounded-xl" />
                             </div>
                         </div>
                     </div>
@@ -145,7 +155,7 @@ const ServicesPage = () => {
                                 both aspirational and achievable, inspiring everyone to aim higher and constantly improve.
                             </p>
                         </div>
-                        <div className="flex flex-col md:grid grid-cols-2 gap-10 md:w-[90%] mx-auto mt-12">
+                        <div className="text-center md:text-left flex flex-col md:grid grid-cols-2 gap-10 md:w-[90%] mx-auto mt-12">
                             <div ref={addToRefs} className="border rounded-xl border-solid border-[#D6D6D6] md:grid grid-cols-1/3 items-center p-4 gap-10">
                                 <div>
                                     <Image src={Consultation} alt="women posing for picture" className="rounded-xl w-full object-cover" />
@@ -262,7 +272,7 @@ const ServicesPage = () => {
                                     <div className="mx-auto border-2 mb-5 border-solid border-accent size-16 rounded-full flex items-center justify-center">
                                         <h4 className="text-accent text-2xl">1</h4>
                                     </div>
-                                    <h4 className="font-jakarta font-medium text-2xl mb-3 text-[#0D0D0D]">How do consultations work?</h4>
+                                    <h4 className="font-jakarta font-medium text-xl md:text-2xl mb-1 md:mb-3 text-[#0D0D0D]">How do consultations work?</h4>
                                     <p className="font-jakarta text-base text-[#808080] leading-relaxed mb-5">These issues can
                                         range from minor illnesses and injuries to chronic.</p>
                                 </div>
@@ -270,7 +280,7 @@ const ServicesPage = () => {
                                     <div className="mx-auto border-2 mb-5 border-solid border-accent size-16 rounded-full flex items-center justify-center">
                                         <h4 className="text-accent text-2xl">2</h4>
                                     </div>
-                                    <h4 className="font-jakarta font-medium text-2xl mb-3 text-[#0D0D0D]">How do consultations work?</h4>
+                                    <h4 className="font-jakarta font-medium text-xl md:text-2xl mb-1 md:mb-3 text-[#0D0D0D]">How do consultations work?</h4>
                                     <p className="font-jakarta text-base text-[#808080] leading-relaxed mb-5">These issues can
                                         range from minor illnesses and injuries to chronic.</p>
                                 </div>
@@ -278,13 +288,13 @@ const ServicesPage = () => {
                                     <div className="mx-auto border-2 mb-5 border-solid border-accent size-16 rounded-full flex items-center justify-center">
                                         <h4 className="text-accent text-2xl">3</h4>
                                     </div>
-                                    <h4 className="font-jakarta font-medium text-2xl mb-3 text-[#0D0D0D]">How do consultations work?</h4>
+                                    <h4 className="font-jakarta font-medium text-xl md:text-2xl mb-1 md:mb-3 text-[#0D0D0D]">How do consultations work?</h4>
                                     <p className="font-jakarta text-base text-[#808080] leading-relaxed mb-5">These issues can
                                         range from minor illnesses and injuries to chronic.</p>
                                 </div>
                             </div>
 
-                            <div className="mt-40">
+                            <div className="mt-20 md:mt-40">
                                 <div className="grid relative grid-cols-3/1 gap-3 md:gap-10">
                                     <div>
                                         <Image src={ProgressOne} alt="woman posing for picture" className="rounded-xl h-full w-full" />
@@ -293,7 +303,7 @@ const ServicesPage = () => {
                                         <Image src={ProgressTwo} alt="woman posing for picture" className="rounded-xl h-full w-full" />
                                         <Image src={ProgressThree} alt="woman posing for picture" className="rounded-xl h-full w-full" />
                                     </div>
-                                    <div className="bg-white absolute rounded-xl -bottom-24 md:-bottom-10 w-[70%] md:w-[30%] right-14 md:right-32 py-5 shadow-2xl px-5">
+                                    <div className="bg-white absolute rounded-xl -bottom-24 md:-bottom-10 w-[70%] md:w-[30%] right-14 md:right-32 py-3 md:py-5 shadow-2xl px-3 md:px-5">
                                         <div>
                                             <h3 className="font-jakarta font-medium text-xl md:text-3xl mb-5 text-[#0D0D0D]">Our Progress and <br /> Milestones</h3>
                                             <p className="text-xs md:text-sm font-jakarta text-[#808080]">
@@ -302,7 +312,7 @@ const ServicesPage = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="mt-32 md:mt-24 grid-cols-2 gap-10 md:gap-0 md:grid-cols-4 grid">
+                                <div className="mt-32 md:mt-24 grid-cols-2 gap-5 md:gap-0 md:grid-cols-4 grid">
                                     <div className="text-center py-5 md:border-solid md:border-[#F963AB] md:border-r px-10">
                                         <h2 className="text-4xl font-jakarta font-medium mb-3 text-[#0D0D0D]">2+</h2>
                                         <p className="text-base font-jakarta text-[#808080]">Years of Experience</p>

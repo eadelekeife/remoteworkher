@@ -86,8 +86,8 @@ const EventsPage = () => {
                             <Image src={HeroImg} alt="women posing for picture" className="rounded-xl w-max mx-auto -mb-[15rem] md:-mb-[20rem] object-cover" />
                         </div>
                     </div> */}
-                    <div ref={addToRefs} className="mt-[13rem] md:mt-[4rem] px-5 md:px-0">
-                        <div className="px-20">
+                    <div ref={addToRefs} className="mt-20 md:mt-[4rem] px-5 md:px-0">
+                        <div className="px-5 md:px-20">
                             <div className="text-center">
                                 {/* <div className="w-max mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500] text-accent">Services</h4>
@@ -96,8 +96,8 @@ const EventsPage = () => {
                                     Great Reasons to Attend Our Conference
                                 </h3>
                             </div>
-                            <div className="mt-14">
-                                <div className="flex flex-col md:grid grid-cols-4 gap-7 px-24 mx-auto">
+                            <div className="mt-10 md:mt-14">
+                                <div className="grid grid-cols-2 md:grid md:grid-cols-4 gap-7 md:px-24 mx-auto">
                                     <EventPros bg="bg-[#FFEEF6]" borderColor="border-[#F8E4ED]" textColor="text-[#14141C]" main="10K" icon="+" footnote="Tickets Confirmed" />
                                     <EventPros bg="bg-[#FFFEEE]" borderColor="border-[#F1EFDA]" textColor="text-[#14141C]" main="100" icon="+" footnote="Event Sponsors" />
                                     <EventPros bg="bg-[#F5F5FE]" borderColor="border-[#E9E9F4]" textColor="text-[#14141C]" main="20" icon="+" footnote="Speakers" />
@@ -105,13 +105,13 @@ const EventsPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div ref={addToRefs} className="mt-24 px-16">
+                        <div ref={addToRefs} className="mt-24 md:px-16">
                             <div className="flex flex-col md:grid grid-cols-2 gap-5 md:gap-0 items-center">
                                 <div>
-                                    <Image src={RemoteImg} alt="women posing for picture" className="rounded-xl w-full h-auto object-cover" />
+                                    <Image src={RemoteImg} alt="women posing for picture" className="rounded-xl md:w-full h-auto object-cover" />
                                 </div>
                                 <div>
-                                    <h3 className="font-jakarta text-3xl md:text-4xl font-black leading-normal md:leading-normal mb-3 w-[80%] md:w-[70%]">Bringing the Remote Community Together</h3>
+                                    <h3 className="font-jakarta text-3xl md:text-4xl font-black leading-normal md:leading-normal mb-3 md:w-[80%] md:w-[70%]">Bringing the Remote Community Together</h3>
                                     <p className="md:text-lg text-[#333333] leading-loose md:leading-loose mb-2">
                                         Learn about remote work best practices from industry experts and become part of the thriving tech
                                         experts community. Learn the best things.
@@ -123,19 +123,19 @@ const EventsPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div ref={addToRefs} className="mt-32 md:mt-24">
+                        <div ref={addToRefs} className="mt-24">
                             <div className="">
-                                <h3 className="font-jakarta text-3xl md:text-4xl font-bold mt-5 mb-10 text-center leading-snug">
+                                <h3 className="font-jakarta text-3xl md:text-4xl font-bold mt-5 mb-5 md:mb-10 text-center leading-snug">
                                     Upcoming Events
                                 </h3>
-                                <div className="flex flex-col md:grid grid-cols-3 gap-7 w-full px-24 mx-auto">
+                                <div className="flex flex-col md:grid grid-cols-3 gap-7 w-full md:px-24 mx-auto">
                                     <UpcomingEvents />
                                     <UpcomingEvents />
                                     <UpcomingEvents />
                                 </div>
                             </div>
                         </div>
-                        <div ref={addToRefs} className="mt-28">
+                        <div ref={addToRefs} className="mt-24 md:mt-28">
                             <div className="text-center">
                                 <h3 className="font-jakarta text-3xl md:text-4xl font-bold mt-5 mb-3">
                                     Past Events
@@ -144,8 +144,8 @@ const EventsPage = () => {
                                     Best practices from industry experts and become part of the thriving tech experts community.
                                 </p>
                             </div>
-                            <div className="mt-10 md:mt-10">
-                                <div className="flex flex-col md:grid grid-cols-3 gap-14 px-24 mx-auto">
+                            <div className="mt-5 md:mt-10">
+                                <div className="flex flex-col md:grid grid-cols-3 gap-7 md:gap-14 md:px-24 mx-auto">
                                     <PastEvents img={PastImg1} />
                                     <PastEvents img={PastImg2} />
                                     <PastEvents img={PastImg3} />
@@ -156,7 +156,7 @@ const EventsPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div ref={addToRefs} className="sec-hero mt-40 px-5 py-28">
+                    {/* <div ref={addToRefs} className="sec-hero mt-40 px-5 py-28">
                         <div>
                             <h3 className="font-jakarta md:w-[30%] mx-auto text-3xl md:text-4xl font-bold mt-5 mb-10 text-center leading-snug text-white">
                                 Count Every Seconds Until Event
@@ -171,7 +171,7 @@ const EventsPage = () => {
                                 <h3 className="text-white text-2xl md:text-4xl font-black">22 <br /> <span className="text-sm font-normal">DAYS</span></h3>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </>
             </DisplayLayout>
         </div >

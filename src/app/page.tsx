@@ -425,16 +425,16 @@ export default function JobBoard() {
             </div>
           </div>
           <div className="mt-32 md:mt-72 px-5 md:px-20 relative">
-            <div className="grid grid-cols-2 gap-14 md:gap-28 md:items-center">
+            <div className="flex flex-col md:grid grid-cols-2 gap-14 md:gap-28 md:items-center">
               <div>
-                <div className="flex justify-between relative">
+                <div className="md:flex justify-between relative">
                   <div></div>
                   <div className="absolute h-full w-full top-0 left-0 flex items-center">
-                    <Image layout="intrisic" src={SecInvolved} className="h-[20rem] w-auto" alt="collection of women" />
+                    <Image layout="intrisic" src={SecInvolved} className="md:h-[20rem] w-auto" alt="collection of women" />
                   </div>
                   <div>
-                    <div className="-ml-[27rem]">
-                      <Image layout="intrisic" src={MainInvolved} className="w-max" alt="collection of women" />
+                    <div className="md:-ml-[27rem]">
+                      <Image layout="intrisic" src={MainInvolved} className="w-max mx-auto md:mx-0" alt="collection of women" />
                     </div>
                   </div>
                 </div>
