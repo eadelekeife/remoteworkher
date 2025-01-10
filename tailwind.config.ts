@@ -29,8 +29,16 @@ export default {
         "2/1": "2fr 1fr",
         "3/1": "3fr 1fr",
         "1/2": "1fr 2.5fr",
-        "1.5/1": "1.5fr 1fr"
+        "1.5/1": "1.5fr 1fr",
+        autoFit: "repeat(auto-fit, minmax(150px, 1fr))"
       }
+    },
+    screens: {
+      sm: '790px',
+      md: '792px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
     },
   },
   plugins: [],

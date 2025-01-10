@@ -36,7 +36,7 @@ const Navigation = (props: NavigationPropsInterface) => {
     const toggleNavDrawer = () => setDisplayNavDrawer(!displayNavDrawer);
 
     return (
-        <div className={`flex justify-between items-center py-7 px-5 md:px-20 z-50 fixed top-0 w-full ${fixedNav ? 'bg-white' : ''}`}>
+        <div className={`flex justify-between items-center py-7 px-5 md:px-20 z-50 fixed top-0 w-full ${fixedNav ? 'bg-white nav-shadow' : ''}`}>
             <div>
                 <Link href="/">
                     <h2 className={`font-jakarta font-bold text-2xl md:text-3xl ${props.logoColor ? props.logoColor : "text-black"}`}>Remote WorkHer</h2>

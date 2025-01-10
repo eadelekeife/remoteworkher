@@ -6,18 +6,19 @@ import WomanLarge from "@/assets/images/about/big_one.png";
 import WomanSmallOne from "@/assets/images/about/small_one.png";
 import WomanSmallTwo from "@/assets/images/about/small_two.png";
 
-import GridOne from "@/assets/images/about/grid_1.png";
-import GridTwo from "@/assets/images/about/grid_2.png";
-import GridThree from "@/assets/images/about/grid_3.png";
+import GridOne from "@/assets/images/about/grid_1.svg";
+import GridTwo from "@/assets/images/about/grid_2.svg";
+import GridThree from "@/assets/images/about/grid_3.svg";
 
 import TeamOne from "@/assets/images/about/team_1.png";
 import TeamTwo from "@/assets/images/about/team_1.png";
 import TeamThree from "@/assets/images/about/team_1.png";
 
-import TestimonialOne from "@/assets/images/about/testimonial_1.png";
-import TestimonialTwo from "@/assets/images/about/testimonial_2.png";
+import TestimonialOne from "@/assets/images/about/kate.svg";
+import TestimonialTwo from "@/assets/images/about/rhami.svg";
+import TestimonialThree from "@/assets/images/about/sarah.svg";
 
-import Hero from "@/assets/images/about/hero.png";
+import Hero from "@/assets/images/about/hero.svg";
 import VectorImg from "@/assets/images/vector-bg.png";
 
 
@@ -149,11 +150,13 @@ const AboutUsPage = () => {
                             </h3>
                         </div>
                         <div className="mt-12">
-                            <div className="flex flex-col md:grid grid-cols-2 gap-10">
+                            <div className="flex flex-col md:grid grid-cols-1/1.5 gap-8">
                                 <div ref={addToRefs}>
                                     <div className="bg-[#F9F9FB] py-10 md:py-0 rounded-xl h-full flex items-center">
-                                        <div className="w-[85%] mx-auto text-center h-max">
-                                            <Image src={TestimonialOne} alt="woman posing for picture" className="rounded-xl mx-auto w-max mb-5" />
+                                        <div className="w-[75%] mx-auto text-center h-max">
+                                            <div>
+                                                <Image src={TestimonialOne} alt="woman posing for picture" className="rounded-xl mx-auto w-auto h-[8rem] mb-5" />
+                                            </div>
                                             <p className="font-jakarta text-[#667085] leading-relaxed mb-5">
                                                 Within 90 days of mentoring, I landed my first client and exceeded my income goals. The guidance
                                                 I received was invaluable."
@@ -165,33 +168,39 @@ const AboutUsPage = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div ref={addToRefs} className="flex flex-col gap-10">
-                                    <div className="bg-[#F9F9FB] py-10 rounded-xl">
-                                        <div className="w-[85%] mx-auto text-center md:text-left flex flex-col md:flex-row md:gap-10">
-                                            <Image src={TestimonialTwo} alt="woman posing for picture" className="rounded-xl mx-auto w-auto h-max mb-5" />
+                                <div ref={addToRefs} className="flex flex-col gap-8">
+                                    <div className="bg-[#F9F9FB] py-10 rounded-2xl">
+                                        <div className="px-10 mx-auto text-center md:text-left flex flex-col md:flex-row items-center md:gap-10">
                                             <div>
-                                                <p className="font-jakarta text-[#667085] leading-relaxed mb-5">
-                                                    Within 90 days of mentoring, I landed my first client and exceeded my income goals. The guidance
-                                                    I received was invaluable."
-                                                </p>
-                                                <div>
-                                                    <h4 className="font-jakarta font-600 mb-1">Kate Smith</h4>
-                                                    <p className="font-jakarta text-sm text-[#808080] leading-relaxed">Marketing Specialist</p>
+                                                <Image src={TestimonialTwo} alt="woman posing for picture" className="rounded-xl mx-auto w-full h-auto mb-5 md:mb-0" />
+                                            </div>
+                                            <div className="flex-1">
+                                                <div className="">
+                                                    <p className="font-jakarta text-[#667085] text-base leading-relaxed mb-5">
+                                                        Remote WorkHER was a life-changing experience. It gave me the push I needed to quit my 9-5 job and go remote.
+                                                    </p>
+                                                    <div>
+                                                        <h4 className="font-jakarta font-600 mb-1 text-sm">Kate Smith</h4>
+                                                        <p className="font-jakarta text-sm text-[#808080] leading-relaxed">Marketing Specialist</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="bg-[#F9F9FB] py-10 rounded-xl">
-                                        <div className="w-[85%] mx-auto text-center md:text-left flex flex-col md:flex-row md:gap-10">
-                                            <Image src={TestimonialTwo} alt="woman posing for picture" className="rounded-xl mx-auto w-auto h-max mb-5" />
+                                    <div className="bg-[#F9F9FB] py-10 rounded-2xl">
+                                        <div className="px-10 mx-auto text-center md:text-left flex flex-col md:flex-row items-center md:gap-10">
                                             <div>
-                                                <p className="font-jakarta text-[#667085] leading-relaxed mb-5">
-                                                    Within 90 days of mentoring, I landed my first client and exceeded my income goals. The guidance
-                                                    I received was invaluable."
-                                                </p>
-                                                <div>
-                                                    <h4 className="font-jakarta font-600 mb-1">Kate Smith</h4>
-                                                    <p className="font-jakarta text-sm text-[#808080] leading-relaxed">Marketing Specialist</p>
+                                                <Image src={TestimonialThree} alt="woman posing for picture" className="rounded-xl mx-auto w-full h-auto mb-5 md:mb-0" />
+                                            </div>
+                                            <div className="flex-1">
+                                                <div className="">
+                                                    <p className="font-jakarta text-[#667085] text-base leading-relaxed mb-5">
+                                                        After the training, I successfully started a remote career and even moved to Bali!
+                                                    </p>
+                                                    <div>
+                                                        <h4 className="font-jakarta font-600 mb-1 text-sm">Kate Smith</h4>
+                                                        <p className="font-jakarta text-sm text-[#808080] leading-relaxed">Marketing Specialist</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -216,7 +225,7 @@ const AboutUsPage = () => {
                         <div className="mt-12 md:px-24" ref={addToRefs}>
                             <div className="text-center md:text-left flex flex-col md:grid grid-cols-4 gap-8">
                                 <div ref={addToRefs}>
-                                    <Image src={GridOne} alt="woman posing for picture" className="rounded-xl mx-auto md:mx-0" />
+                                    <Image src={GridThree} alt="woman posing for picture" className="rounded-xl mx-auto md:mx-0" />
                                     <div className="mt-4">
                                         <h3 className="font-jakarta text-2xl font-600 text-[#0D0D0D] mt-5">
                                             Community Access
@@ -229,7 +238,7 @@ const AboutUsPage = () => {
                                     </div>
                                 </div>
                                 <div ref={addToRefs}>
-                                    <Image src={GridTwo} alt="woman posing for picture" className="rounded-xl mx-auto md:mx-0" />
+                                    <Image src={GridThree} alt="woman posing for picture" className="rounded-xl mx-auto md:mx-0" />
                                     <div className="mt-4">
                                         <h3 className="font-jakarta text-2xl font-600 text-[#0D0D0D] mt-5">
                                             Resources
@@ -242,7 +251,7 @@ const AboutUsPage = () => {
                                     </div>
                                 </div>
                                 <div ref={addToRefs}>
-                                    <Image src={GridThree} alt="woman posing for picture" className="rounded-xl mx-auto md:mx-0" />
+                                    <Image src={GridOne} alt="woman posing for picture" className="rounded-xl mx-auto md:mx-0" />
                                     <div className="mt-4">
                                         <h3 className="font-jakarta text-2xl font-600 text-[#0D0D0D] mt-5">
                                             Events and Workshop
@@ -255,7 +264,7 @@ const AboutUsPage = () => {
                                     </div>
                                 </div>
                                 <div ref={addToRefs}>
-                                    <Image src={GridThree} alt="woman posing for picture" className="rounded-xl mx-auto md:mx-0" />
+                                    <Image src={GridTwo} alt="woman posing for picture" className="rounded-xl mx-auto md:mx-0" />
                                     <div className="mt-4">
                                         <h3 className="font-jakarta text-2xl font-600 text-[#0D0D0D] mt-5">
                                             Mentorship

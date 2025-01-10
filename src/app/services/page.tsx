@@ -3,13 +3,13 @@
 import DisplayLayout from "@/components/layout";
 
 import HeroImg from "@/assets/images/services/hero.png";
-import Consultation from "@/assets/images/services/consultation.png";
-import PartnershipImg from "@/assets/images/services/partnership.png";
-import JobImg from "@/assets/images/services/postings.png";
-import SpeakingImg from "@/assets/images/services/speaking.png";
+import Consultation from "@/assets/images/services/consultation.svg";
+import PartnershipImg from "@/assets/images/services/partnership.svg";
+import JobImg from "@/assets/images/services/postings.svg";
+import SpeakingImg from "@/assets/images/services/speaking.svg";
 
 import TalentOne from "@/assets/images/services/talent_1.png";
-import TalentTwo from "@/assets/images/services/talent_2.png";
+import TalentTwo from "@/assets/images/services/talent_2.svg";
 import TalentThree from "@/assets/images/services/talent_3.png";
 
 import QuoteImg from "@/assets/images/services/quote.png";
@@ -22,10 +22,10 @@ import ProgressOne from "@/assets/images/services/progress_1.png";
 import ProgressTwo from "@/assets/images/services/progress_2.png";
 import ProgressThree from "@/assets/images/services/progress_3.png";
 
-import HeroImgOne from "@/assets/images/services/hero1.png";
-import HeroImgTwo from "@/assets/images/services/hero2.png";
-import HeroImgThree from "@/assets/images/services/hero3.png";
-import HeroImgFour from "@/assets/images/services/hero4.png";
+import HeroImgOne from "@/assets/images/services/hero1.svg";
+import HeroImgTwo from "@/assets/images/services/hero2.svg";
+import HeroImgThree from "@/assets/images/services/hero3.svg";
+import HeroImgFour from "@/assets/images/services/hero4.svg";
 
 import CenterVectorImg from "@/assets/images/services/Vector.svg";
 
@@ -79,7 +79,7 @@ const ServicesPage = () => {
                                 <h2 className="block font-bold md:w-[70%] mx-auto text-3xl md:text-5xl pt-12 leading-tight md:leading-tight font-jakarta">
                                     Empowering Employers and Talents to Thrive in Remote Work</h2>
                                 <div className="absolute w-full h-full -bottom-3 bg-blac flex items-end justify-center">
-                                    <Image src={CenterVectorImg} alt="zig-zag lines" className="" />
+                                    <Image src={CenterVectorImg} alt="zig-zag lines" className="w-[50%] md:w-auto" />
                                 </div>
                             </div>
                             <div ref={addToRefs} className="mt-3 md:mt-6 md:w-[65%] mx-auto">
@@ -89,19 +89,19 @@ const ServicesPage = () => {
                             <div ref={addToRefs} className="mt-8">
                             </div>
                         </div>
-                        <div className="hidden md:block">
-                            <div className="grid grid-cols-2 md:flex w-max gap-8 items-end px-5 md:px-20">
-                                <div>
-                                    <Image src={HeroImgOne} alt="woman posing for picture" className="rounded-xl flex-1 max-w-full h-auto" />
+                        <div className="hidden md:block px-20">
+                            <div className="grid grid-cols-autoFit gap-8 items-end justify-center">
+                                <div className="aspect-w-1 aspect-h-1 overflow-hidden">
+                                    <Image src={HeroImgOne} alt="woman posing for picture" className="w-full max-h-[25rem] object-top object-cover rounded-xl" />
                                 </div>
-                                <div>
-                                    <Image src={HeroImgTwo} alt="woman posing for picture" className="rounded-xl max-w-full h-auto" />
+                                <div className="aspect-w-1 aspect-h-1 overflow-hidden">
+                                    <Image src={HeroImgTwo} alt="woman posing for picture" className="w-full h-auto object-cover rounded-xl" />
                                 </div>
-                                <div>
-                                    <Image src={HeroImgThree} alt="woman posing for picture" className="rounded-xl max-w-full h-auto" />
+                                <div className="aspect-w-1 aspect-h-1 overflow-hidden">
+                                    <Image src={HeroImgThree} alt="woman posing for picture" className="w-full h-auto object-cover rounded-xl" />
                                 </div>
-                                <div>
-                                    <Image src={HeroImgFour} alt="woman posing for picture" className="rounded-xl flex-1 max-w-full h-auto" />
+                                <div className="aspect-w-1 aspect-h-1 overflow-hidden">
+                                    <Image src={HeroImgFour} alt="woman posing for picture" className="w-full h-auto object-cover rounded-xl" />
                                 </div>
                             </div>
                         </div>
@@ -231,7 +231,7 @@ const ServicesPage = () => {
                                             </div>
                                         </div>
                                     </div> */}
-                                <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5 flex flex-col md:flex-row gap-4 md:gap-12">
+                                <div className="border rounded-3xl border-solid border-[#D6D6D6] p-5 flex flex-col md:flex-row gap-4 md:gap-12 items-center">
                                     <Image src={TalentTwo} alt="women posing for picture" className="rounded-xl object-cover w-full md:w-max" />
                                     <div className="md:mt-4">
                                         <h3 className="font-jakarta text-2xl font-bold">
