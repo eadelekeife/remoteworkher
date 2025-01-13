@@ -28,7 +28,7 @@ body {
   color: var(--text-color);
   background: var(--background);
   font-family: "DM Sans", serif;
-  max-width: 1800px;
+  /* max-width: 1800px; */
   margin: 0px auto;
   overflow-x: hidden;
 }

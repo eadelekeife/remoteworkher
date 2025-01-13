@@ -70,7 +70,7 @@ import Quote from "@/assets/images/home/quote.png";
 
 import MainInvolved from "@/assets/images/home/main_involved.png";
 import SecInvolved from "@/assets/images/home/sec_involved.png";
-
+import Experience from "@/assets/images/home/experience.svg"
 // import MeetHero from "@/assets/images/home/meet.png";
 import MeetRight from "@/assets/images/home/meet_right.png";
 import MeetLeft from "@/assets/images/home/meet_left.png";
@@ -78,6 +78,7 @@ import VectorImg2 from "@/assets/images/home/mask.png";
 import VectorImg from "@/assets/images/home/bg-pattern.png";
 import VectorImg3 from "@/assets/images/home/involve-gradient.png";
 import CurveImg from "@/assets/images/home/curve.svg";
+import Involved from "@/assets/images/home/involved.svg"
 
 // import BlogImg from "@/assets/images/blog/blog_content.png";
 // import { IoFilter } from "react-icons/io5";
@@ -120,12 +121,12 @@ export default function JobBoard() {
     <div>
       <DisplayLayout>
         <>
-        <div className="px-5 md:px-20 pt-32 md:pt-20">
+          <div className="px-5 md:px-20 pt-32 md:pt-20">
             <Image src={VectorImg} alt="vector background" className="vector-bg z-[-1]" />
             <div className="">
               <div ref={addToRefs} className="flex flex-col md:grid grid-cols-2 md:mt-[60px] ">
-                <div className="relative  ">
-                  <h2 className="text-[2rem] md:text-[2.9rem] font-bold font-jakarta  leading-tight">
+                <div className="relative  max-w-[600px] md:mt-10">
+                  <h2 className="text-[2rem] md:text-[2.9rem] font-bold font-jakarta  text-black leading-tight">
                     More Than Just a Space, it&apos;s a Community of Remote WorkHers
                   </h2>
                   <p className="mt-6 text-[#666666] text-base font-[300] w-full md:w-[70%] mb-7">
@@ -142,7 +143,8 @@ export default function JobBoard() {
               </div>
             </div>
           </div>
-          <div className="mt-5 bg-[#F9FAFB] w-full py-14 md:py-10 px-5 md:px-20">
+          <div className="mt-5 bg-[#F9FAFB] w-full ">
+            <div className="py-14 md:py-10 px-5 md:px-20">
             <p className="text-[#475467] text-xl text-center">Trusted by our Partners</p>
             <div className="mt-7">
               <div className="flex justify-between flex-wrap gap-10 md:flex-unwrap md:gap-0">
@@ -153,12 +155,13 @@ export default function JobBoard() {
                 <Image layout="intrisic" src={Company5} className="w-[40%] md:w-max" alt="companies we partner with" />
               </div>
             </div>
+            </div>
           </div>
           <div className="px-5 md:px-20 mt-20 relative">
             <div className="md:grid grid-cols-1.5/1">
               <div ref={addToRefs}>
                 <h4 className="text-3xl font-bold mb-4">Who We Are</h4>
-                <p className="text-base md:text-lg mb-7 md:mb-0 leading-loose text-[#475467]">
+                <p className="text-base md:text-lg mb-7 md:mb-0 leading-loose text-[#475467] max-w-[736px]">
                   RemoteWorkHer is a platform dedicated to empowering individuals through remote work opportunities and resources. We help
                   you connect, learn, and grow in your remote career, regardless of where you are
                 </p>
@@ -196,13 +199,13 @@ export default function JobBoard() {
             {
               currentView === "personal" ?
                 <>
-                  <div className="hidden md:grid grid-cols-4 gap-10 mt-10 md:mt-14">
-                    <div className="bg-[#FFF1F3]  rounded-3xl pt-1 pb-10 px-5 h-[504px]">
+                  <div className="hidden md:grid justify-center gap-10 md:gap-20 mx-auto w-max grid-cols-3 mt-10 md:mt-14">
+                    <div className="bg-[#FFF1F3] max-w-[380px] rounded-3xl pt-1 pb-10 px-5 h-[504px]">
                       <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                         <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
                           <p className="text-[#555A62] font-jakarta font-[600] text-[10px]"> The law and Business of Remote Work</p>
                         </div>
-                        <Image layout="intrisic" src={Pros1} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                        <Image layout="intrisic" src={Pros1} className="w-full object-fit object-cover rounded-lg h-[200px]" alt="collection of women" />
                         <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
                           <ul className="flex gap-5">
                             <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
@@ -213,18 +216,18 @@ export default function JobBoard() {
                         </div>
                       </div>
                       <div className="mb-10">
-                        <h4 className="font-bold font-jakarta text-xl leading-snug mb-2 min-h-[2rem]">Exclusive Community Events </h4>
+                        <h4 className="font-bold font-jakarta text-xl leading-snug mb-2 min-h-[2rem]">Community & Events </h4>
                         <p className="text-base text-[#4B5563]">
                           Events that help bring you together with other remote workers and better opportunities
                         </p>
                       </div>
                     </div>
-                    <div className="bg-[#FFFAEC]  rounded-3xl pt-1 pb-10 px-5 h-[504px]">
+                    <div className="bg-[#FFFAEC] max-w-[380px]  rounded-3xl pt-1 pb-10 px-5 h-[504px]">
                       <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                         <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
                           <p className="text-[#555A62] font-jakarta font-[600] text-[10px]"> The law and Business of Remote Work</p>
                         </div>
-                        <Image layout="intrisic" src={Pros2} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                        <Image layout="intrisic" src={Pros2} className="w-full object-fit object-cover h-[200px] rounded-lg" alt="collection of women" />
                         <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
                           <ul className="flex gap-5">
                             <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
@@ -235,18 +238,18 @@ export default function JobBoard() {
                         </div>
                       </div>
                       <div className="mb-10">
-                        <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Facebook Community</h4>
+                        <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Inner Circle</h4>
                         <p className="text-base text-[#4B5563]">
                           Our easy-to-use editor allows you to create customized job ads within minutes.
                         </p>
                       </div>
                     </div>
-                    <div className="bg-[#F1F3FF]  rounded-3xl pt-1 pb-10 px-5 h-[504px]">
+                    <div className="bg-[#F1F3FF] max-w-[380px]  rounded-3xl pt-1 pb-10 px-5 h-[504px]">
                       <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                         <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
                           <p className="text-[#555A62] font-jakarta font-[600] text-[10px]">Open Source Library of resources</p>
                         </div>
-                        <Image layout="intrisic" src={Pros3} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                        <Image layout="intrisic" src={Pros3} className="w-full object-fit object-cover rounded-lg h-[200px]" alt="collection of women" />
                         <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
                           <ul className="flex gap-5">
                             <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
@@ -263,7 +266,7 @@ export default function JobBoard() {
                         </p>
                       </div>
                     </div>
-                    <div className="bg-[#F1FFF8]  rounded-3xl pt-1 pb-10 px-5 h-[504px]">
+                    {/* <div className="bg-[#F1FFF8]  rounded-3xl pt-1 pb-10 px-5 h-[504px]">
                       <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                         <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
                           <p className="text-[#555A62] font-jakarta font-[600] text-[10px]"> The law and Business of Remote Work</p>
@@ -273,8 +276,7 @@ export default function JobBoard() {
                           <ul className="flex gap-5">
                             <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
                               <span className="text-[#555A62] font-jakarta font-[600] text-xs"> Individuals</span></li>
-                            {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
-                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
+                    
                           </ul>
                         </div>
                       </div>
@@ -284,7 +286,7 @@ export default function JobBoard() {
                           Our easy-to-use editor allows you to create customized job ads within minutes.
                         </p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="block md:hidden mt-10 md:mt-14">
                     <Swiper
@@ -292,17 +294,17 @@ export default function JobBoard() {
                       pagination={false}
                       spaceBetween={50}
                       breakpoints={{
-                        // Mobile view (default)
+                     
                         0: {
                           slidesPerView: 1,
                           spaceBetween: 10,
                         },
-                        // Tablet view
+               
                         768: {
                           slidesPerView: 2,
                           spaceBetween: 15,
                         },
-                        // Desktop view
+                  
                         1024: {
                           slidesPerView: 4,
                           spaceBetween: 35,
@@ -433,12 +435,35 @@ export default function JobBoard() {
                       </p>
                     </div>
                   </div>
+
+                  <div className="bg-[#FFF1F3] rounded-3xl pt-1 pb-10 px-5">
+                    <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
+                      <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
+                        <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
+                      </div>
+                      <Image layout="intrisic" src={Pros1} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                      <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
+                        <ul className="flex gap-5">
+                          {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Individuals</span></li> */}
+                          <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="mb-10">
+                      <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Headhunt Talent</h4>
+                      <p className="text-base text-[#4B5563]">
+                        Events that help bring you together with other remote workers and better opportunities
+                      </p>
+                    </div>
+                  </div>
                 </div>
             }
           </div>
 
           <div className="mt-28 md:mt-40 px-5 md:px-20 relative">
-            <div className="flex flex-col md:grid grid-cols-2 gap-20 items-center">
+            <div className="flex flex-col md:grid grid-cols-2 gap-30 items-center">
               <div ref={addToRefs} className="">
               <p className="text-sm font-[500] text-[#667085] mb-2">JOB BOARD</p>
                 <h3 className="font-jakarta font-bold text-[2rem] md:text-[2.6rem] md:w-[70%] md:max-w-[465px] mb-1 leading-[50px]">Want to source for remote jobs?</h3>
@@ -447,7 +472,11 @@ export default function JobBoard() {
                 </p>
                 <button className="bg-black py-4 px-10 rounded-lg text-white text-sm mt-5">Browse Opportunities</button>
               </div>
-              <div className="relative flex justify-between">
+
+              <div className="">
+              <Image layout="intrisic" src={Experience} className="md:ml-auto" alt="gradient" />
+              </div>
+              {/* <div className="relative flex justify-between">
                 <div></div>
                 <div className="relative">
                   <Image layout="intrisic" src={ExperienceCard} className="shadow-2xl relative rounded-l-2xl z-40" alt="remote job calculation" />
@@ -459,7 +488,7 @@ export default function JobBoard() {
                   <Image layout="intrisic" src={RedEclipse} className="absolute -top-[2rem] -left-[2rem] z-1" alt="ellipse" />
                 </div>
                 <Image layout="intrisic" src={CircleGradient} className="absolute -left-[20rem] -top-[20rem] opacity-30" alt="gradient" />
-              </div>
+              </div> */}
               <Image layout="intrisic" src={RedGradient} className="w-max absolute -top-[20rem] left-0 opacity-30" alt="gradient" />
             </div>
           </div>
@@ -512,10 +541,10 @@ export default function JobBoard() {
             <div className="relative w-full h-full pt-16">
               <h3 className="font-jakarta font-bold text-2xl md:text-4xl text-center">Meet Adeife, Our Founder</h3>
               {/* <Image layout="intrisic" src={MeetHero} className="mx-auto" alt="about us video" /> */}
-              <div className="mx-auto mt-10">
+              <div className="mx-auto mt-10 border">
               <iframe
-                width="560"
-                height="315"
+                width="880"
+                height="545"
                 className="mx-auto rounded-[20px] border-[18px]   border-[#FFDDED]"
                 src="https://www.youtube.com/embed/EDnfEVU8vyA"
                 title="YouTube Video"
@@ -558,7 +587,8 @@ export default function JobBoard() {
             <Image src={VectorImg3} alt="vector background" className="vector-bg z-[-1]" />
             <div className="flex flex-col md:grid grid-cols-2 gap-14 md:gap-28 md:items-center">
               <div>
-                <div className="md:flex justify-between relative">
+              <Image layout="intrisic" src={Involved} className=" w-auto" alt="collection of women" />
+                {/* <div className="md:flex justify-between relative">
                   <div></div>
                   <div className="absolute h-full w-full top-0 left-0 flex items-center">
                     <Image layout="intrisic" src={SecInvolved} className="md:h-[20rem] w-auto" alt="collection of women" />
@@ -568,12 +598,12 @@ export default function JobBoard() {
                       <Image layout="intrisic" src={MainInvolved} className="w-max mx-auto md:mx-0" alt="collection of women" />
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div>
                 <Image layout="intrisic" src={Quote} className="w-auto h-[25px] mb-4" alt="quote" />
                 <div className="relative">
-                  <h4 className="text-3xl font-bold mb-10">Get Involved</h4>
+                  <h4 className="text-4xl font-bold mb-10">Get Involved</h4>
                   <div className="absolute w-full md:w-max h-full -bottom-4 left-7 md:left-0 flex items-end">
                     <Image src={CurveImg} alt="semi-circle curve" className="w-[30%] md:w-[70%] md:mx-auto" />
                   </div>
@@ -584,10 +614,14 @@ export default function JobBoard() {
                     <p className="text-[#475467] text-base">Join in on this mentor ship programme as either a Mentor or a Mentee and
                       make use of the opportunity to learn and impart others</p>
                   </div>
-                  <div className="py-1 pl-5 border-l-4 mb-2 border-solid border-[#F2F4F7]">
+                  <div className="py-1 pl-5 border-l-4 mb-8 border-solid border-[#F2F4F7]">
                     <h5 className="mb-1 font-dmsans font-[600]">Volunteering</h5>
                     <p className="text-[#475467] text-base">Join us and become a part of our esteemed volunteers with
                       exclusive access to our platform and resources</p>
+                  </div>
+                  <div className="py-1 pl-5 border-l-4 mb-8 border-solid border-black">
+                    <h5 className="mb-1 font-dmsans font-[600]">Talent Pool</h5>
+                    <p className="text-[#475467] text-base">Join our Talent Pool to showcase your skills, connect with potential employers, and unlock new career opportunities while expanding your professional network.</p>
                   </div>
                 </div>
               </div>
