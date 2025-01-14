@@ -63,7 +63,7 @@ import CardModerator3 from "@/assets/images/hero/card_moderator3.png";
 import CardModerator4 from "@/assets/images/hero/card_moderator4.png";
 
 // import Shape from "@/assets/images/hero/Shape.png";
-
+*
 // import Woman from "@/assets/images/hero/woman.png";
 // import Community from "@/assets/images/hero/community.png";
 import Quote from "@/assets/images/home/quote.png";
@@ -199,8 +199,8 @@ export default function JobBoard() {
             {
               currentView === "personal" ?
                 <>
-                  <div className="hidden md:grid justify-center gap-10 md:gap-20 mx-auto w-max grid-cols-3 mt-10 md:mt-14">
-                    <div className="bg-[#FFF1F3] max-w-[380px] rounded-3xl pt-1 pb-10 px-5 h-[504px]">
+                  <div className="hidden md:grid justify-center gap-10 md:gap-20 mx-auto max-w-[1400px] grid-cols-3 mt-10 md:mt-14">
+                    <div className="bg-[#FFF1F3] max-w-[380px] rounded-3xl pt-1 pb-10 px-5 h-[534px]">
                       <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                         <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
                           <p className="text-[#555A62] font-jakarta font-[600] text-[10px]"> The law and Business of Remote Work</p>
@@ -222,7 +222,7 @@ export default function JobBoard() {
                         </p>
                       </div>
                     </div>
-                    <div className="bg-[#FFFAEC] max-w-[380px]  rounded-3xl pt-1 pb-10 px-5 h-[504px]">
+                    <div className="bg-[#FFFAEC] max-w-[380px]  rounded-3xl pt-1 pb-10 px-5 h-[534px]">
                       <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                         <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
                           <p className="text-[#555A62] font-jakarta font-[600] text-[10px]"> The law and Business of Remote Work</p>
@@ -244,7 +244,7 @@ export default function JobBoard() {
                         </p>
                       </div>
                     </div>
-                    <div className="bg-[#F1F3FF] max-w-[380px]  rounded-3xl pt-1 pb-10 px-5 h-[504px]">
+                    <div className="bg-[#F1F3FF] max-w-[380px]  rounded-3xl pt-1 pb-10 px-5 h-[534px]">
                       <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                         <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
                           <p className="text-[#555A62] font-jakarta font-[600] text-[10px]">Open Source Library of resources</p>
@@ -413,7 +413,7 @@ export default function JobBoard() {
                 :
                 <div className="md:grid grid-cols-4 gap-10 mt-10 md:mt-14">
                   {/* */}
-                  <div className="bg-[#FFF1F3] rounded-3xl pt-1 pb-10 px-5">
+                  <div className="bg-[#FFF1F3] rounded-3xl pt-1 pb-10 px-5 h-[534px]">
                     <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                       <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
                         <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
@@ -436,7 +436,7 @@ export default function JobBoard() {
                     </div>
                   </div>
 
-                  <div className="bg-[#FFF1F3] rounded-3xl pt-1 pb-10 px-5">
+                  <div className="bg-[#FFF1F3] rounded-3xl pt-1 pb-10 px-5 h-[534px]">
                     <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                       <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
                         <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
@@ -537,11 +537,11 @@ export default function JobBoard() {
             </div>
             <Image layout="intrisic" src={RedGradient} className="w-max absolute -top-[20rem] left-0" alt="gradient" />
           </div> */}
-          <div className="mt-24 md:mt-[10rem] md:mb-[5rem]">
+          <div className="mt-10  md:mb-[5rem] ">
             <div className="relative w-full h-full pt-16">
               <h3 className="font-jakarta font-bold text-2xl md:text-4xl text-center">Meet Adeife, Our Founder</h3>
               {/* <Image layout="intrisic" src={MeetHero} className="mx-auto" alt="about us video" /> */}
-              <div className="mx-auto mt-10 border">
+              <div className="mx-auto mt-10">
               <iframe
                 width="880"
                 height="545"
