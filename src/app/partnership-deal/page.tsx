@@ -16,8 +16,8 @@ import { useEffect, useRef } from "react";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
-import BGMain from "@/assets/images/services/business/BG.svg"
-import VectorMain from "@/assets/images/services/business/Vector.svg"
+import BGMain from "@/assets/images/services/business/bg.svg"
+import VectorMain from "@/assets/images/services/business/vector.svg"
 
 const PartnershipDeal = () => {
     const textRefs = useRef<HTMLDivElement[]>([]);
