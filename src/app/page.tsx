@@ -30,6 +30,10 @@ import Company3 from "@/assets/images/hero/companies/logo_3.svg";
 import Company4 from "@/assets/images/hero/companies/logo_4.svg";
 import Company5 from "@/assets/images/hero/companies/logo_5.svg";
 
+import User1 from "@/assets/images/home/user1.svg";
+import User2 from "@/assets/images/home/user2.svg";
+import User3 from "@/assets/images/home/user3.svg";
+
 // import Grid1 from "@/assets/images/hero/grid_1.png";
 // import Grid2 from "@/assets/images/hero/grid_2.png";
 // import Grid3 from "@/assets/images/hero/grid_3.png";
@@ -63,7 +67,6 @@ import CardModerator3 from "@/assets/images/hero/card_moderator3.png";
 import CardModerator4 from "@/assets/images/hero/card_moderator4.png";
 
 // import Shape from "@/assets/images/hero/Shape.png";
-*
 // import Woman from "@/assets/images/hero/woman.png";
 // import Community from "@/assets/images/hero/community.png";
 import Quote from "@/assets/images/home/quote.png";
@@ -137,24 +140,36 @@ export default function JobBoard() {
                   <Image layout="intrisic" src={HeroPeople} className="w-[40%] md:w-max" alt="collection of women" />
                   <Image layout="intrisic" src={HeroFly} className="absolute -top-5 md:top-0 -right-5 md:right-0" alt="flying icon" />
                 </div>
-                <div className="">
+                <div className="relative">
                   <Image layout="intrisic" src={HeroImg} className="w-full md:w-max mx-auto mt-10 mb-5 md:mt-[-50px] md:mb-0 " alt="collection of women" />
+                  <div>
+                    <Image layout="intrisic" src={User1} className="absolute left-0 top-60 user-rotation" alt="companies we partner with" />
+                    <Image layout="intrisic" src={User2} className="absolute right-10 top-0 user-rotation" alt="companies we partner with" />
+                    <Image layout="intrisic" src={User3} className="absolute right-0 bottom-10 user-rotation" alt="companies we partner with" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="mt-5 bg-[#F9FAFB] w-full ">
             <div className="py-14 md:py-10 px-5 md:px-20">
-            <p className="text-[#475467] text-xl text-center">Trusted by our Partners</p>
-            <div className="mt-7">
-              <div className="flex justify-between flex-wrap gap-10 md:flex-unwrap md:gap-0">
-                <Image layout="intrisic" src={Company1} className="w-[40%] md:w-max" alt="companies we partner with" />
-                <Image layout="intrisic" src={Company2} className="w-[40%] md:w-max" alt="companies we partner with" />
-                <Image layout="intrisic" src={Company3} className="w-[40%] md:w-max" alt="companies we partner with" />
-                <Image layout="intrisic" src={Company4} className="w-[40%] md:w-max" alt="companies we partner with" />
-                <Image layout="intrisic" src={Company5} className="w-[40%] md:w-max" alt="companies we partner with" />
+              <p className="text-[#475467] text-xl text-center">Trusted by our Partners</p>
+              <div className="mt-7 overflow-hidden whitespace-nowrap">
+                <div className="inline-flex justify-between w-full flex-wrap gap-10 md:flex-unwrap md:gap-0">
+                  <Image layout="intrisic" src={Company1} className="w-[40%] md:w-max" alt="companies we partner with" />
+                  <Image layout="intrisic" src={Company2} className="w-[40%] md:w-max" alt="companies we partner with" />
+                  <Image layout="intrisic" src={Company3} className="w-[40%] md:w-max" alt="companies we partner with" />
+                  <Image layout="intrisic" src={Company4} className="w-[40%] md:w-max" alt="companies we partner with" />
+                  <Image layout="intrisic" src={Company5} className="w-[40%] md:w-max" alt="companies we partner with" />
+                </div>
+                {/* <div ref={sliderRef} className="flex justify-between flex-wrap gap-10 md:flex-unwrap md:gap-0">
+                  <Image layout="intrisic" src={Company1} className="w-[40%] md:w-max" alt="companies we partner with" />
+                  <Image layout="intrisic" src={Company2} className="w-[40%] md:w-max" alt="companies we partner with" />
+                  <Image layout="intrisic" src={Company3} className="w-[40%] md:w-max" alt="companies we partner with" />
+                  <Image layout="intrisic" src={Company4} className="w-[40%] md:w-max" alt="companies we partner with" />
+                  <Image layout="intrisic" src={Company5} className="w-[40%] md:w-max" alt="companies we partner with" />
+                </div> */}
               </div>
-            </div>
             </div>
           </div>
           <div className="px-5 md:px-20 mt-20 relative">
@@ -294,17 +309,17 @@ export default function JobBoard() {
                       pagination={false}
                       spaceBetween={50}
                       breakpoints={{
-                     
+
                         0: {
                           slidesPerView: 1,
                           spaceBetween: 10,
                         },
-               
+
                         768: {
                           slidesPerView: 2,
                           spaceBetween: 15,
                         },
-                  
+
                         1024: {
                           slidesPerView: 4,
                           spaceBetween: 35,
@@ -465,7 +480,7 @@ export default function JobBoard() {
           <div className="mt-28 md:mt-40 px-5 md:px-20 relative">
             <div className="flex flex-col md:grid grid-cols-2 gap-30 items-center">
               <div ref={addToRefs} className="">
-              <p className="text-sm font-[500] text-[#667085] mb-2">JOB BOARD</p>
+                <p className="text-sm font-[500] text-[#667085] mb-2">JOB BOARD</p>
                 <h3 className="font-jakarta font-bold text-[2rem] md:text-[2.6rem] md:w-[70%] md:max-w-[465px] mb-1 leading-[50px]">Want to source for remote jobs?</h3>
                 <p className="text-sm md:text-lg font-[#4B5563] leading-loose md:w-[80%]">
                   Join RemoteWorkHer Today
@@ -474,7 +489,7 @@ export default function JobBoard() {
               </div>
 
               <div className="">
-              <Image layout="intrisic" src={Experience} className="md:ml-auto" alt="gradient" />
+                <Image layout="intrisic" src={Experience} className="md:ml-auto" alt="gradient" />
               </div>
               {/* <div className="relative flex justify-between">
                 <div></div>
@@ -542,17 +557,17 @@ export default function JobBoard() {
               <h3 className="font-jakarta font-bold text-2xl md:text-4xl text-center">Meet Adeife, Our Founder</h3>
               {/* <Image layout="intrisic" src={MeetHero} className="mx-auto" alt="about us video" /> */}
               <div className="mx-auto mt-10">
-              <iframe
-                width="880"
-                height="545"
-                className="mx-auto rounded-[20px] border-[18px]   border-[#FFDDED]"
-                src="https://www.youtube.com/embed/EDnfEVU8vyA"
-                title="YouTube Video"
-                frameBorder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
+                <iframe
+                  width="880"
+                  height="545"
+                  className="mx-auto rounded-[20px] border-[18px]   border-[#FFDDED]"
+                  src="https://www.youtube.com/embed/EDnfEVU8vyA"
+                  title="YouTube Video"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
 
               <Image layout="intrisic" src={MeetRight} className="hidden md:block absolute right-5 bottom-[3.5rem]" alt="image of founder" />
               <Image layout="intrisic" src={MeetLeft} className="hidden md:block absolute left-5 bottom-[-0.9rem]" alt="image of founder" />
@@ -587,7 +602,7 @@ export default function JobBoard() {
             <Image src={VectorImg3} alt="vector background" className="vector-bg z-[-1]" />
             <div className="flex flex-col md:grid grid-cols-2 gap-14 md:gap-28 md:items-center">
               <div>
-              <Image layout="intrisic" src={Involved} className=" w-auto" alt="collection of women" />
+                <Image layout="intrisic" src={Involved} className=" w-auto" alt="collection of women" />
                 {/* <div className="md:flex justify-between relative">
                   <div></div>
                   <div className="absolute h-full w-full top-0 left-0 flex items-center">
@@ -641,7 +656,7 @@ export default function JobBoard() {
 
 
 
-          <div className="grid grid-cols-2 md:grid-cols-4 text-center gap-x-10 gap-y-10 md:gap-y-16  mt-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 text-center gap-x-10 gap-y-10 md:gap-y-16  mt-16">
               <div ref={addToRefs}>
                 <h3 className="font-jakarta text-4xl md:text-6xl font-[600] mb-4">400+</h3>
                 <h5 className="font-dmsans font-[600] text-base md:text-lg mb-2">Partnerships Created</h5>

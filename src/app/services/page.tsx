@@ -245,7 +245,7 @@ const ServicesPage = () => {
                                                 sessions led by experts to level up your remote work skills. Advanced sessions led by experts to
                                                 level up your remote work skills.
                                             </p>
-                                            <Link href="" className="text-accent text-base font-jost font-600 flex gap-3 items-center">Partnership Deal<FaArrowRight /></Link>
+                                            <Link href="/partnership-deal" className="text-accent text-base font-jost font-600 flex gap-3 items-center">Partnership Deal<FaArrowRight /></Link>
                                         </div>
                                     </div>
                                 </div>

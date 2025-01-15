@@ -97,7 +97,7 @@ const AboutUsPage = () => {
                             </h3>
                         </div>
                         <div className="mt-10 md:mt-20">
-                            <div className="flex flex-col-reverse gap-10 md:gap-24 md:grid grid-cols-2 md:items-center">
+                            <div className="flex flex-col-reverse gap-10 md:gap-24 md:grid grid-cols-2">
                                 <div>
                                     <div className="mx-auto">
                                         <Image src={WomanLarge} alt="woman posing for picture" className="h-full rounded-xl w-full" />
