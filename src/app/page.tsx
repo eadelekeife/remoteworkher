@@ -141,7 +141,7 @@ export default function JobBoard() {
                   <Image layout="intrisic" src={HeroFly} className="absolute -top-5 md:top-0 -right-5 md:right-0" alt="flying icon" />
                 </div>
                 <div className="relative">
-                  <Image layout="intrisic" src={HeroImg} className="w-full md:w-max mx-auto mt-10 mb-5 md:mt-[-50px] md:mb-0 " alt="collection of women" />
+                  <Image layout="intrisic" src={HeroImg} className="w-full mx-auto mt-10 mb-5 md:mt-[-50px] md:mb-0 " alt="collection of women" />
                   <div>
                     <Image layout="intrisic" src={User1} className="absolute left-0 top-60 user-rotation" alt="companies we partner with" />
                     <Image layout="intrisic" src={User2} className="absolute right-10 top-0 user-rotation" alt="companies we partner with" />
