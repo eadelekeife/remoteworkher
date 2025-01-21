@@ -17,9 +17,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
 // import { Navigation, Pagination } from 'swiper';
 
-import HeroPeople from "@/assets/images/hero_people.png";
+import HeroPeople from "@/assets/images/home/community.svg";
 // import HeroImg from "@/assets/images/hero.png";
 import HeroImg from "@/assets/images/home/hero-2.png";
 import HeroFly from "@/assets/images/patterns.svg";
@@ -38,7 +39,7 @@ import User3 from "@/assets/images/home/user3.svg";
 // import Grid2 from "@/assets/images/hero/grid_2.png";
 // import Grid3 from "@/assets/images/hero/grid_3.png";
 
-import TestimonialCard1 from "@/assets/images/hero/testimonial_card.png";
+import TestimonialCard1 from "@/assets/images/home/testimony.png";
 import TestimonialCard2 from "@/assets/images/hero/testimonial_card2.png";
 
 import RedGradient from "@/assets/images/hero/red_gradient.png";
@@ -120,6 +121,28 @@ export default function JobBoard() {
       textRefs.current.push(el);
     }
   };
+// horizontal scroll
+const logoContainerRef = useRef<HTMLDivElement>(null);
+
+useEffect(() => {
+  const logoContainer = logoContainerRef.current;
+
+  if (logoContainer) {
+    // Duplicate logos dynamically
+    const containerWidth = logoContainer.scrollWidth;
+
+    // Set up GSAP animation for seamless scrolling
+    gsap.to(logoContainer, {
+      x: `-${containerWidth / 2}px`, // Scroll through half of the content width (one set of logos)
+      ease: "linear",
+      duration: 20, // Adjust speed as needed
+      repeat: -1, // Infinite loop
+      modifiers: {
+        x: gsap.utils.wrap(-containerWidth / 2, 0), // Wrap around content
+      },
+    });
+  }
+}, []);
   return (
     <div>
       <DisplayLayout>
@@ -127,9 +150,9 @@ export default function JobBoard() {
           <div className="px-5 md:px-20 pt-32 md:pt-20">
             <Image src={VectorImg} alt="vector background" className="vector-bg z-[-1]" />
             <div className="">
-              <div ref={addToRefs} className="flex flex-col md:grid grid-cols-2 md:mt-[60px] ">
-                <div className="relative  max-w-[600px] md:mt-10">
-                  <h2 className="text-[2rem] md:text-[2.9rem] font-bold font-jakarta  text-black leading-tight">
+              <div ref={addToRefs} className="flex flex-col md:grid grid-cols-2 md:mt-[60px]  ">
+                <div className="relative  max-w-[632px] md:mt-10">
+                  <h2 className="text-[2rem] md:text-[3.2rem] font-bold font-jakarta  text-black leading-[75px]">
                     More Than Just a Space, it&apos;s a Community of Remote WorkHers
                   </h2>
                   <p className="mt-6 text-[#666666] text-base font-[300] w-full md:w-[70%] mb-7">
@@ -151,31 +174,91 @@ export default function JobBoard() {
               </div>
             </div>
           </div>
-          <div className="mt-5 bg-[#F9FAFB] w-full ">
+          <div className="bg-[#F9FAFB] w-full overflow-hidden">
             <div className="py-14 md:py-10 px-5 md:px-20">
               <p className="text-[#475467] text-xl text-center">Trusted by our Partners</p>
-              <div className="mt-7 overflow-hidden whitespace-nowrap">
-                <div className="inline-flex justify-between w-full flex-wrap gap-10 md:flex-unwrap md:gap-0">
-                  <Image layout="intrisic" src={Company1} className="w-[40%] md:w-max" alt="companies we partner with" />
-                  <Image layout="intrisic" src={Company2} className="w-[40%] md:w-max" alt="companies we partner with" />
-                  <Image layout="intrisic" src={Company3} className="w-[40%] md:w-max" alt="companies we partner with" />
-                  <Image layout="intrisic" src={Company4} className="w-[40%] md:w-max" alt="companies we partner with" />
-                  <Image layout="intrisic" src={Company5} className="w-[40%] md:w-max" alt="companies we partner with" />
+              <div className="mt-7 overflow-hidden">
+                {/* Wrapper for GSAP animation */}
+                <div
+                  ref={logoContainerRef}
+                  className="flex gap-10 whitespace-nowrap"
+                  style={{ width: "max-content" }} // Ensure proper width calculation
+                >
+                  {/* Original Logos */}
+                  <div className="flex gap-10">
+                    <Image
+                      layout="intrinsic"
+                      src={Company1}
+                      className="w-[40%] md:w-max"
+                      alt="companies we partner with"
+                    />
+                    <Image
+                      layout="intrinsic"
+                      src={Company2}
+                      className="w-[40%] md:w-max"
+                      alt="companies we partner with"
+                    />
+                    <Image
+                      layout="intrinsic"
+                      src={Company3}
+                      className="w-[40%] md:w-max"
+                      alt="companies we partner with"
+                    />
+                    <Image
+                      layout="intrinsic"
+                      src={Company4}
+                      className="w-[40%] md:w-max"
+                      alt="companies we partner with"
+                    />
+                    <Image
+                      layout="intrinsic"
+                      src={Company5}
+                      className="w-[40%] md:w-max"
+                      alt="companies we partner with"
+                    />
+                  </div>
+                  {/* Duplicate Logos for seamless scrolling */}
+                  <div className="flex gap-10">
+                    <Image
+                      layout="intrinsic"
+                      src={Company1}
+                      className="w-[40%] md:w-max"
+                      alt="companies we partner with"
+                    />
+                    <Image
+                      layout="intrinsic"
+                      src={Company2}
+                      className="w-[40%] md:w-max"
+                      alt="companies we partner with"
+                    />
+                    <Image
+                      layout="intrinsic"
+                      src={Company3}
+                      className="w-[40%] md:w-max"
+                      alt="companies we partner with"
+                    />
+                    <Image
+                      layout="intrinsic"
+                      src={Company4}
+                      className="w-[40%] md:w-max"
+                      alt="companies we partner with"
+                    />
+                    <Image
+                      layout="intrinsic"
+                      src={Company5}
+                      className="w-[40%] md:w-max"
+                      alt="companies we partner with"
+                    />
+                  </div>
                 </div>
-                {/* <div ref={sliderRef} className="flex justify-between flex-wrap gap-10 md:flex-unwrap md:gap-0">
-                  <Image layout="intrisic" src={Company1} className="w-[40%] md:w-max" alt="companies we partner with" />
-                  <Image layout="intrisic" src={Company2} className="w-[40%] md:w-max" alt="companies we partner with" />
-                  <Image layout="intrisic" src={Company3} className="w-[40%] md:w-max" alt="companies we partner with" />
-                  <Image layout="intrisic" src={Company4} className="w-[40%] md:w-max" alt="companies we partner with" />
-                  <Image layout="intrisic" src={Company5} className="w-[40%] md:w-max" alt="companies we partner with" />
-                </div> */}
               </div>
             </div>
           </div>
-          <div className="px-5 md:px-20 mt-20 relative">
+
+          <div className="px-5 md:px-20 mt-20 relative border border-black">
             <div className="md:grid grid-cols-1.5/1">
               <div ref={addToRefs}>
-                <h4 className="text-3xl font-bold mb-4">Who We Are</h4>
+                <h4 className="text-5xl font-bold mb-4">Who We Are</h4>
                 <p className="text-base md:text-lg mb-7 md:mb-0 leading-loose text-[#475467] max-w-[736px]">
                   RemoteWorkHer is a platform dedicated to empowering individuals through remote work opportunities and resources. We help
                   you connect, learn, and grow in your remote career, regardless of where you are
@@ -193,7 +276,7 @@ export default function JobBoard() {
             </div>
             <Image layout="intrisic" src={RightRedGradient} className="w-max absolute -top-[20rem] right-0" alt="red gradient" />
           </div>
-          <div className="mt-28 md:mt-48 px-5 md:px-20" ref={addToRefs}>
+          <div className="mt-28 md:mt-48 px-5 md:px-20 border border-red-800" ref={addToRefs} >
             <div className={`button mx-auto w-max relative border-2 border-solid border-[#E2C6D4] p-1 flex items-center rounded-full`}>
               <div onClick={() => {
                 setCurrentView("personal")
@@ -426,9 +509,9 @@ export default function JobBoard() {
                   </div>
                 </>
                 :
-                <div className="md:grid grid-cols-4 gap-10 mt-10 md:mt-14">
+                <div className="md:grid grid-cols-3 gap-10 mt-10 md:mt-14">
                   {/* */}
-                  <div className="bg-[#FFF1F3] rounded-3xl pt-1 pb-10 px-5 h-[534px]">
+                  <div className="bg-[#FFF1F3] max-w-[380px]  rounded-3xl pt-1 pb-10 px-5 h-[534px]">
                     <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                       <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
                         <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
@@ -451,7 +534,7 @@ export default function JobBoard() {
                     </div>
                   </div>
 
-                  <div className="bg-[#FFF1F3] rounded-3xl pt-1 pb-10 px-5 h-[534px]">
+                  <div className="bg-[#FFF1F3] max-w-[380px]  rounded-3xl pt-1 pb-10 px-5 h-[534px]">
                     <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                       <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
                         <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
@@ -477,11 +560,11 @@ export default function JobBoard() {
             }
           </div>
 
-          <div className="mt-28 md:mt-40 px-5 md:px-20 relative">
+          <div className="mt-20 px-5 md:px-20 relative border border-black">
             <div className="flex flex-col md:grid grid-cols-2 gap-30 items-center">
               <div ref={addToRefs} className="">
                 <p className="text-sm font-[500] text-[#667085] mb-2">JOB BOARD</p>
-                <h3 className="font-jakarta font-bold text-[2rem] md:text-[2.6rem] md:w-[70%] md:max-w-[465px] mb-1 leading-[50px]">Want to source for remote jobs?</h3>
+                <h3 className="font-jakarta font-bold text-[2rem] md:text-5xl md:w-[70%] md:max-w-[465px] mb-1 leading-[50px]">Want to source for remote jobs?</h3>
                 <p className="text-sm md:text-lg font-[#4B5563] leading-loose md:w-[80%]">
                   Join RemoteWorkHer Today
                 </p>
@@ -554,7 +637,7 @@ export default function JobBoard() {
           </div> */}
           <div className="mt-10  md:mb-[5rem] ">
             <div className="relative w-full h-full pt-16">
-              <h3 className="font-jakarta font-bold text-2xl md:text-4xl text-center">Meet Adeife, Our Founder</h3>
+              <h3 className="font-jakarta font-bold text-2xl md:text-7xl text-center">Meet Adeife, Our Founder</h3>
               {/* <Image layout="intrisic" src={MeetHero} className="mx-auto" alt="about us video" /> */}
               <div className="mx-auto mt-10">
                 <iframe
@@ -602,7 +685,21 @@ export default function JobBoard() {
             <Image src={VectorImg3} alt="vector background" className="vector-bg z-[-1]" />
             <div className="flex flex-col md:grid grid-cols-2 gap-14 md:gap-28 md:items-center">
               <div>
-                <Image layout="intrisic" src={Involved} className=" w-auto" alt="collection of women" />
+              <Swiper modules={[Autoplay, Pagination]}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                pagination={{ clickable: true }}
+                loop={true}
+                className="w-full">
+                <SwiperSlide>
+                  <Image layout="intrinsic" src={Involved} alt="Image 1" className="w-auto" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image layout="intrinsic" src={Involved} alt="Image 2" className="w-auto" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image layout="intrinsic" src={Involved} alt="Image 3" className="w-auto" />
+                </SwiperSlide>
+              </Swiper>
                 {/* <div className="md:flex justify-between relative">
                   <div></div>
                   <div className="absolute h-full w-full top-0 left-0 flex items-center">
@@ -618,7 +715,7 @@ export default function JobBoard() {
               <div>
                 <Image layout="intrisic" src={Quote} className="w-auto h-[25px] mb-4" alt="quote" />
                 <div className="relative">
-                  <h4 className="text-4xl font-bold mb-10">Get Involved</h4>
+                  <h4 className="text-5xl font-bold mb-10">Get Involved</h4>
                   <div className="absolute w-full md:w-max h-full -bottom-4 left-7 md:left-0 flex items-end">
                     <Image src={CurveImg} alt="semi-circle curve" className="w-[30%] md:w-[70%] md:mx-auto" />
                   </div>
@@ -656,29 +753,7 @@ export default function JobBoard() {
 
 
 
-            <div className="grid grid-cols-2 md:grid-cols-4 text-center gap-x-10 gap-y-10 md:gap-y-16  mt-16">
-              <div ref={addToRefs}>
-                <h3 className="font-jakarta text-4xl md:text-6xl font-[600] mb-4">400+</h3>
-                <h5 className="font-dmsans font-[600] text-base md:text-lg mb-2">Partnerships Created</h5>
-                <p className="text-sm md:text-base text-[#667085]">We&apos;ve helped build over 400 amazing projects.</p>
-              </div>
-              <div ref={addToRefs}>
-                <h3 className="font-jakarta text-4xl md:text-6xl font-[600] mb-4">70%</h3>
-                <h5 className="font-dmsans font-[600] text-base md:text-lg mb-2">Job board validity</h5>
-                <p className="text-sm md:text-base text-[#667085]">Our customers have reported a 70% in the callback
-                  responses on jobs posted on our platform.</p>
-              </div>
-              <div ref={addToRefs}>
-                <h3 className="font-jakarta text-4xl md:text-6xl font-[600] mb-4">10k</h3>
-                <h5 className="font-dmsans font-[600] text-base md:text-lg mb-2">Community Width</h5>
-                <p className="text-sm md:text-base text-[#667085]">Our free community has a record of ove 20k plus  participating members.</p>
-              </div>
-              <div ref={addToRefs}>
-                <h3 className="font-jakarta text-4xl md:text-6xl font-[600] mb-4">200+</h3>
-                <h5 className="font-dmsans font-[600] text-base md:text-lg mb-2">5 Star Reviews</h5>
-                <p className="text-sm md:text-base text-[#667085]">We&apos;re proud of our 5-star rating with over 200 reviews.</p>
-              </div>
-            </div>
+
             {/* <div className="flex flex-col md:grid grid-cols-2 gap-10 md:gap-20 mt-16 items-center">
               <div>
                 <div className="grid grid-cols-2 text-center gap-x-10 gap-y-10 md:gap-y-16">
@@ -710,17 +785,32 @@ export default function JobBoard() {
               </div>
             </div> */}
           </div>
-          <div className="mt-24 md:mt-32 px-5 md:px-20">
-            <div className="flex flex-col md:grid px-5 md:px-20 grid-cols-2 bg-[#FFF4F9] rounded-2xl">
+          <div className="mt-24 md:mt-32 px-5 md:px-20 ">
+            <div className="flex flex-col md:grid px-5 md:pl-20 grid-cols-2 bg-[#FFF4F9] rounded-2xl">
               <div className="py-10 md:py-20">
                 <h3 className="font-jakarta font-bold text-3xl md:text-5xl mb-2 md:mb-5 leading-snug">People love <br /> Remote WorkHer</h3>
                 <p className="text-lg font-[#66676D] leading-loose md:w-[80%]">
                   Recommendations from satisfied clients that affirm the value of our service.
                 </p>
               </div>
-              <div className="shape relative h-full">
-                <Image layout="intrisic" src={TestimonialCard1} className="w-full md:absolute -top-[5rem] -right-[9rem]" alt="gradient" />
-                <Image layout="intrisic" src={TestimonialCard2} className="w-full md:absolute -mt-[3rem] md:-bottom-[4rem] left-0" alt="gradient" />
+              <div className="shape relative h-full ">
+              {/* <Image layout="intrisic" src={TestimonialCard1} className="w-full  md:absolute -top-[5rem] -right-[5rem]" alt="gradient" /> */}
+                <Swiper modules={[Autoplay, Pagination]}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                pagination={{ clickable: true }}
+                loop={true}
+                className="w-full h-full border relative">
+                <SwiperSlide>
+                  <Image layout="intrisic" src={TestimonialCard1} className="w-full md:absolute -top-[5rem] -right-[5rem]" alt="gradient" />
+                </SwiperSlide>
+                <SwiperSlide>
+                 <Image layout="intrisic" src={TestimonialCard1} className="w-full md:absolute -top-[5rem] -right-[5rem]" alt="gradient" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image layout="intrisic" src={TestimonialCard1} className="w-full md:absolute -top-[5rem] -right-[5rem]" alt="gradient" />
+                </SwiperSlide>
+              </Swiper>
+                {/* <Image layout="intrisic" src={TestimonialCard2} className="w-full md:absolute -mt-[3rem] md:-bottom-[4rem] left-0" alt="gradient" /> */}
               </div>
             </div>
           </div>

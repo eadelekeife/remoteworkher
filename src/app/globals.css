@@ -202,3 +202,11 @@ h6 {
     transform: rotate(360deg);
   }
 }
+
+.swiper-pagination {
+  bottom: 5px !important; /* Moves the pagination 30px below the Swiper container */
+  z-index: 50;
+}
+.swiper-pagination-bullet-active {
+  background-color: #F963AB !important; /* Sets the active dot color */
+}
