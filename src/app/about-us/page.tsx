@@ -62,18 +62,18 @@ const AboutUsPage = () => {
         <div>
             <DisplayLayout>
                 <>
-                    <div className="px-5 md:px-24" ref={addToRefs}>
-                        <Image src={VectorImg} alt="vector background" className="vector-bg z-10" />
+                    <div className="px-5 md:px-24 bg-cover bg-center" ref={addToRefs} style={{backgroundImage:`url(${VectorImg.src})`}}>
+                        {/* <Image src={VectorImg} alt="vector background" className="vector-bg z-10" /> */}
                         <div className="md:min-h-[100vh] job-hero pt-24 pb-16 md:pb-24">
                             <div className="md:w-[70%] px-5 md:px-0 mx-auto text-center">
                                 <div ref={addToRefs}>
                                     <div className="text-[#F963AB] pt-14">
-                                        <h4 className="font-600 text-base font-dmsans">About us</h4>
+                                        <h4 className="font-600 text-lg font-dmsans">About us</h4>
                                     </div>
-                                    <h2 style={{ display: 'block' }} className="font-600 mx-auto text-4xl md:text-5xl pt-6 leading-tight text-[#101828]">Thrive in a World Without Borders</h2>
+                                    <h2 style={{ display: 'block' }} className="font-600 mx-auto text-3xl md:text-5xl pt-6 leading-tight text-[#101828]">Thrive in a World Without Borders</h2>
                                 </div>
                                 <div ref={addToRefs} className="mt-3 md:mt-8 md:w-[70%] mx-auto">
-                                    <p style={{ display: 'block' }} className="text-sm md:text-lg leading-loose md:leading-normal mb-10 md:mb-14 text-[#475467]">We&apos;re a community dedicated  to promoting and sustaining remote work worldwide.</p>
+                                    <p style={{ display: 'block' }} className="text-sm md:text-lg mleading-[14px] md:leading-normal mb-10 md:mb-14 text-[#475467]">We&apos;re a community dedicated  to promoting and sustaining remote work worldwide.</p>
                                 </div>
                             </div>
                             <Image src={Hero} alt="woman posing for picture" className="h-full rounded-xl w-full" />
@@ -92,7 +92,7 @@ const AboutUsPage = () => {
                             {/* <div className="w-max px-6 rounded-full py-3 border-[#F963AB] border-2 border-solid mx-auto text-[#F963AB]">
                                 <h4 className="font-jost font-[500]">About Us</h4>
                             </div> */}
-                            <h3 className="font-jakarta text-3xl md:text-4xl font-bold mt-5">
+                            <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-5">
                                 The story behind RemoteWorkHer
                             </h3>
                         </div>
@@ -143,9 +143,9 @@ const AboutUsPage = () => {
                     <div className="mt-24 md:mt-36 px-5 md:px-24 md:w-[90%] mx-auto">
                         <div className="text-center" ref={addToRefs}>
                             <div className="w-max mx-auto text-[#F963AB]">
-                                <h4 className="font-jost font-[500]">Testimonial</h4>
+                                <h4 className="font-jost font-[500] text-lg">Testimonial</h4>
                             </div>
-                            <h3 className="font-jakarta text-3xl md:text-4xl text-[#0D0D0D] font-medium mt-5">
+                            <h3 className="font-jakarta text-3xl md:text-5xl text-[#0D0D0D] font-medium mt-5">
                                 What our users say about us
                             </h3>
                         </div>
@@ -157,13 +157,13 @@ const AboutUsPage = () => {
                                             <div>
                                                 <Image src={TestimonialOne} alt="woman posing for picture" className="rounded-xl mx-auto w-auto h-[8rem] mb-5" />
                                             </div>
-                                            <p className="font-jakarta text-[#667085] leading-relaxed mb-5">
+                                            <p className="font-jakarta text-[#667085] text-lg leading-relaxed mb-5">
                                                 Within 90 days of mentoring, I landed my first client and exceeded my income goals. The guidance
                                                 I received was invaluable."
                                             </p>
                                             <div>
-                                                <h4 className="font-jakarta font-600 mb-1">Kate Smith</h4>
-                                                <p className="font-jakarta text-sm text-[#808080] leading-relaxed">Marketing Specialist</p>
+                                                <h4 className="font-jakarta text-base font-600 mb-1">Kate Smith</h4>
+                                                <p className="font-jakarta text-base text-[#808080] leading-relaxed">Marketing Specialist</p>
                                             </div>
                                         </div>
                                     </div>
@@ -176,12 +176,12 @@ const AboutUsPage = () => {
                                             </div>
                                             <div className="flex-1">
                                                 <div className="">
-                                                    <p className="font-jakarta text-[#667085] text-base leading-relaxed mb-5">
+                                                    <p className="font-jakarta text-[#667085] text-lg leading-relaxed mb-5">
                                                         Remote WorkHER was a life-changing experience. It gave me the push I needed to quit my 9-5 job and go remote.
                                                     </p>
                                                     <div>
-                                                        <h4 className="font-jakarta font-600 mb-1 text-sm">Kate Smith</h4>
-                                                        <p className="font-jakarta text-sm text-[#808080] leading-relaxed">Marketing Specialist</p>
+                                                        <h4 className="font-jakarta font-600 mb-1 text-base">Kate Smith</h4>
+                                                        <p className="font-jakarta text-base text-[#808080] leading-relaxed">Marketing Specialist</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -194,12 +194,12 @@ const AboutUsPage = () => {
                                             </div>
                                             <div className="flex-1">
                                                 <div className="">
-                                                    <p className="font-jakarta text-[#667085] text-base leading-relaxed mb-5">
+                                                    <p className="font-jakarta text-[#667085] text-lg leading-relaxed mb-5">
                                                         After the training, I successfully started a remote career and even moved to Bali!
                                                     </p>
                                                     <div>
-                                                        <h4 className="font-jakarta font-600 mb-1 text-sm">Kate Smith</h4>
-                                                        <p className="font-jakarta text-sm text-[#808080] leading-relaxed">Marketing Specialist</p>
+                                                        <h4 className="font-jakarta font-600 mb-1 text-base">Kate Smith</h4>
+                                                        <p className="font-jakarta text-base text-[#808080] leading-relaxed">Marketing Specialist</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -211,7 +211,7 @@ const AboutUsPage = () => {
                     </div>
                     <div className="mt-24 md:mt-36 px-5 md:px-0 mx-auto">
                         <div className="text-center" ref={addToRefs}>
-                            <h3 className="font-jakarta text-3xl md:text-4xl font-bold mt-5">
+                            <h3 className="font-jakarta text-3xl md:text-5xl font-bold mt-5">
                                 Services we Offer
                             </h3>
                             <div className="md:w-[60%] mt-3 md:mt-5 mx-auto">
@@ -231,7 +231,7 @@ const AboutUsPage = () => {
                                             Community Access
                                         </h3>
                                         <div className="mt-2 mx-auto">
-                                            <p className="text-base leading-relaxed font-jakarta text-[#475467]">
+                                            <p className="text-lg leading-relaxed font-jakarta text-[#475467]">
                                                 Journey to the highest reaches of the earth and discover the unparalleled.
                                             </p>
                                         </div>
@@ -244,7 +244,7 @@ const AboutUsPage = () => {
                                             Resources
                                         </h3>
                                         <div className="mt-2 mx-auto">
-                                            <p className="text-base leading-relaxed font-jakarta text-[#475467]">
+                                            <p className="text-lg leading-relaxed font-jakarta text-[#475467]">
                                                 Journey to the highest reaches of the earth and discover the unparalleled.
                                             </p>
                                         </div>
@@ -257,7 +257,7 @@ const AboutUsPage = () => {
                                             Events and Workshop
                                         </h3>
                                         <div className="mt-2 mx-auto">
-                                            <p className="text-base leading-relaxed font-jakarta text-[#475467]">
+                                            <p className="text-lg leading-relaxed font-jakarta text-[#475467]">
                                                 Journey to the highest reaches of the earth and discover the unparalleled.
                                             </p>
                                         </div>
@@ -270,7 +270,7 @@ const AboutUsPage = () => {
                                             Mentorship
                                         </h3>
                                         <div className="mt-2 mx-auto">
-                                            <p className="text-base leading-relaxed font-jakarta text-[#475467]">
+                                            <p className="text-lg leading-relaxed font-jakarta text-[#475467]">
                                                 Journey to the highest reaches of the earth and discover the unparalleled.
                                             </p>
                                         </div>
@@ -282,7 +282,7 @@ const AboutUsPage = () => {
                     <div className="mt-24 md:mt-36 mx-auto">
                         <div className="" ref={addToRefs}>
                             <div className="mt-7 px-5 md:px-24 text-center">
-                                <h3 className="font-jakarta text-3xl md:text-4xl font-medium text-[#0D0D0D] mt-4">
+                                <h3 className="font-jakarta text-3xl md:text-5xl font-medium text-[#0D0D0D] mt-4">
                                     Meet our team.
                                 </h3>
                                 <div className="md:w-[50%] mx-auto mt-3 md:mt-5">

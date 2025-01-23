@@ -17,7 +17,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination,  } from 'swiper/modules';
 // import { Navigation, Pagination } from 'swiper';
 
 import HeroPeople from "@/assets/images/home/community.svg";
@@ -86,7 +86,7 @@ import Involved from "@/assets/images/home/involved.svg"
 
 // import BlogImg from "@/assets/images/blog/blog_content.png";
 // import { IoFilter } from "react-icons/io5";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from "next/link";
 
@@ -124,21 +124,26 @@ export default function JobBoard() {
 // horizontal scroll
 const logoContainerRef = useRef<HTMLDivElement>(null);
 
-useEffect(() => {
+useLayoutEffect(() => {
   const logoContainer = logoContainerRef.current;
 
   if (logoContainer) {
-    // Duplicate logos dynamically
-    const containerWidth = logoContainer.scrollWidth;
+    // Calculate total width of the container
+    const containerWidth = Array.from(logoContainer.children).reduce(
+      (acc, child) => acc + (child as HTMLElement).offsetWidth,
+      0
+    );
 
-    // Set up GSAP animation for seamless scrolling
+    console.log("Container width:", containerWidth);
+
+    // GSAP animation for seamless scrolling
     gsap.to(logoContainer, {
-      x: `-${containerWidth / 2}px`, // Scroll through half of the content width (one set of logos)
+      x: `-${containerWidth / 2}px`, // Scroll through half the container width
       ease: "linear",
-      duration: 20, // Adjust speed as needed
-      repeat: -1, // Infinite loop
+      duration: 20,
+      repeat: -1, // Infinite scrolling
       modifiers: {
-        x: gsap.utils.wrap(-containerWidth / 2, 0), // Wrap around content
+        x: gsap.utils.wrap(-containerWidth / 2, 0), // Seamless wrapping
       },
     });
   }
@@ -147,15 +152,15 @@ useEffect(() => {
     <div>
       <DisplayLayout>
         <>
-          <div className="px-5 md:px-20 pt-32 md:pt-20">
+          <div className="px-5 md:px-20 pt-32 md:pt-20 h-max pb-[5rem] md:pb-0">
             <Image src={VectorImg} alt="vector background" className="vector-bg z-[-1]" />
             <div className="">
               <div ref={addToRefs} className="flex flex-col md:grid grid-cols-2 md:mt-[60px]  ">
-                <div className="relative  max-w-[632px] md:mt-10">
-                  <h2 className="text-[2rem] md:text-[3.2rem] font-bold font-jakarta  text-black leading-[75px]">
+                <div className="relative  max-w-[632px] mt-5 md:mt-10">
+                  <h2 className="text-[2rem] md:text-[3.2rem]  md:text-left font-bold font-jakarta  text-black leading-[40px] md:leading-[75px]">
                     More Than Just a Space, it&apos;s a Community of Remote WorkHers
                   </h2>
-                  <p className="mt-6 text-[#666666] text-base font-[300] w-full md:w-[70%] mb-7">
+                  <p className="md:mt-6 mt-8 text-[#666666] text-base font-[300] w-full md:w-[70%] mb-9 md:mb-7">
                     Whatever your remote work journey looks like, Remote WorkHER is here to support, inspire, and elevate you.
                   </p>
                   <button className="bg-accent px-8 py-4 font-[600] text-base text-white rounded-lg mb-7">Join The Community</button>
@@ -163,7 +168,7 @@ useEffect(() => {
                   <Image layout="intrisic" src={HeroPeople} className="w-[40%] md:w-max" alt="collection of women" />
                   <Image layout="intrisic" src={HeroFly} className="absolute -top-5 md:top-0 -right-5 md:right-0" alt="flying icon" />
                 </div>
-                <div className="relative">
+                <div className="relative hidden md:block">
                   <Image layout="intrisic" src={HeroImg} className="w-full mx-auto mt-10 mb-5 md:mt-[-50px] md:mb-0 " alt="collection of women" />
                   <div>
                     <Image layout="intrisic" src={User1} className="absolute left-0 top-60 user-rotation" alt="companies we partner with" />
@@ -175,91 +180,37 @@ useEffect(() => {
             </div>
           </div>
           <div className="bg-[#F9FAFB] w-full overflow-hidden">
-            <div className="py-14 md:py-10 px-5 md:px-20">
-              <p className="text-[#475467] text-xl text-center">Trusted by our Partners</p>
-              <div className="mt-7 overflow-hidden">
-                {/* Wrapper for GSAP animation */}
-                <div
-                  ref={logoContainerRef}
-                  className="flex gap-10 whitespace-nowrap"
-                  style={{ width: "max-content" }} // Ensure proper width calculation
-                >
-                  {/* Original Logos */}
-                  <div className="flex gap-10">
-                    <Image
-                      layout="intrinsic"
-                      src={Company1}
-                      className="w-[40%] md:w-max"
-                      alt="companies we partner with"
-                    />
-                    <Image
-                      layout="intrinsic"
-                      src={Company2}
-                      className="w-[40%] md:w-max"
-                      alt="companies we partner with"
-                    />
-                    <Image
-                      layout="intrinsic"
-                      src={Company3}
-                      className="w-[40%] md:w-max"
-                      alt="companies we partner with"
-                    />
-                    <Image
-                      layout="intrinsic"
-                      src={Company4}
-                      className="w-[40%] md:w-max"
-                      alt="companies we partner with"
-                    />
-                    <Image
-                      layout="intrinsic"
-                      src={Company5}
-                      className="w-[40%] md:w-max"
-                      alt="companies we partner with"
-                    />
-                  </div>
-                  {/* Duplicate Logos for seamless scrolling */}
-                  <div className="flex gap-10">
-                    <Image
-                      layout="intrinsic"
-                      src={Company1}
-                      className="w-[40%] md:w-max"
-                      alt="companies we partner with"
-                    />
-                    <Image
-                      layout="intrinsic"
-                      src={Company2}
-                      className="w-[40%] md:w-max"
-                      alt="companies we partner with"
-                    />
-                    <Image
-                      layout="intrinsic"
-                      src={Company3}
-                      className="w-[40%] md:w-max"
-                      alt="companies we partner with"
-                    />
-                    <Image
-                      layout="intrinsic"
-                      src={Company4}
-                      className="w-[40%] md:w-max"
-                      alt="companies we partner with"
-                    />
-                    <Image
-                      layout="intrinsic"
-                      src={Company5}
-                      className="w-[40%] md:w-max"
-                      alt="companies we partner with"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div className="py-14 md:py-10 px-5 md:px-20">
+        <p className="text-[#475467] text-xl text-center">Trusted by our Partners</p>
+        <div className="mt-7 overflow-hidden">
+          <div
+            ref={logoContainerRef}
+            className="flex gap-10 whitespace-nowrap"
+            style={{ width: "max-content" }}
+          >
+            {/* Original Logos */}
+            <Image layout="intrinsic" src={Company1} alt="companies we partner with" />
+            <Image layout="intrinsic" src={Company2} alt="companies we partner with" />
+            <Image layout="intrinsic" src={Company3} alt="companies we partner with" />
+            <Image layout="intrinsic" src={Company4} alt="companies we partner with" />
+            <Image layout="intrinsic" src={Company5} alt="companies we partner with" />
+
+            {/* Duplicate Logos */}
+            <Image layout="intrinsic" src={Company1} alt="companies we partner with" />
+            <Image layout="intrinsic" src={Company2} alt="companies we partner with" />
+            <Image layout="intrinsic" src={Company3} alt="companies we partner with" />
+            <Image layout="intrinsic" src={Company4} alt="companies we partner with" />
+            <Image layout="intrinsic" src={Company5} alt="companies we partner with" />
           </div>
+        </div>
+      </div>
+    </div>
 
           <div className="px-5 md:px-20 mt-20 relative border border-black">
             <div className="md:grid grid-cols-1.5/1">
               <div ref={addToRefs}>
-                <h4 className="text-5xl font-bold mb-4">Who We Are</h4>
-                <p className="text-base md:text-lg mb-7 md:mb-0 leading-loose text-[#475467] max-w-[736px]">
+                <h4 className="text-3xl md:text-5xl font-bold mb-4">Who We Are</h4>
+                <p className="text-lg md:text-lg mb-7 md:mb-0 leading-loose text-[#475467] max-w-[736px]">
                   RemoteWorkHer is a platform dedicated to empowering individuals through remote work opportunities and resources. We help
                   you connect, learn, and grow in your remote career, regardless of where you are
                 </p>
@@ -387,10 +338,12 @@ useEffect(() => {
                     </div> */}
                   </div>
                   <div className="block md:hidden mt-10 md:mt-14">
-                    <Swiper
+                    <Swiper modules={[Autoplay, Pagination]} 
+                      autoplay={{ delay:3000, disableOnInteraction:false}}
                       navigation
                       pagination={false}
                       spaceBetween={50}
+                      loop={true}
                       breakpoints={{
 
                         0: {
@@ -795,32 +748,32 @@ useEffect(() => {
               </div>
               <div className="shape relative h-full ">
               {/* <Image layout="intrisic" src={TestimonialCard1} className="w-full  md:absolute -top-[5rem] -right-[5rem]" alt="gradient" /> */}
-                <Swiper modules={[Autoplay, Pagination]}
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
-                pagination={{ clickable: true }}
+                <Swiper modules={[Autoplay]}
+                autoplay={{ delay: 4000, disableOnInteraction: false }}
+                pagination={{ clickable: false }}
                 loop={true}
-                className="w-full h-full border relative">
+                className="w-full h-full  relative">
                 <SwiperSlide>
-                  <Image layout="intrisic" src={TestimonialCard1} className="w-full md:absolute -top-[5rem] -right-[5rem]" alt="gradient" />
+                  <Image layout="intrisic" src={TestimonialCard1} className="w-full md:absolute  -right-[5rem] " alt="gradient" />
                 </SwiperSlide>
                 <SwiperSlide>
-                 <Image layout="intrisic" src={TestimonialCard1} className="w-full md:absolute -top-[5rem] -right-[5rem]" alt="gradient" />
+                 <Image layout="intrisic" src={TestimonialCard1} className="w-full md:absolute  -right-[5rem]" alt="gradient" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <Image layout="intrisic" src={TestimonialCard1} className="w-full md:absolute -top-[5rem] -right-[5rem]" alt="gradient" />
+                  <Image layout="intrisic" src={TestimonialCard1} className="w-full md:absolute  -right-[5rem]" alt="gradient" />
                 </SwiperSlide>
               </Swiper>
                 {/* <Image layout="intrisic" src={TestimonialCard2} className="w-full md:absolute -mt-[3rem] md:-bottom-[4rem] left-0" alt="gradient" /> */}
               </div>
             </div>
           </div>
-          <div className="mt-24 md:mt-32 px-5 md:px-20">
-            <div ref={addToRefs} className="flex flex-col md:grid grid-cols-1/1.5 gap-14 md:gap-44">
+          <div className="mt-24 md:mt-32 px-5 md:px-20 border bg-[#FFFAEC]">
+            <div ref={addToRefs} className="flex flex-col md:items-center md:grid grid-cols-1/1.5 gap-14 md:gap-44">
               <div>
-                <h3 className="font-jakarta font-bold text-3xl md:text-4xl mb-8 w-[85%] leading-snug">Got Questions? We&apos;ve Got Answers.</h3>
-                <p className="text-base md:text-lg mb-7">For more information, please contact us:</p>
+                <h3 className="font-jakarta font-bold text-5xl md:text-4xl mb-8 w-[85%] leading-snug">Got Questions? We&apos;ve Got Answers.</h3>
+                {/* <p className="text-base md:text-lg mb-7">For more information, please contact us:</p> */}
                 <div className="w-[60%] mt-5">
-                  <ul className="flex flex-col gap-8">
+                  {/* <ul className="flex flex-col gap-8">
                     <li>
                       <Link href="tel:+441234567890" className="text-sm md:text-base flex items-center gap-5 md:gap-10">
                         <span><FaPhone /></span>
@@ -833,7 +786,7 @@ useEffect(() => {
                         <span>hello@remoteworkher.com</span>
                       </Link>
                     </li>
-                  </ul>
+                  </ul> */}
                 </div>
               </div>
               <div>
