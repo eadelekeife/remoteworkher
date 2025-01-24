@@ -665,7 +665,7 @@ const toggleFAQ = (index: number) => {
             }
           </div>
 
-          <div className="mt-5 px-5 md:px-20 relative ">
+          <div className="mt-20 md:mt-5 px-5 md:px-20 relative ">
             <div className="flex flex-col md:grid grid-cols-2 gap-30 items-center">
               <div ref={addToRefs} className="">
                 <p className="text-sm font-[500] text-[#667085] mb-2">JOB BOARD</p>
@@ -803,8 +803,8 @@ const toggleFAQ = (index: number) => {
 
           <div className="mt-22 md:mt-12 px-5 md:px-20 md:py-[50px] relative ">
             <Image src={VectorImg3} alt="vector background" className="vector-bg z-[-1]" />
-            <div className="flex flex-col md:grid grid-cols-2 gap-14 md:gap-28 md:items-center">
-              <div>
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-14 md:gap-28 md:items-center">
+              <div className="hidden md:block">
               <Swiper modules={[Autoplay, Pagination]}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 pagination={{ clickable: true }}
@@ -856,6 +856,34 @@ const toggleFAQ = (index: number) => {
                     <p className="text-[#475467] text-base">Join our Talent Pool to showcase your skills, connect with potential employers, and unlock new career opportunities while expanding your professional network.</p>
                   </div>
                 </div>
+              </div>
+              <div className="md:hidden block">
+              <Swiper modules={[Autoplay, Pagination]}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                pagination={{ clickable: true }}
+                loop={true}
+                className="w-full">
+                <SwiperSlide>
+                  <Image layout="intrinsic" src={Involved} alt="Image 1" className="w-auto" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image layout="intrinsic" src={Involved} alt="Image 2" className="w-auto" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image layout="intrinsic" src={Involved} alt="Image 3" className="w-auto" />
+                </SwiperSlide>
+              </Swiper>
+                {/* <div className="md:flex justify-between relative">
+                  <div></div>
+                  <div className="absolute h-full w-full top-0 left-0 flex items-center">
+                    <Image layout="intrisic" src={SecInvolved} className="md:h-[20rem] w-auto" alt="collection of women" />
+                  </div>
+                  <div>
+                    <div className="md:-ml-[27rem]">
+                      <Image layout="intrisic" src={MainInvolved} className="w-max mx-auto md:mx-0" alt="collection of women" />
+                    </div>
+                  </div>
+                </div> */}
               </div>
             </div>
           </div>
