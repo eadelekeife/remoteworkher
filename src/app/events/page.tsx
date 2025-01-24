@@ -135,14 +135,18 @@ const EventsPage = () => {
           className="bg-[#FFEEF6] border-[#F8E4ED] border-solid border-2 rounded-2xl py-10 px-10 md:py-14 text-center"
         >
           <h3
-          ref={(el) => el && counters.current.push(el)}
+          ref={(el) => {
+            if (el) counters.current.push(el);
+          }}
             data-value="1000"
             className="text-4xl font-jakarta font-medium hidden md:block text-[#14141C] relative after:content-['+'] after:ml-1"
           >
             0
           </h3>
           <h3
-          ref={(el) => el && counters.current.push(el)}
+         ref={(el) => {
+            if (el) counters.current.push(el);
+          }}
             data-value="100"
             className="text-4xl font-jakarta font-medium block md:hidden text-[#14141C] relative after:content-['+'] after:ml-1"
           >
@@ -154,7 +158,9 @@ const EventsPage = () => {
           className="bg-[#FFFEEE] border-[#F1EFDA] border-solid border-2 rounded-2xl py-10 px-10 md:py-14 text-center"
         >
           <h2
-          ref={(el) => el && counters.current.push(el)}
+          ref={(el) => {
+            if (el) counters.current.push(el);
+          }}
             data-value="100"
             className="text-4xl font-jakarta font-medium text-[#14141C] relative after:content-['+'] after:ml-1"
           >
@@ -166,7 +172,9 @@ const EventsPage = () => {
           className="bg-[#F5F5FE] border-solid border-2 rounded-2xl py-10 px-10 md:py-14  text-center"
         >
           <h2
-              ref={(el) => el && counters.current.push(el)}
+             ref={(el) => {
+                if (el) counters.current.push(el);
+              }}
             data-value="20"
             className="text-4xl font-jakarta font-medium text-[#14141C] relative after:content-['+'] after:ml-1"
           >
@@ -178,7 +186,9 @@ const EventsPage = () => {
           className="bg-[#FEF4F9] border-solid border-2 rounded-2xl py-10 px-10 md:py-14  text-center"
         >
           <h2
-           ref={(el) => el && counters.current.push(el)} 
+           ref={(el) => {
+            if (el) counters.current.push(el);
+          }}
             data-value="50"
             className="text-4xl font-jakarta font-medium text-[#14141C] relative after:content-['+'] after:ml-1"
           >
