@@ -51,13 +51,46 @@ const EventsPage = () => {
             textRefs.current.push(el);
         }
     };
+
+    // counting animation
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const counters = useRef<HTMLHeadingElement[]>([]);
+  
+    useEffect(() => {
+      const targets = counters.current;
+  
+      targets.forEach((counter) => {
+        const endValue = parseInt(counter.dataset.value || "0", 10); // Extract numeric value
+  
+        gsap.fromTo(
+          counter,
+          { innerText: 0 },
+          {
+            innerText: endValue,
+            duration: 2,
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top bottom",
+            },
+            snap: { innerText: 1 },
+            ease: "power1.out",
+            onUpdate: function () {
+              const value = parseInt(counter.innerText || "0", 10);
+              counter.innerText = counter.dataset.value?.includes("K")
+                ? `${Math.round(value)}K`
+                : `${value}`;
+            },
+          }
+        );
+      });
+    }, []);
     return (
         <div>
             {/* <DisplayLayout textColor="text-[#98A2B3]" logoColor="text-white" footerMargin="mt-0"> */}
             <DisplayLayout>
                 <>
-                    <Image src={VectorImg} alt="vector background" className="vector-bg z-10" />
-                    <div className="md:min-h-[100vh] job-hero pt-24">
+                    {/* <Image src={VectorImg} alt="vector background" className="vector-bg z-10" /> */}
+                    <div className="md:min-h-[100vh] job-hero pt-24 bg-cover bg-[top_left] bg-no-repeat " style={{backgroundImage:`url(${VectorImg.src})`}}>
                         <div className="md:w-[85%] px-5 md:px-0 mx-auto text-center">
                             <div ref={addToRefs}>
                                 <h2 className="block font-bold md:w-[80%] mx-auto text-4xl md:text-5xl pt-16 leading-tight md:leading-tight">
@@ -96,14 +129,65 @@ const EventsPage = () => {
                                     Great Reasons to Attend Our Conference
                                 </h3>
                             </div>
-                            <div className="mt-10 md:mt-14">
-                                <div className="grid grid-cols-2 md:grid md:grid-cols-4 gap-7 md:px-24 mx-auto">
-                                    <EventPros bg="bg-[#FFEEF6]" borderColor="border-[#F8E4ED]" textColor="text-[#14141C]" main="10K" icon="+" footnote="Tickets Confirmed" />
-                                    <EventPros bg="bg-[#FFFEEE]" borderColor="border-[#F1EFDA]" textColor="text-[#14141C]" main="100" icon="+" footnote="Event Sponsors" />
-                                    <EventPros bg="bg-[#F5F5FE]" borderColor="border-[#E9E9F4]" textColor="text-[#14141C]" main="20" icon="+" footnote="Speakers" />
-                                    <EventPros bg="bg-[#FEF4F9]" borderColor="border-[#FCEDF5]" textColor="text-[#14141C]" main="50" icon="+" footnote="Industry Talks" />
-                                </div>
-                            </div>
+                            <div className="mt-10 md:mt-14" ref={sectionRef}>
+      <div className="grid grid-cols-2 md:grid md:grid-cols-4 gap-7 md:px-24 mx-auto">
+        <div
+          className="bg-[#FFEEF6] border-[#F8E4ED] border-solid border-2 rounded-2xl py-10 px-10 md:py-14 text-center"
+        >
+          <h3
+          ref={(el) => el && counters.current.push(el)}
+            data-value="1000"
+            className="text-4xl font-jakarta font-medium hidden md:block text-[#14141C] relative after:content-['+'] after:ml-1"
+          >
+            0
+          </h3>
+          <h3
+          ref={(el) => el && counters.current.push(el)}
+            data-value="100"
+            className="text-4xl font-jakarta font-medium block md:hidden text-[#14141C] relative after:content-['+'] after:ml-1"
+          >
+            0
+          </h3>
+          <p className="text-base mt-3 text-[#14141C]">Tickets Confirmed</p>
+        </div>
+        <div
+          className="bg-[#FFFEEE] border-[#F1EFDA] border-solid border-2 rounded-2xl py-10 px-10 md:py-14 text-center"
+        >
+          <h2
+          ref={(el) => el && counters.current.push(el)}
+            data-value="100"
+            className="text-4xl font-jakarta font-medium text-[#14141C] relative after:content-['+'] after:ml-1"
+          >
+            0
+          </h2>
+          <p className="text-base mt-3 text-[#14141C]">Event Sponsors</p>
+        </div>
+        <div
+          className="bg-[#F5F5FE] border-solid border-2 rounded-2xl py-10 px-10 md:py-14  text-center"
+        >
+          <h2
+              ref={(el) => el && counters.current.push(el)}
+            data-value="20"
+            className="text-4xl font-jakarta font-medium text-[#14141C] relative after:content-['+'] after:ml-1"
+          >
+            0
+          </h2>
+          <p className="text-base mt-3 text-[#14141C]">Speakers</p>
+        </div>
+        <div
+          className="bg-[#FEF4F9] border-solid border-2 rounded-2xl py-10 px-10 md:py-14  text-center"
+        >
+          <h2
+           ref={(el) => el && counters.current.push(el)} 
+            data-value="50"
+            className="text-4xl font-jakarta font-medium text-[#14141C] relative after:content-['+'] after:ml-1"
+          >
+            0
+          </h2>
+          <p className="text-base mt-3 text-[#14141C]">Industry Talks</p>
+        </div>
+      </div>
+    </div>
                         </div>
                         <div ref={addToRefs} className="mt-24 md:px-16">
                             <div className="flex flex-col md:grid grid-cols-2 gap-5 md:gap-0 items-center">

@@ -153,7 +153,7 @@ const AboutUsPage = () => {
                             <div className="flex flex-col md:grid grid-cols-1/1.5 gap-8">
                                 <div ref={addToRefs}>
                                     <div className="bg-[#F9F9FB] py-10 md:py-0 rounded-xl h-full flex items-center">
-                                        <div className="w-[75%] mx-auto text-center h-max">
+                                        <div className="w-[85%] mx-auto text-center h-max">
                                             <div>
                                                 <Image src={TestimonialOne} alt="woman posing for picture" className="rounded-xl mx-auto w-auto h-[8rem] mb-5" />
                                             </div>

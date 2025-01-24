@@ -5,6 +5,7 @@ import Image from "next/image";
 import RemoteImg from "@/assets/images/services/business/map.svg";
 import IconImg from "@/assets/images/services/business/icon.svg";
 import TeamImg from "@/assets/images/services/business/Group 18583.svg";
+import Package from "@/assets/images/package.svg";
 
 import VectorImg from "@/assets/images/vector-bg.png";
 import HeroImg from "@/assets/images/services/business/hero.svg";
@@ -50,8 +51,8 @@ const PartnershipDeal = () => {
         <div>
             <DisplayLayout>
                 <>
-                    <Image src={VectorImg} alt="vector background" className="vector-bg z-10" />
-                    <div className="md:min-h-[100vh] job-hero pt-24">
+                    {/* <Image src={VectorImg} alt="vector background" className="vector-bg z-10" /> */}
+                    <div className="md:min-h-[100vh] job-hero pt-24 bg-cover bg-[top_left] bg-no-repeat" style={{backgroundImage:`url(${VectorImg.src})`}}>
                         <div className="md:w-[85%] px-5 md:px-0 mx-auto text-center">
                             <div ref={addToRefs}>
                                 <h2 className="block font-bold md:w-[80%] mx-auto text-2xl md:text-4xl md:text-3xl md:text-5xl pt-16 leading-tight md:leading-tight">
@@ -167,7 +168,9 @@ const PartnershipDeal = () => {
                             <div className="flex flex-col md:grid grid-cols-3 gap-9">
                                 <div className="bg-white shadow border border-solid border-[#10182814] rounded-xl">
                                     <div className="p-7 py-10">
-                                        <div className="size-12 rounded-lg shadow mb-4 mx-auto border border-solid border-[#EAECF0]"></div>
+                                        <div className="size-12 rounded-lg shadow mb-4 mx-auto border flex justify-center items-center border-solid border-[#EAECF0]">
+                                        <Image src={Package} alt="woman posing for picture" className="" />
+                                        </div>
                                         <div className="text-center">
                                             <h4 className="text-sm md:text-base font-dmsans mb-2 font-[500] text-[#F963AB]">Basic plan</h4>
                                             <h4 className="text-2xl md:text-4xl font-600 mb-3">$10/mth</h4>
@@ -212,7 +215,9 @@ const PartnershipDeal = () => {
                                 </div>
                                 <div className="bg-white shadow border border-solid border-[#10182814] rounded-xl">
                                     <div className="p-7 py-10">
-                                        <div className="size-12 rounded-lg shadow mb-4 mx-auto border border-solid border-[#EAECF0]"></div>
+                                    <div className="size-12 rounded-lg shadow mb-4 mx-auto border flex justify-center items-center border-solid border-[#EAECF0]">
+                                        <Image src={Package} alt="woman posing for picture" className="" />
+                                        </div>
                                         <div className="text-center">
                                             <h4 className="text-sm md:text-base font-dmsans mb-2 font-[500] text-[#F963AB]">Basic plan</h4>
                                             <h4 className="text-2xl md:text-4xl font-600 mb-3">$10/mth</h4>
@@ -257,7 +262,9 @@ const PartnershipDeal = () => {
                                 </div>
                                 <div className="bg-white shadow border border-solid border-[#10182814] rounded-xl">
                                     <div className="p-7 py-10">
-                                        <div className="size-12 rounded-lg shadow mb-4 mx-auto border border-solid border-[#EAECF0]"></div>
+                                    <div className="size-12 rounded-lg shadow mb-4 mx-auto border flex justify-center items-center border-solid border-[#EAECF0]">
+                                        <Image src={Package} alt="woman posing for picture" className="" />
+                                        </div>
                                         <div className="text-center">
                                             <h4 className="text-sm md:text-base font-dmsans mb-2 font-[500] text-[#F963AB]">Basic plan</h4>
                                             <h4 className="text-2xl md:text-4xl font-600 mb-3">$10/mth</h4>
@@ -302,7 +309,7 @@ const PartnershipDeal = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-32">
+                        <div className="mt-32 mb-[-90px]">
                             <div className="bg-[#F963AB] pt-20 py-32 rounded-xl max-h-[422px] relative">
                                 <h2 className="font-jakarta mb-10 text-2xl md:text-6xl max-w-[770px] mx-auto leading-tight font-bold text-center">
                                     Reach Out to Us for Partnership Inquiries

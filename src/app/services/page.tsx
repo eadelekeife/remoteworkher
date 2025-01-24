@@ -68,15 +68,48 @@ const ServicesPage = () => {
             textRefs.current.push(el);
         }
     };
+
+    //animate count up
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const counters = useRef<HTMLDivElement[]>([]);
+  
+    useEffect(() => {
+      const targets = counters.current;
+  
+      targets.forEach((counter) => {
+        const endValue = parseInt(counter.dataset.value || "0", 10);
+  
+        // Animate from 0 to the value
+        gsap.fromTo(
+          counter,
+          { innerText: 0 },
+          {
+            innerText: endValue,
+            duration: 2,
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top bottom", // Start animation when section enters the viewport
+            },
+            snap: { innerText: 1 }, // Increment numbers by 1
+            ease: "power1.out",
+            onUpdate: function () {
+              // Force the innerText to update to an integer
+              counter.innerText = Math.round(parseInt(counter.innerText || "0", 10)).toString();
+            },
+          }
+        );
+      });
+    }, []);
+
     return (
         <div>
             <DisplayLayout>
                 <>
-                    <Image src={VectorImg} alt="vector background" className="vector-bg z-10" />
-                    <div className="md:min-h-[100vh] job-hero pt-24">
+                    {/* <Image src={VectorImg} alt="vector background" className="vector-bg z-10" /> */}
+                    <div className="md:min-h-[100vh] job-hero pt-24 bg-cover bg-[top_left] bg-no-repeat" style={{backgroundImage:`url(${VectorImg.src})`}}>
                         <div className="md:w-[85%] px-5 md:px-0 mx-auto text-center">
                             <div ref={addToRefs} className="relative">
-                                <h2 className="block font-bold md:w-[70%] mx-auto text-3xl md:text-5xl pt-12 leading-tight md:leading-tight font-jakarta">
+                                <h2 className="block font-bold md:w-[70%] max-w-[940px] mx-auto text-3xl md:text-5xl pt-12 leading-tight md:leading-tight font-jakarta">
                                     Empowering Employers and Talents to Thrive in Remote Work</h2>
                                 <div className="absolute w-full h-full -bottom-3 bg-blac flex items-end justify-center">
                                     <Image src={CenterVectorImg} alt="zig-zag lines" className="w-[50%] md:w-auto" />
@@ -317,24 +350,36 @@ const ServicesPage = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="mt-32 md:mt-24 grid-cols-2 gap-5 md:gap-0 md:grid-cols-4 grid">
-                                    <div className="text-center py-5 md:border-solid md:border-[#F963AB] md:border-r px-10">
-                                        <h2 className="text-4xl font-jakarta font-medium mb-3 text-[#0D0D0D]">2+</h2>
-                                        <p className="text-base font-jakarta text-[#808080]">Years of Experience</p>
-                                    </div>
-                                    <div className="text-center py-5 md:border-solid md:border-[#F963AB] md:border-r px-10">
-                                        <h2 className="text-4xl font-jakarta font-medium mb-3 text-[#0D0D0D]">70+</h2>
-                                        <p className="text-base font-jakarta text-[#808080]">Total Courses</p>
-                                    </div>
-                                    <div className="text-center py-5 md:border-solid md:border-[#F963AB] md:border-r px-10">
-                                        <h2 className="text-4xl font-jakarta font-medium mb-3 text-[#0D0D0D]">1K+</h2>
-                                        <p className="text-base font-jakarta text-[#808080]">Satisfied Partnerships</p>
-                                    </div>
-                                    <div className="text-center py-5 px-10">
-                                        <h2 className="text-4xl font-jakarta font-medium mb-3 text-[#0D0D0D]">20+</h2>
-                                        <p className="text-base font-jakarta text-[#808080]">Certificates and Awards</p>
-                                    </div>
-                                </div>
+                                <div
+      ref={sectionRef}
+      className="mt-32 md:mt-24 grid-cols-2 gap-5 md:gap-0 md:grid-cols-4 grid"
+    >
+      {[
+        { value: 2, label: "Years of Experience" },
+        { value: 70, label: "Total Courses" },
+        { value: 1000, label: "Satisfied Partnerships" },
+        { value: 20, label: "Certificates and Awards" },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className={`text-center py-5 ${
+            index < 3 ? "md:border-solid md:border-[#F963AB] md:border-r" : ""
+          } px-10`}
+        >
+          <h2
+           ref={(el) => {
+            if (el) counters.current[index] = el;
+          }}
+          
+            data-value={item.value}
+            className="text-4xl font-jakarta font-medium mb-3 text-[#0D0D0D] relative after:content-['+'] after:absolute after:ml-1"
+          >
+            0
+          </h2>
+          <p className="text-base font-jakarta text-[#808080]">{item.label}</p>
+        </div>
+      ))}
+    </div>
                             </div>
                         </div>
                         <div ref={addToRefs} className="mt-32 md:px-20">

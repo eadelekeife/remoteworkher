@@ -11,8 +11,7 @@ import { gsap } from 'gsap';
 
 import { FaPhone } from "react-icons/fa6";
 import { RiMailSendLine } from "react-icons/ri";
-import { LuPlus } from "react-icons/lu";
-
+import { LuPlus, LuMinus } from "react-icons/lu";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -94,7 +93,7 @@ export default function JobBoard() {
 
   const [currentView, setCurrentView] = useState("personal");
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const textRefs = useRef<HTMLDivElement[]>([]);
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
@@ -124,30 +123,36 @@ export default function JobBoard() {
 // horizontal scroll
 const logoContainerRef = useRef<HTMLDivElement>(null);
 
-useLayoutEffect(() => {
+useEffect(() => {
   const logoContainer = logoContainerRef.current;
 
   if (logoContainer) {
-    // Calculate total width of the container
-    const containerWidth = Array.from(logoContainer.children).reduce(
-      (acc, child) => acc + (child as HTMLElement).offsetWidth,
-      0
-    );
+    const contentWidth = logoContainer.scrollWidth / 2; // Half of the container due to duplication
 
-    console.log("Container width:", containerWidth);
-
-    // GSAP animation for seamless scrolling
     gsap.to(logoContainer, {
-      x: `-${containerWidth / 2}px`, // Scroll through half the container width
+      x: `-${contentWidth}px`, // Scroll by one full width of the original content
       ease: "linear",
-      duration: 20,
-      repeat: -1, // Infinite scrolling
-      modifiers: {
-        x: gsap.utils.wrap(-containerWidth / 2, 0), // Seamless wrapping
-      },
+      duration: 20, // Adjust speed
+      repeat: -1, // Infinite loop
     });
   }
 }, []);
+
+//faq functionality
+
+
+const faqs = [
+  { question: "How does Remote WorkHer help me?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+  { question: "What services do you provide?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt orci a felis dignissim, vel pharetra est auctor." },
+  { question: "Is there a free trial available?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis nisl nec est fermentum malesuada." },
+  { question: "How can I get support?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus velit sit amet bibendum ultricies." },
+  { question: "Can I cancel my subscription?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula dui ut orci convallis consequat." },
+  { question: "How secure is the platform?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a eros non quam pharetra tempor non ac urna." },
+];
+
+const toggleFAQ = (index: number) => {
+  setActiveIndex(activeIndex === index ? null : index);
+};
   return (
     <div>
       <DisplayLayout>
@@ -157,7 +162,7 @@ useLayoutEffect(() => {
             <div className="">
               <div ref={addToRefs} className="flex flex-col md:grid grid-cols-2 md:mt-[60px]  ">
                 <div className="relative  max-w-[632px] mt-5 md:mt-10">
-                  <h2 className="text-[2rem] md:text-[3.2rem]  md:text-left font-bold font-jakarta  text-black leading-[40px] md:leading-[75px]">
+                  <h2 className="text-[2rem] md:text-[3.2rem]  md:text-left font-bold font-jakarta  text-black leading-[40px] md:leading-[65px]">
                     More Than Just a Space, it&apos;s a Community of Remote WorkHers
                   </h2>
                   <p className="md:mt-6 mt-8 text-[#666666] text-base font-[300] w-full md:w-[70%] mb-9 md:mb-7">
@@ -183,30 +188,95 @@ useLayoutEffect(() => {
       <div className="py-14 md:py-10 px-5 md:px-20">
         <p className="text-[#475467] text-xl text-center">Trusted by our Partners</p>
         <div className="mt-7 overflow-hidden">
+          {/* Wrapper for GSAP animation */}
           <div
             ref={logoContainerRef}
             className="flex gap-10 whitespace-nowrap"
-            style={{ width: "max-content" }}
+            style={{ width: "max-content" }} // Ensure proper width calculation
           >
             {/* Original Logos */}
-            <Image layout="intrinsic" src={Company1} alt="companies we partner with" />
-            <Image layout="intrinsic" src={Company2} alt="companies we partner with" />
-            <Image layout="intrinsic" src={Company3} alt="companies we partner with" />
-            <Image layout="intrinsic" src={Company4} alt="companies we partner with" />
-            <Image layout="intrinsic" src={Company5} alt="companies we partner with" />
-
-            {/* Duplicate Logos */}
-            <Image layout="intrinsic" src={Company1} alt="companies we partner with" />
-            <Image layout="intrinsic" src={Company2} alt="companies we partner with" />
-            <Image layout="intrinsic" src={Company3} alt="companies we partner with" />
-            <Image layout="intrinsic" src={Company4} alt="companies we partner with" />
-            <Image layout="intrinsic" src={Company5} alt="companies we partner with" />
+            <div className="flex gap-10">
+              <Image
+                layout="intrinsic"
+                src={Company1}
+                className="w-[40%] md:w-max"
+                alt="companies we partner with"
+              />
+              <Image
+                layout="intrinsic"
+                src={Company2}
+                className="w-[40%] md:w-max"
+                alt="companies we partner with"
+              />
+              <Image
+                layout="intrinsic"
+                src={Company3}
+                className="w-[40%] md:w-max"
+                alt="companies we partner with"
+              />
+              <Image
+                layout="intrinsic"
+                src={Company4}
+                className="w-[40%] md:w-max"
+                alt="companies we partner with"
+              />
+              <Image
+                layout="intrinsic"
+                src={Company5}
+                className="w-[40%] md:w-max"
+                alt="companies we partner with"
+              />
+            </div>
+            {/* Duplicate Logos for seamless scrolling */}
+            <div className="flex gap-10">
+              <Image
+                layout="intrinsic"
+                src={Company1}
+                className="w-[40%] md:w-max"
+                alt="companies we partner with"
+              />
+              <Image
+                layout="intrinsic"
+                src={Company2}
+                className="w-[40%] md:w-max"
+                alt="companies we partner with"
+              />
+              <Image
+                layout="intrinsic"
+                src={Company3}
+                className="w-[40%] md:w-max"
+                alt="companies we partner with"
+              />
+              <Image
+                layout="intrinsic"
+                src={Company4}
+                className="w-[40%] md:w-max"
+                alt="companies we partner with"
+              />
+              <Image
+                layout="intrinsic"
+                src={Company5}
+                className="w-[40%] md:w-max"
+                alt="companies we partner with"
+              />
+               <Image
+                layout="intrinsic"
+                src={Company5}
+                className="w-[40%] md:w-max"
+                alt="companies we partner with"
+              />
+               <Image
+                layout="intrinsic"
+                src={Company5}
+                className="w-[40%] md:w-max"
+                alt="companies we partner with"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-          <div className="px-5 md:px-20 mt-20 relative border border-black">
+          <div className="px-5 md:px-20 mt-20 relative ">
             <div className="md:grid grid-cols-1.5/1">
               <div ref={addToRefs}>
                 <h4 className="text-3xl md:text-5xl font-bold mb-4">Who We Are</h4>
@@ -227,7 +297,8 @@ useLayoutEffect(() => {
             </div>
             <Image layout="intrisic" src={RightRedGradient} className="w-max absolute -top-[20rem] right-0" alt="red gradient" />
           </div>
-          <div className="mt-28 md:mt-48 px-5 md:px-20 border border-red-800" ref={addToRefs} >
+          
+          <div className="mt-28 md:mt-28 px-5 md:px-20 " ref={addToRefs} >
             <div className={`button mx-auto w-max relative border-2 border-solid border-[#E2C6D4] p-1 flex items-center rounded-full`}>
               <div onClick={() => {
                 setCurrentView("personal")
@@ -462,7 +533,8 @@ useLayoutEffect(() => {
                   </div>
                 </>
                 :
-                <div className="md:grid grid-cols-3 gap-10 mt-10 md:mt-14">
+                <>
+                <div className="hidden md:grid grid-cols-3 gap-10 md:gap-20 mt-10 md:mt-14">
                   {/* */}
                   <div className="bg-[#FFF1F3] max-w-[380px]  rounded-3xl pt-1 pb-10 px-5 h-[534px]">
                     <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
@@ -482,12 +554,12 @@ useLayoutEffect(() => {
                     <div className="mb-10">
                       <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Partnership</h4>
                       <p className="text-base text-[#4B5563]">
-                        Events that help bring you together with other remote workers and better opportunities
+                      Events that help bring you together with other remote workers and better opportunities
                       </p>
                     </div>
                   </div>
 
-                  <div className="bg-[#FFF1F3] max-w-[380px]  rounded-3xl pt-1 pb-10 px-5 h-[534px]">
+                  <div className="bg-[#FFFAEC] max-w-[380px]  rounded-3xl pt-1 pb-10 px-5 h-[534px]">
                     <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
                       <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
                         <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
@@ -510,10 +582,90 @@ useLayoutEffect(() => {
                     </div>
                   </div>
                 </div>
+
+                <div className="block md:hidden mt-10 md:mt-14">
+                    <Swiper modules={[Autoplay, Pagination]} 
+                      autoplay={{ delay:3000, disableOnInteraction:false}}
+                      navigation
+                      pagination={false}
+                      spaceBetween={50}
+                      loop={true}
+                      breakpoints={{
+
+                        0: {
+                          slidesPerView: 1,
+                          spaceBetween: 10,
+                        },
+
+                        768: {
+                          slidesPerView: 2,
+                          spaceBetween: 15,
+                        },
+
+                        1024: {
+                          slidesPerView: 4,
+                          spaceBetween: 35,
+                        },
+                      }}
+                    >
+                      <SwiperSlide>
+                        <div className="bg-[#FFF1F3] h-full rounded-3xl pt-1 pb-10 px-5">
+                          <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
+                            <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
+                              <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
+                            </div>
+                            <Image layout="intrisic" src={Pros1} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                            <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
+                              <ul className="flex gap-5">
+                                <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                                  <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Business</span></li>
+                                {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="mb-10">
+                            <h4 className="font-bold font-jakarta text-xl leading-snug mb-2 min-h-[2rem]">Partnership </h4>
+                            <p className="text-base text-[#4B5563]">
+                            Events that help bring you together with other remote workers and better opportunities
+                            </p>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="bg-[#FFFAEC] h-full rounded-3xl pt-1 pb-10 px-5">
+                          <div className="bg-white p-3 pt-2 mt-6 mb-5 md:mb-5 rounded-lg">
+                            <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2 py-2 mb-2">
+                              <p className="text-[#555A62] font-jakarta font-[600] text-xs"> The law and Business of Remote Work</p>
+                            </div>
+                            <Image layout="intrisic" src={Pros2} className="w-full object-fit object-cover rounded-lg" alt="collection of women" />
+                            <div className="bg-[#FFF8FB] px-3 w-full rounded-lg mt-2">
+                              <ul className="flex gap-5">
+                                <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                                  <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li>
+                                {/* <li className="text-sm flex items-center gap-3"><span className="text-2xl font-black">&bull;</span>
+                            <span className="text-[#555A62] font-jakarta font-[600] text-sm"> Businesses</span></li> */}
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="mb-10">
+                            <h4 className="font-bold font-jakarta text-xl leading-snug mb-2">Talent Headhunt</h4>
+                            <p className="text-base text-[#4B5563]">
+                            Events that help bring you together with other remote workers and better opportunities
+                            </p>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                
+                    </Swiper>
+                  </div>
+                </>
+
+
             }
           </div>
 
-          <div className="mt-20 px-5 md:px-20 relative border border-black">
+          <div className="mt-5 px-5 md:px-20 relative ">
             <div className="flex flex-col md:grid grid-cols-2 gap-30 items-center">
               <div ref={addToRefs} className="">
                 <p className="text-sm font-[500] text-[#667085] mb-2">JOB BOARD</p>
@@ -521,7 +673,8 @@ useLayoutEffect(() => {
                 <p className="text-sm md:text-lg font-[#4B5563] leading-loose md:w-[80%]">
                   Join RemoteWorkHer Today
                 </p>
-                <button className="bg-black py-4 px-10 rounded-lg text-white text-sm mt-5">Browse Opportunities</button>
+                <button className="bg-black py-4 px-10 rounded-lg text-white text-sm mt-5">
+                  <Link href="/job"></Link>Browse Opportunities</button>
               </div>
 
               <div className="">
@@ -588,11 +741,11 @@ useLayoutEffect(() => {
             </div>
             <Image layout="intrisic" src={RedGradient} className="w-max absolute -top-[20rem] left-0" alt="gradient" />
           </div> */}
-          <div className="mt-10  md:mb-[5rem] ">
+          <div className="  mb-[5rem] bg-cover bg-[top_left] bg-no-repeat" style={{backgroundImage:`url(${VectorImg2.src})`}}>
             <div className="relative w-full h-full pt-16">
-              <h3 className="font-jakarta font-bold text-2xl md:text-7xl text-center">Meet Adeife, Our Founder</h3>
+              <h3 className="font-jakarta font-bold text-2xl md:text-6xl text-center">Meet Adeife, Our Founder</h3>
               {/* <Image layout="intrisic" src={MeetHero} className="mx-auto" alt="about us video" /> */}
-              <div className="mx-auto mt-10">
+              <div className="mx-auto mt-10 md:block hidden">
                 <iframe
                   width="880"
                   height="545"
@@ -605,9 +758,23 @@ useLayoutEffect(() => {
                 ></iframe>
               </div>
 
+<div className="mx-auto mt-10 block md:hidden">
+  <div className="relative   mx-auto w-[90%] h-[255px]  rounded-[20px] border-[18px] border-[#FFDDED]">
+    <iframe
+      className="absolute top-0 left-0 w-full h-full "
+      src="https://www.youtube.com/embed/EDnfEVU8vyA"
+      title="YouTube Video"
+      frameBorder="0"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  </div>
+
+</div>
+
               <Image layout="intrisic" src={MeetRight} className="hidden md:block absolute right-5 bottom-[3.5rem]" alt="image of founder" />
               <Image layout="intrisic" src={MeetLeft} className="hidden md:block absolute left-5 bottom-[-0.9rem]" alt="image of founder" />
-              <Image src={VectorImg2} alt="vector background" className="vector-bg z-[-1]" />
+              {/* <Image src={VectorImg2} alt="vector background" className="vector-bg z-[-1]" /> */}
             </div>
             {/* <div className="bg-[#FCEFEF] flex flex-col md:grid grid-cols-2">
               <div className="bg-[#E4E4E4] min-h-[20rem]">
@@ -742,11 +909,11 @@ useLayoutEffect(() => {
             <div className="flex flex-col md:grid px-5 md:pl-20 grid-cols-2 bg-[#FFF4F9] rounded-2xl">
               <div className="py-10 md:py-20">
                 <h3 className="font-jakarta font-bold text-3xl md:text-5xl mb-2 md:mb-5 leading-snug">People love <br /> Remote WorkHer</h3>
-                <p className="text-lg font-[#66676D] leading-loose md:w-[80%]">
+                <p className="text-lg font-[#66676D] leading-[20px] md:w-[80%]">
                   Recommendations from satisfied clients that affirm the value of our service.
                 </p>
               </div>
-              <div className="shape relative h-full ">
+              <div className="shape relative h-full  ">
               {/* <Image layout="intrisic" src={TestimonialCard1} className="w-full  md:absolute -top-[5rem] -right-[5rem]" alt="gradient" /> */}
                 <Swiper modules={[Autoplay]}
                 autoplay={{ delay: 4000, disableOnInteraction: false }}
@@ -767,7 +934,7 @@ useLayoutEffect(() => {
               </div>
             </div>
           </div>
-          <div className="mt-24 md:mt-32 px-5 md:px-20 border bg-[#FFFAEC]">
+          <div className="mt-24 md:mt-32 px-5 py-10 mb-[-70px] md:px-20 bg-[#FFFAEC]">
             <div ref={addToRefs} className="flex flex-col md:items-center md:grid grid-cols-1/1.5 gap-14 md:gap-44">
               <div>
                 <h3 className="font-jakarta font-bold text-5xl md:text-4xl mb-8 w-[85%] leading-snug">Got Questions? We&apos;ve Got Answers.</h3>
@@ -790,98 +957,32 @@ useLayoutEffect(() => {
                 </div>
               </div>
               <div>
-                <div className="flex flex-col gap-10">
-                  <div className="collapse-bar">
-                    <div className="collapse-block">
-                      <div className="collapse-header flex justify-between items-center">
+              <div className="flex flex-col gap-10">
+                {faqs.map((faq, index) => (
+                  <div className="collapse-bar" key={index}>
+                    <div
+                      className="collapse-block"
+                      onClick={() => toggleFAQ(index)}
+                    >
+                      <div className="collapse-header flex justify-between items-center cursor-pointer">
+                        <h4 className="font-dmsans text-[#001F3E]">{faq.question}</h4>
                         <div>
-                          <h4 className="font-dmsans text-[#001F3E]">How does Remote WorkHer help me?</h4>
-                        </div>
-                        <div>
-                          <LuPlus className="font-bold text-2xl" />
+                          {activeIndex === index ? (
+                            <LuMinus className="font-bold text-2xl" />
+                          ) : (
+                            <LuPlus className="font-bold text-2xl" />
+                          )}
                         </div>
                       </div>
-                      <div className="collapse-body">
-
-                      </div>
+                      {activeIndex === index && (
+                        <div className="collapse-body mt-4 text-sm text-[#333]">
+                          {faq.answer}
+                        </div>
+                      )}
                     </div>
                   </div>
-                  <div className="collapse-bar">
-                    <div className="collapse-block">
-                      <div className="collapse-header flex justify-between items-center">
-                        <div>
-                          <h4 className="font-dmsans text-[#001F3E]">How does Remote WorkHer help me?</h4>
-                        </div>
-                        <div>
-                          <LuPlus className="font-bold text-2xl" />
-                        </div>
-                      </div>
-                      <div className="collapse-body">
-
-                      </div>
-                    </div>
-                  </div>
-                  <div className="collapse-bar">
-                    <div className="collapse-block">
-                      <div className="collapse-header flex justify-between items-center">
-                        <div>
-                          <h4 className="font-dmsans text-[#001F3E]">How does Remote WorkHer help me?</h4>
-                        </div>
-                        <div>
-                          <LuPlus className="font-bold text-2xl" />
-                        </div>
-                      </div>
-                      <div className="collapse-body">
-
-                      </div>
-                    </div>
-                  </div>
-                  <div className="collapse-bar">
-                    <div className="collapse-block">
-                      <div className="collapse-header flex justify-between items-center">
-                        <div>
-                          <h4 className="font-dmsans text-[#001F3E]">How does Remote WorkHer help me?</h4>
-                        </div>
-                        <div>
-                          <LuPlus className="font-bold text-2xl" />
-                        </div>
-                      </div>
-                      <div className="collapse-body">
-
-                      </div>
-                    </div>
-                  </div>
-                  <div className="collapse-bar">
-                    <div className="collapse-block">
-                      <div className="collapse-header flex justify-between items-center">
-                        <div>
-                          <h4 className="font-dmsans text-[#001F3E]">How does Remote WorkHer help me?</h4>
-                        </div>
-                        <div>
-                          <LuPlus className="font-bold text-2xl" />
-                        </div>
-                      </div>
-                      <div className="collapse-body">
-
-                      </div>
-                    </div>
-                  </div>
-                  <div className="collapse-bar">
-                    <div className="collapse-block">
-                      <div className="collapse-header flex justify-between items-center">
-                        <div>
-                          <h4 className="font-dmsans text-[#001F3E]">How does Remote WorkHer help me?</h4>
-                        </div>
-                        <div>
-                          <LuPlus className="font-bold text-2xl" />
-                        </div>
-                      </div>
-                      <div className="collapse-body">
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                ))}
+              </div>
               </div>
             </div>
           </div>
