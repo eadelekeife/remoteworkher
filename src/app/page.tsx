@@ -157,9 +157,10 @@ const toggleFAQ = (index: number) => {
     <div>
       <DisplayLayout>
         <>
-          <div className="px-5 md:px-20 pt-32 md:pt-20 h-max pb-[5rem] md:pb-0">
+          <div className="px-5 md:px-20 pt-32 md:pt-20 h-max pb-[5rem] md:pb-0 md:h-[100vh]">
             <Image src={VectorImg} alt="vector background" className="vector-bg z-[-1]" />
-            <div className="">
+            {/* ?Hero one */}
+            {/* <div className="">
               <div ref={addToRefs} className="flex flex-col md:grid grid-cols-2 md:mt-[60px]  ">
                 <div className="relative  max-w-[632px] mt-5 md:mt-10">
                   <h2 className="text-[2rem] md:text-[3.2rem]  md:text-left font-bold font-jakarta  text-black leading-[40px] md:leading-[65px]">
@@ -182,6 +183,20 @@ const toggleFAQ = (index: number) => {
                   </div>
                 </div>
               </div>
+            </div> */}
+
+            <div className="text-center ">
+              <h2 style={{ display: 'block' }} className="font-bold md:w-[60%] text-center mx-auto text-4xl max-w-[800px]  md:text-6xl pt-16 md:mt-[10vh] leading-tight">  More Than Just a Space, it&apos;s a Community of Remote WorkHers</h2>
+              <p className="md:mt-6 mt-8 text-[#666666] text-lg font-[300] w-full  mb-9 md:mb-8 mx-auto md:max-w-[600px]">
+                    Whatever your remote work journey looks like, Remote WorkHER is here to support, inspire, and elevate you.
+              </p>
+              <button className="bg-accent px-8 py-4 font-[600] text-lg text-white rounded-lg mb-8">Join The Community</button>
+                <div className="w-[90%] mx-auto flex justify-center items-center">
+                <h4 className="font-dmsans text-base font-bold ">Community Members</h4>
+                <Image layout="intrisic" src={HeroPeople} className="" alt="collection of women" />
+
+                </div>
+                  
             </div>
           </div>
           <div className="bg-[#F9FAFB] w-full overflow-hidden">

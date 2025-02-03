@@ -37,16 +37,16 @@ const Footer = (props: FooterInterface) => {
                             <h5 className="font-dmsans font-black text-bold mb-5">Explore</h5>
                             <ul className="flex flex-col gap-3">
                                 <li>
-                                    <Link href="/">About Us</Link>
+                                    <Link href="/about-us">About Us</Link>
                                 </li>
                                 <li>
-                                    <Link href="/">Partnerships</Link>
+                                    <Link href="/partnership-deal">Partnerships</Link>
                                 </li>
                                 <li>
-                                    <Link href="/">Services</Link>
+                                    <Link href="/services">Services</Link>
                                 </li>
                                 <li>
-                                    <Link href="/">Events</Link>
+                                    <Link href="/events">Events</Link>
                                 </li>
                             </ul>
                         </div>
@@ -57,7 +57,7 @@ const Footer = (props: FooterInterface) => {
                                     <Link href="/">Volunteering</Link>
                                 </li>
                                 <li>
-                                    <Link href="/">Job Board</Link>
+                                    <Link href="/job">Job Board</Link>
                                 </li>
                                 <li>
                                     <Link href="/">Newsletter</Link>
@@ -71,13 +71,13 @@ const Footer = (props: FooterInterface) => {
                             <h5 className="font-dmsans font-black text-bold mb-5">Services</h5>
                             <ul className="flex flex-col gap-3">
                                 <li>
-                                    <Link href="/">Post a Job</Link>
+                                    <Link href="/job">Post a Job</Link>
                                 </li>
                                 <li>
-                                    <Link href="/">For Employers</Link>
+                                    <Link href="/job">For Employers</Link>
                                 </li>
                                 <li>
-                                    <Link href="/">For Talents</Link>
+                                    <Link href="/job">For Talents</Link>
                                 </li>
                             </ul>
                         </div>
